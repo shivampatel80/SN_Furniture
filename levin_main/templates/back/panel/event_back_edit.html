@@ -1,0 +1,107 @@
+{% extends 'back/master_back.html' %}
+
+{% load static %}
+
+
+    {% block headblock %}
+
+    <style>
+        /* Chrome, Safari, Edge, Opera */
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+
+        /* Firefox */
+        input[type=number] {
+          -moz-appearance: textfield;
+        }
+    </style>
+
+    {% endblock %}
+
+
+
+    {% block page_content %}
+    <!-- padding : 0 on both sides -->
+
+    <div class="container" style="padding: 10px 0px 0px 0px !important; margin-top: 35px;">
+        <div class="container">
+
+            <!-- form -->
+            <div id="ftFormArray" class="col-lg-12 col-12 layout-spacing" style="padding-bottom: 60px;">
+                <div class="statbox widget box box-shadow">
+
+                    <div class="widget-header">
+                        <div class="row">
+                            <div class="col-xl-12 col-md-12 col-sm-12 col-12" style="margin-top: 20px; margin-left: 7px;">
+                                <h4>Event Edit</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="widget-content widget-content-area custom-autocomplete h-100">
+
+                        <!-- {{demo}} -->
+                        <form onsubmit="myFunction()" action="{% url 'event_back_edit' event_pk=event.pk %}" method="post" id="quillForm1" name="quillForm1" enctype="multipart/form-data" class="form-horizontal">
+                            {% csrf_token %}
+
+                            <div class="form-row mb-4">
+                                <div class="form-group col-md-6">
+                                    <label for="name">Event Name *</label>
+                                    <input type="text" class="form-control" id="name" name="name" placeholder="Bangalore ..." value="{{event.name}}" required>
+                                    <small id="emailHelp1" class="form-text text-muted mb-4" style="margin-left: 5px;">Event name must be unique</small>
+                                </div>
+                            </div>
+
+                            <div class="form-row mb-4">
+                                <div class="form-group col-md-6">
+                                    <label for="title">Event Title *</label>
+                                    <input type="text" class="form-control" id="title" name="title" placeholder="Bangalore Art Exibition ..." value="{{event.title}}" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row mb-4">
+                                <div class="form-group col-md-6">
+                                    <label for="intro">Event Intro *</label>
+                                    <input type="text" class="form-control" id="intro" name="intro" placeholder="Eat, Sleep, Code Repeat ..." value="{{event.intro}}" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row mb-4">
+                                <div class="form-group col-md-6">
+                                    <label for="detail">Event Detail</label>
+                                    <textarea name="detail" id="detail" rows="3" class="form-control" placeholder="We are here because ..." required>{{event.detail}}</textarea>
+                                </div>
+                            </div>
+
+
+                            <button type="submit" class="btn btn-primary mt-3">Edit</button>
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    {% endblock %}
+
+
+    {% block footerblock  %}
+
+    <script>
+
+    $("input[name='number']").TouchSpin({
+        verticalbuttons: true,
+        buttondown_class: "btn btn-classic btn-outline-info",
+        buttonup_class: "btn btn-classic btn-outline-danger"
+    });
+
+    </script>
+
+
+    {% endblock %}

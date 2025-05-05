@@ -1,0 +1,459 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en-US">
+
+    <head>
+
+        <meta charset="UTF-8">
+		<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#fff">
+        
+        <meta name="keywords" content="Laminates, Laminates in Ahmedabad, Laminates in Gujarat, Laminates in India">
+
+        <title>{% if page_handler %}{{page_handler.meta_title}}{% endif %}</title>
+        
+        <meta name="description" content="{% if page_handler %}{{page_handler.meta_description}}{% endif %}">
+
+        <meta property="og:title" content="{% if page_handler %}{{page_handler.meta_title}}{% endif %}">
+
+        <meta property="og:description" content="{% if page_handler %}{{page_handler.meta_description}}{% endif %}">
+        
+        <meta property="og:type" content="website">
+        <meta property="og:site_name" content="Levin Decor">
+        <meta property="og:url" content="{{request.build_absolute_uri}}">
+        <link rel="canonical" href="{{request.build_absolute_uri}}">
+
+        <meta name="geo.country" content="INDIA">
+        <meta name="language" content="EN">
+
+
+        <link rel="icon" href='{% static "front/images/Levin.png" %}' sizes="32x32" />
+
+        <style>
+            .justify-text {
+                text-align: justify !important;
+            }
+        </style>
+        
+        {% block headblock %}
+
+        {% endblock %}
+	
+    </head>
+
+    <!--  preloader-true preloader-progress_bar -->
+    <!-- header-space-true if there is a need for spacing on top -->
+    <body class="
+        {% if request.resolver_match.url_name == 'home' or request.resolver_match.url_name == 'products' or request.resolver_match.url_name == 'privacy_policy' %}
+            header-space-false 
+        {% endif %}
+        {% if request.resolver_match.url_name == 'catalogues' %}
+            header-space-false
+        {% endif %}
+        page-template page-template-template-landing page-template-template-landing-php page page-id-2783 theme-holleta woocommerce-no-js light-scheme header-container-fluid header-light header-logo-left header-space-true right-click-disable-false popup-download-link-true mobile-images-false project-image-download-hide custom-cursor-false navigation-hover-style1 chrome windows wpb-js-composer js-comp-ver-6.2.0 vc_responsive         page page-id-2779"
+    >
+        
+		<div id="page">
+
+			<!-- loader -->
+            <!-- <div id="pace-content">
+                <div class="site-logo">
+                    <a href="../index.html" data-magic-cursor="link">
+                    <img src="images/prealoader.png" alt="Holleta">
+                    </a>
+                </div>
+            </div> -->
+
+			<!-- nav : (desktop) -->
+            <header class="site-header {% if request.resolver_match.url_name == 'product_detail' or 'events' %}dark-color{% else %}light-color{% endif %}">
+                <div class="container-fluid">
+                    <div class="row align-items-center justify-content-between">
+                        <div class="left col-auto">
+                            <div class="sidebar-butter" data-magic-cursor="link-small"><span></span><span></span></div>
+                            <div class="logo-block">
+                                <div class="site-logo">
+                                    <a href="{% url 'home' %}" data-magic-cursor="link">
+                                        <span>
+                                            <img src='{% static "front/images/Levin.png" %}' alt="" style="width: 100px;">
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contact-links-block">
+                            <a href="#" class="single-popup-item" data-type="video" data-size="1920x1080" data-video='<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3659.8727836422386!2d72.8766353155043!3d23.465052905532577!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395dc8ca9d9f9fdd%3A0x154bd8cd0bd80641!2sLevin%20Decor%20LLP!5e0!3m2!1sen!2sin!4v1617780983853!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>'>
+                                <span>location</span>
+                                <i class="base-icon-pin"></i>
+                            </a>
+                                <a href="{% url 'contact' %}">
+                                <i class="base-icon-mail"></i>
+                                <span>mail us</span>
+                            </a>
+                        </div>
+                        <div class="right col-auto">
+                            <nav class="navigation visible_menu">
+                                <ul id="menu-navigation" class="menu">
+
+                                    <!-- home -->
+                                    <li id="menu-item-2888" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2888 {% if request.resolver_match.url_name == 'home' %} current-menu-ancestor current-menu-parent {% endif %}">
+                                        <a href="{% url 'home' %}"><span>Home</span></a>
+                                    </li>
+
+                                    <!-- products -->
+                                    <li id="menu-item-3141" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3141 {% if request.resolver_match.url_name == 'products' or request.resolver_match.url_name == 'product_detail' or request.resolver_match.url_name == 'product_search' %} current-menu-ancestor current-menu-parent {% endif %}">
+                                        <a href="{% url 'products' %}"><span>Products</span></a>
+                                    </li>
+                                    
+                                    <!-- catalogue -->
+                                    <li id="menu-item-2894" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2894 {% if request.resolver_match.url_name == 'catalogues' %} current-menu-ancestor current-menu-parent {% endif %}">
+                                        <a href="{% url 'catalogues' %}"><span>Catalogues</span></a>
+                                        <!-- <ul class="sub-menu">
+                                            <li id="menu-item-2895" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2895">
+                                                <a href="{% url 'catalogue_remark' %}"><span>1MM - Remark</span></a>
+                                            </li>
+                                            <li id="menu-item-3144" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3144">
+                                                <a href="{% url 'catalogue_ultima' %}"><span>Ultima</span></a>
+                                            </li>
+                                            <li id="menu-item-3117" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3117">
+                                                <a href="{% url 'catalogue_elite' %}"><span>Elite</span></a>
+                                            </li>
+                                            <li id="menu-item-3140" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3140">
+                                                <a href="{% url 'catalogue_doorvin' %}"><span>Doorvin</span></a>
+                                            </li>
+                                        </ul> -->
+                                    </li>
+
+                                    <!-- events -->
+                                    <li id="menu-item-2896" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2896 {% if request.resolver_match.url_name == 'events' %} current-menu-ancestor current-menu-parent {% endif %}">
+                                        <a><span>Events</span></a>
+                                        <ul class="sub-menu">
+                                            {% for events in events %}
+                                            <li id="menu-item-3190" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3190">
+                                                <a href="{% url 'events' name_slug=events.name_slug %}"><span>{{events.name | title}}</span></a>
+                                            </li>
+                                            {% endfor %}
+                                        </ul>
+                                    </li>
+
+                                    <!-- visualizer -->
+                                    <li id="menu-item-2896" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2896 {% if request.resolver_match.url_name == 'visualizer' %} current-menu-ancestor current-menu-parent {% endif %}">
+                                        <a href="{% url 'visualizer_default' %}"><span>Visualizer</span></a>
+                                        <!-- <a href="{% url 'visualizer' area=vsg.area_slug %}"><span>Visualizer</span></a> -->
+                                        <!-- <ul class="sub-menu">
+                                            {% for vsgs in vsgs %}
+                                            <li id="menu-item-3190" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3190">
+                                                <a href="{% url 'visualizer' area=vsgs.area_slug %}"><span>{{vsgs.area | title}}</span></a>
+                                            </li>
+                                            {% endfor %}
+                                        </ul> -->
+                                    </li>
+
+                                    <!-- contact -->
+                                    <li id="menu-item-3170" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3170 {% if request.resolver_match.url_name == 'contact' %} current-menu-ancestor current-menu-parent {% endif %}">
+                                        <a href="{% url 'contact' %}"><span>Contact</span></a>
+                                    </li>
+
+                                </ul>
+                            </nav> 
+                            
+                            <!-- search button -->
+                            <div class="header-search-button"><i class="base-icon-search"></i><i class="base-icon-close-button"></i></div>
+
+                            <div class="nav-butter visible_menu" data-magic-cursor="link-small"><span></span><span></span></div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+			<!-- search - popup -->
+            <div class="search-popup light-color">
+                <div class="form-block">
+                    <div class="title">What are you looking for?</div>
+
+                    <form action="{% url 'product_search' %}" method="get" enctype="multipart/form-data" role="search" method="get" class="searchform" >
+                        {% csrf_token %}
+
+                        <div>
+                            <input type="text" value="{{search}}" placeholder="Search" name="search" class="input" autocomplete="off" />
+                        </div>
+
+                        <button type="submit" class="searchsubmit" value=""><i class="base-icon-search"></i></button>
+
+                    </form>
+
+                </div>
+            </div>
+
+			<!-- left sidebar -->
+            <div class="sidebar-content-overlay"></div>
+            <div class="sidebar-content-block">
+                <div class="close base-icon-close-button"></div>
+                <div class="wrap scrollbar-inner">
+                    <div id="categories-3" class="widget widget_categories">
+                        <h6 class="widget-title">Locate Us</h6>
+                        <ul>
+                            <li>
+                                <p style="padding-left: 5%;">
+                                    Poglu-Piludra Crossing, <br>
+                                    NH. No.8, At Poglu, Ta. Prantij, <br>
+                                    SabarKantha, Gujarat, <br>
+                                    INDIA — 383205
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="tag_cloud-2" class="widget widget_tag_cloud">
+                        <h6 class="widget-title">Reach Us</h6>
+                        <ul style="list-style: none; padding-left: 0;">
+                            <li>
+                                <p style="padding-left: 5%;">
+                                    <b>Ph.</b> +91 8095625909 <br>
+                                        <!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; +91 7069018375 <br>-->
+                                        <!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; +91 2770244185 <br>-->
+                                        <!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; +91 2770244186 <br>-->
+                                        <!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; +91 2770244187 <br>-->
+                                    <b>Em.</b> levindecor@yahoo.com <br>
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+			<!-- nav : (mobile) -->
+            <div class="mobile-navigation-block">
+                <div class="close base-icon-close-button"></div>
+                <nav class="mobile-navigation">
+                    <ul class="menu">
+
+                        <!-- home -->
+                        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2888 {% if request.resolver_match.url_name == 'home' %} current-menu-ancestor current-menu-parent {% endif %}">
+                            <a href="{% url 'home' %}">Home</a>
+                        </li>
+
+                        <!-- products -->
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3141 {% if request.resolver_match.url_name == 'products' or request.resolver_match.url_name == 'product_detail' or request.resolver_match.url_name == 'product_search' %} current-menu-ancestor current-menu-parent {% endif %}">
+                            <a href="{% url 'products' %}">Products</a>
+                        </li>
+                        
+                        <!-- catalogues -->
+                        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3078 {% if request.resolver_match.url_name == 'catalogues' %} current-menu-ancestor current-menu-parent {% endif %}">
+                            <a href="{% url 'catalogues' %}">Catalogues</a>
+                            <!-- <ul class="sub-menu">
+                                <li class="menu-item menu-item-type-post_type menu-item-object-mphb_room_type menu-item-3079">
+                                    <a href="{% url 'catalogue_remark' %}">1MM - Remark</a>
+                                </li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-mphb_room_type menu-item-3079">
+                                    <a href="{% url 'catalogue_ultima' %}">Ultima</a>
+                                </li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-mphb_room_type menu-item-3079">
+                                    <a href="{% url 'catalogue_elite' %}">Elite</a>
+                                </li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-mphb_room_type menu-item-3079">
+                                    <a href="{% url 'catalogue_doorvin' %}">Doorvin</a>
+                                </li>
+                            </ul> -->
+                        </li>
+
+                        <!-- events -->
+                        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2894">
+                            <a href="#">Events</a>
+                            <ul class="sub-menu">
+                                {% for events in events %}
+                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2895 {% if request.resolver_match.url_name == 'events' %} current-menu-ancestor current-menu-parent {% endif %}">
+                                    <a href="{% url 'events' name_slug=events.name_slug %}">{{events.name | title}}</a>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </li>
+
+                        <!-- visualizer -->
+                        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2894">
+                            <a href="{% url 'visualizer_default' %}">Visualizer</a>
+                            <!-- <a href="{% url 'visualizer' area=vsg.area_slug %}">Visualizer</a> -->
+                            <!-- <ul class="sub-menu">
+                                {% for vsgs in vsgs %}
+                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2895">
+                                    <a href="{% url 'visualizer' area=vsgs.area_slug %}">{{vsgs.area | title}}</a>
+                                </li>
+                                {% endfor %}
+                            </ul> -->
+                        </li>
+
+                        <!-- contact -->
+                        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3170 {% if request.resolver_match.url_name == 'contact' %} current-menu-ancestor current-menu-parent {% endif %}">
+                            <a href="{% url 'contact' %}">Contact</a>
+                        </li>
+
+                    </ul>
+                </nav>
+                <div class="bottom">
+                    <div class="social-links">
+                        <div class="label">Follow us:</div>
+                        <a href="https://www.facebook.com/levin.decor.7" target="_blank"><i class="base-icon-facebook"></i></a>
+                        <a href="https://www.instagram.com/levindecorllp/" target="_blank"><i class="base-icon-instagram"></i></a>				
+                    </div>
+                </div>
+            </div>
+            
+
+            <!-- main -->
+            <div class="header-space" style="height: 125px !important;"></div>
+
+
+            {% block page_content %}
+            
+            
+            {% endblock %}
+
+
+            {% if request.resolver_match.url_name != 'catalogues' and request.resolver_match.url_name != 'product_detail_single' %}
+			    <!-- footer -->
+                <div class="menu-overlay"></div>
+                <footer class="site-footer light-color">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 col-sm-5 col-md-2 col-lg-3">
+                                <div class="site-logo">
+                                    <a href="{% url 'home' %}" data-magic-cursor="link">
+                                        <img src="{% static 'front/images/Levin_light.png' %}" alt="Levin Decor" style="max-width: 80px; margin-left: 26%;">
+                                    </a>
+                                </div>
+                                <div id="black-studio-tinymce-2" class="widget widget_black_studio_tinymce">
+                                    <div class="textwidget">
+                                        <h6>
+                                            Levin Decor LLP
+                                        </h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-4 col-md-3">
+                                <div id="custom_html-3" class="widget_text widget widget_custom_html">
+                                    <h6 class="widget-title">Address</h6>
+                                    <div class="textwidget custom-html-widget">
+                                        <div class="contact-item">
+                                            <div class="value" style="color: #D4D4D4;">
+                                                Poglu-Piludra Crossing,<br>
+                                                NH. No. 8, At Poglu, <br>
+                                                Ta. Prantij, Sabarkantha, <br>
+                                                Gujarat — 383205 <br>
+                                                <b>Open:</b> 9:00 AM 6:00 PM
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-3 col-md-3 col-lg-2">
+                                <div id="custom_html-4" class="widget_text widget widget_custom_html">
+                                    <h6 class="widget-title">Contact us</h6>
+                                    <div class="textwidget custom-html-widget">
+                                        <div class="contact-item without-label" style="padding-top: 0px !important;">
+                                            <div class="value" style="color: #D4D4D4;">
+                                                North INDIA : <br><b>+91 9913475034</b><br><br>
+                                                Central East INDIA : <br><b>+91 9825540015</b><br><br>
+                                                South INDIA : <br><b>+91 8095625909</b><br><br>
+                                                Western INDIA : <br><b>+91 7069018381</b> <br>
+                                                <br> <span style="text-align: center; width: 100%;">OR</span>
+                                                <br>levindecor@yahoo.com<br></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-3 offset-md-1">
+                                <div id="black-studio-tinymce-3" class="widget widget_black_studio_tinymce">
+                                    <h6 class="widget-title">Stay in touch</h6>
+                                    <div class="social-links-widget widget">
+                                        <div class="social-links">
+                                            <a href="https://www.facebook.com/levin.decor.7" target="_blank"><i class="base-icon-facebook"></i></a>
+                                            <a href="https://www.instagram.com/levindecorllp/" target="_blank"><i class="base-icon-instagram"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <style>
+                            @media(max-width:768px) {
+                                .hide-sm {
+                                    display: none !important;
+                                }
+                                .footer-bottom {
+                                    padding-bottom: 40px !important;
+                                }
+                            }
+                        </style>
+
+                        <div class="footer-bottom">
+                            <div class="left-text" style="float: left; display: inline-block;">© 2024, Levin Decor LLP</div>
+                            <div class="right-text" style="float: right; display: inline-block;">
+                                <div class="links hide-sm" style="display:inline-block;">							
+                                    <a href="{% url 'privacy_policy' %}"><span>Privacy policy</span></a>
+                                </div>
+                                <div class="hide-sm" style="display: inline-block;">
+                                    &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;					
+                                    Developed by  &nbsp;&nbsp;	
+                                </div>
+                                <div class="links" style="display:inline-block;">	
+                                    <a href="https://krioskcreata.com" target="_blank">
+                                        <span>
+                                            <img src="{% static 'front/images/kriosk-logo-white.png' %}" alt="Kriosk Creata" style="width: 60px; margin-bottom: -8px;">
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            {% endif %}
+
+			<!-- cookie popup -->
+            <div class="gdpr-modal-block">
+                <div class="close base-icon-close-button"></div>
+                <div class="text">This website uses cookies to improve your experience. <a href="#">Cookie Policy</a></div>
+            </div>
+
+        </div>
+
+        
+        <link rel='stylesheet' id='pt-inline-css'  href='{% static "front/css/pt-inline7263.css" %}' type='text/css' media='all' />
+
+        {% block footerblock  %}
+
+            
+        {% endblock %}
+
+        <script type='text/javascript' src='{% static "front/js/swiper.min48f5.js" %}'></script>
+        <script type='text/javascript' src='{% static "front/js/scripts5fba.js" %}'></script>
+        <script type='text/javascript' src='{% static "front/js/can.custom.mincd70.js" %}'></script>
+        <script type='text/javascript' src='{% static "front/js/jquery.plugin.mincd70.js" %}'></script>
+        <script type='text/javascript' src='{% static "front/js/jquery.datepick.mincd70.js" %}'></script>
+
+        <!-- <script type='text/javascript' src='{% static "front/js/mphb.mincd70.js" %}'></script> -->
+        <script type='text/javascript' src='{% static "front/js/js.cookie.min6b25.js" %}'></script>
+
+        <script type='text/javascript' src='{% static "front/js/woocommerce.min3a05.js" %}'></script>
+        <script type='text/javascript' src='{% static "front/js/jquery.cookie.min330a.js" %}'></script>
+
+        <script type='text/javascript' src='{% static "front/js/Cart.min370e.js" %}'></script>
+        <script type='text/javascript' src='{% static "front/js/magic-cursor8a54.js" %}'></script>
+        <script type='text/javascript' src='{% static "front/js/isotope.pkgd.min7c45.js" %}'></script>
+        <script type='text/javascript' src='{% static "front/js/jquery.scrollbar.min22c9.js" %}'></script>
+        <script type='text/javascript' src='{% static "front/js/scripts.js" %}'></script>
+        <script type='text/javascript' src='{% static "front/js/js_composer_front.min8a54.js" %}'></script>
+        <script type='text/javascript' src='{% static "front/js/parallax.min.js" %}'></script>
+        <script type='text/javascript' src='{% static "front/js/photoswipe.min0235.js" %}'></script>
+        <script type='text/javascript' src='{% static "front/js/photoswipe-ui-default.min0235.js" %}'></script>
+        <script type='text/javascript' src='{% static "front/js/imagesloaded.min55a0.js" %}'></script>
+        <script type='text/javascript' src='{% static "front/js/load-posts8a54.js" %}'></script>
+
+        <script type='text/javascript' src='{% static "front/js/pt-scripts8a54.js" %}'></script>
+        <script type='text/javascript' src='{% static "front/js/pt-accordion8a54.js" %}'></script>
+
+        <script type='text/javascript' src='{% static "front/js/wp-embed.min7263.js" %}'></script>
+        <script type='text/javascript' src='{% static "front/js/forms.mine049.js" %}'></script>
+
+    </body>
+</html>

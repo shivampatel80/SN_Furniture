@@ -1,0 +1,104 @@
+{% extends 'back/master_back.html' %}
+
+{% load static %}
+
+
+    {% block headblock %}
+
+    <style>
+        /* Chrome, Safari, Edge, Opera */
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+
+        /* Firefox */
+        input[type=number] {
+          -moz-appearance: textfield;
+        }
+    </style>
+
+    {% endblock %}
+
+
+
+    {% block page_content %}
+    <!-- padding : 0 on both sides -->
+
+    <div class="container" style="padding: 10px 0px 0px 0px !important; margin-top: 35px;">
+        <div class="container">
+
+            <!-- form -->
+            <div id="ftFormArray" class="col-lg-12 col-12 layout-spacing" >
+                <div class="statbox widget box box-shadow">
+
+                    <div class="widget-header">
+                        <div class="row">
+                            <div class="col-xl-12 col-md-12 col-sm-12 col-12" style="margin-top: 20px; margin-left: 7px;">
+                                <h4>Visual-Gallery Product Edit</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="widget-content widget-content-area custom-autocomplete h-100">
+
+                        <!-- {{demo}} -->
+                        <form onsubmit="myFunction()" action="{% url 'vsg_back_product_edit' vsg_pk=vsg_obj.pk vsg_product_pk=vsg_product.pk %}" method="post" id="quillForm1" name="quillForm1" enctype="multipart/form-data" class="form-horizontal">
+                            {% csrf_token %}
+
+                            <div class="form-row mb-4">
+                                <div class="form-group col-md-3">
+                                    <label for="product_pk">Products</label>
+                                    <select class="form-control form-small" name="product_pk" id="product_pk" style="margin-bottom: 0px;" required>
+                                        <option value="{% if vsg_product.fk_product %}{{vsg_product.fk_product.pk}}{% endif %}" selected>Selected : {% if vsg_product.fk_product %}{{vsg_product.fk_product.name | title}}{% else %}None{% endif %}</option>
+                                        {% for products in products %}
+                                            {% if products != vsg_product.fk_product %}
+                                                <option value="{{products.pk}}">{{products.name | title}}</option>
+                                            {% endif %}
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-row mb-4">
+                                <div class="form-group col-md-6">
+                                    <label for="is_active">Active</label>
+                                    <label class="switch s-dark mr-2" style="margin-left: 30px; margin-bottom: -3px;">
+                                        {% if vsg_product.is_active == True %}
+                                        <input type="checkbox" id="is_active" name="is_active" value="True" checked>
+                                        {% else %}
+                                        <input type="checkbox" id="is_active" name="is_active" value="True">
+                                        {% endif %}
+                                        <span class="slider"></span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary mt-3">Edit</button>
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    {% endblock %}
+
+
+    {% block footerblock  %}
+
+    <script>
+
+    $("input[name='number']").TouchSpin({
+        verticalbuttons: true,
+        buttondown_class: "btn btn-classic btn-outline-info",
+        buttonup_class: "btn btn-classic btn-outline-danger"
+    });
+
+    </script>
+
+    {% endblock %}

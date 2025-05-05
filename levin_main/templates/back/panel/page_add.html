@@ -1,0 +1,213 @@
+{% extends 'back/master_back.html' %}
+
+{% load static %}
+
+
+    {% block headblock %}
+
+    <style>
+        /* Chrome, Safari, Edge, Opera */
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+        
+        /* Firefox */
+        input[type=number] {
+          -moz-appearance: textfield;
+        }
+    </style>
+
+    <!-- bootstrap for tags -->
+    <style>
+        .bootstrap-tagsinput {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+            display: block;
+            padding: 4px 6px;
+            color: #555;
+            vertical-align: middle;
+            border-radius: 4px;
+            max-width: 100%;
+            line-height: 32px;
+            cursor: text;
+        }
+        .bootstrap-tagsinput input {
+            border: none;
+            box-shadow: none;
+            outline: none;
+            background-color: transparent;
+            padding: 5px 16px;
+            margin: 0;
+            width: auto;
+            max-width: inherit;
+        }
+        .bootstrap-tagsinput .tag {
+            background: gray;
+            border: 1px solid;
+            padding: 0 6px;
+            margin-right: 2px;
+            color: white;
+            border-radius: 4px;
+            }
+    </style>
+
+    {% endblock %}
+
+    
+    
+    {% block page_content %}     
+
+    <div class="container">
+        <div class="container">
+
+            <div class="row layout-top-spacing">
+                
+                <div id="ftFormArray" class="col-lg-12 layout-spacing">
+                    <div class="statbox widget box box-shadow">  
+
+                        <div class="widget-header">
+                            <div class="row">
+                                <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                    <h4>Page Add</h4>
+                                </div>          
+                            </div>
+                        </div>
+
+                        <div class="widget-content widget-content-area custom-autocomplete h-100">
+
+                            <form onsubmit="myFunction()" action="{% url 'page_handler_add' %}" method="post" id="quillForm1" name="quillForm1" enctype="multipart/form-data" class="form-horizontal">
+                                {% csrf_token %}
+
+                                <div class="form-row mb-4">
+                                    <div class="form-group col-md-4">
+                                        <label for="name">Page Name</label>
+                                        <input type="text" class="form-control" id="name" name="name" placeholder="i.e. Home" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-row mb-4">
+                                    <div class="form-group col-md-4">
+                                        <label for="meta_title">Meta Title</label>
+                                        <input type="text" class="form-control" id="meta_title" name="meta_title" placeholder="i.e. Best Home Page in World" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-row mb-4">
+                                    <div class="form-group col-md-6">
+                                        <label for="meta_description">Meta Description</label>
+                                        <textarea name="meta_description" id="meta_description" rows="3" class="form-control" placeholder="We are best home page 'cause ..." required></textarea>
+                                    </div>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary mt-3">Add Page</button>
+
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    {% endblock %}
+
+
+    {% block footerblock  %}
+
+    <!-- for tags -->
+    <script src="{% static 'back/bootstrap/js/bootstrap-tagsinput.js' %}"></script>
+
+    <script>
+        //First upload
+        var firstUpload = new FileUploadWithPreview('myFirstImage')
+        //Second upload
+        // var secondUpload = new FileUploadWithPreview('mySecondImage')
+    </script>
+    
+    <!-- quill js -->
+    <script type="text/javascript">
+
+        // < ==========  1  ========== >
+        var quill1 = new Quill('#editor-container1', {
+        modules: {
+            toolbar: [
+            [{ header: [1, 2, false] }],
+            ['bold', 'italic', 'underline'],
+            ['link', 'blockquote', 'image', 'code-block'],
+            [{ list: 'ordered' }, { list: 'bullet' }]
+            ]
+        },
+        placeholder: 'Compose an epic...',
+        theme: 'snow'  // or 'bubble'
+        });
+
+
+        function myFunction() {
+
+            var text1html = quill1.root.innerHTML;
+
+            var detail1 = document.getElementById('detail1');
+
+            detail1.value = text1html;
+        
+        }
+
+        $("input[name='position_number']").TouchSpin({
+            verticalbuttons: true,
+            buttondown_class: "btn btn-classic btn-outline-info",
+            buttonup_class: "btn btn-classic btn-outline-danger"
+        });
+
+
+
+        // handling form
+        // var preciousContent = document.getElementById('detail1');
+
+        // javascript events "".on"
+        // quill.on('text-change', function() {
+        //     var text = quill.getText();
+        //     var justHtml = quill.root.innerHTML;
+
+        //     preciousContent.value = text;
+
+        //     console.log(text);
+        //     console.log(preciousContent);
+        // });
+
+        // var quill = new Quill('#editor-container1', {
+        //     modules: {
+        //         toolbar: [
+        //         [{ header: [1, 2, false] }],
+        //         ['bold', 'italic', 'underline'],
+        //         ['link', 'blockquote', 'image', 'code-block'],
+        //         [{ list: 'ordered' }, { list: 'bullet' }]
+        //         ]
+        //     },
+        //         placeholder: 'Compose an epic...',
+        //         theme: 'snow'  // or 'bubble'
+        // });
+
+
+        // function myFunction() {
+
+        //     var text = quill.getText();
+        //     var justHtml = quill.root.innerHTML;
+
+        //     preciousContent.value = text;
+
+        //     console.log(text);
+        //     console.log(preciousContent);
+
+        //     alert("Success Baby !")
+            
+        // }
+
+
+    </script>
+
+    {% endblock %}

@@ -1,0 +1,612 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+        <meta http-equiv="Content-Type" content="image/svg+xml; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+        
+        <title>{% if page_handler %}{{page_handler.meta_title}}{% endif %}</title>
+        <meta name="description" content="{% if page_handler %}{{page_handler.meta_description}}{% endif %}" />
+       
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="{% static 'front/images/Levin.png' %}" />
+        
+        <!-- head stylesheets -->
+        <link rel="canonical" href="index.html" />
+        <link href="{% static 'vsg/css/msi-ui6c3f.css' %}" rel="stylesheet"/>
+        <!-- Begin Mailchimp Signup Form -->
+        <link href="{% static 'vsg/css/classic-10_7.css' %}" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600|Raleway:400,500&amp;selection.subset=latin-ext"/>
+
+        <!-- head scripts -->
+        <!-- Google Tag Manager -->
+        <script>
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || []; w[l].push({
+                    'gtm.start':
+                        new Date().getTime(), event: 'gtm.js'
+                }); var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                        '../../www.googletagmanager.com/gtm5445.html?id=' + i + dl; f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-M2KXQ3');
+        </script>
+        <script src="{% static 'vsg/js/jquery0260.js' %}"></script>
+
+        <link rel="stylesheet" href="{% static 'back/vendors/font-awesome/css/font-awesome.min.css' %}">
+
+        <script type="text/javascript">
+
+            var url = "";
+
+            function doAction(url, name, brand) {
+
+                $('.main-image').css('background-image', 'url(' + url + ')');
+
+                $('.post-title').html('  ' + name);
+
+                $('.brand-name').html('  ' + brand);
+
+                $('.image-selected').attr("src", url);
+
+                // $('.post-finish').html(finish)
+
+            }
+
+        </script>
+
+        <!-- jquery -->
+        <!-- <script src="{% static 'front/js/jquery-3.3.1.min.js' %}"></script> -->
+        <!-- lazy -->
+        <!-- <script type="text/javascript" src="{% static 'front/js/jquery.lazy.min.js' %}"></script> -->
+
+        <style>
+            @media(max-width: 992px){
+                .cartbtn-header1{
+                    margin-top: -8px !important;
+                    display: none !important;
+                }
+                .cartbtn-header2{
+                    margin-top: -8px !important;
+                }
+            }
+            @media(min-width: 992px){
+                .cartbtn-header2{
+                    display: none !important;
+                }
+            }
+            /* bootstrap xs gridding */
+            .col-1212{
+                width: 100% !important;
+            }
+            .col-1111{
+                width: 91.3% !important;
+            }
+            .col-1010{
+                width: 83% !important;
+            }
+            .col-99{
+                width: 74.7% !important;
+            }
+            .col-88{
+                width: 66.4% !important;
+            }
+            .col-77{
+                width: 58.1% !important;
+            }
+            .col-66{
+                width: 49.8% !important;
+            }
+            .col-55{
+                width: 41.5% !important;
+            }
+            .col-44{
+                width: 33.2% !important;
+            }
+            .col-33{
+                width: 24.9% !important;
+            }
+            .col-22{
+                width: 16.6% !important;
+            }
+            .col-11{
+                width: 8.3% !important;
+            }
+
+            .buttonin {
+                border: 1px solid #8B6F4E;
+            }
+
+        </style>
+
+    </head>
+
+
+    <body>
+
+        <!-- header -->
+        <header id="HeadSection">
+        
+            <div class="container-wrapper">
+            <div class="logo-container">
+                <div class="logo display-inline">
+                    <a href="{% url 'home' %}">
+                        <img src="{% static 'front/images/Levin.png' %}" alt="Levin Decor" style="height: 70px;">
+                    </a>
+                </div>
+                <div class="nav-login display-inline">
+                    <a href="#msi-mmenu" title="product-menu" class="glyphicon glyphicon-menu-hamburger dropdown-toggle toggle-menu hmbrgr-mbl">MENU</a>
+                    
+                    <!-- <span class="divider cartdvdr">|</span> -->
+                    <a href="{% url 'home' %}" class="cartbtn-header cartbtn-header1">
+                        <img src="{% static 'vsg/images/back.png' %}" alt="" style="margin-bottom: 3px;">
+                        <span class="SampleSpan">BACK TO HOME</span>
+                    </a>
+                    <a href="{% url 'home' %}" class="cartbtn-header cartbtn-header2">
+                        <img src="{% static 'vsg/images/back.png' %}" alt="" style="margin-bottom: 3px;">
+                        <span class="SampleSpan">Back</span>
+                    </a>
+                </div>
+            </div>
+            </div>
+
+            <hr />
+
+            <!-- menu -->
+            <div id="menu-wrap" class="topnav-wrapper" style="display: flex; justify-content: center;">
+                <div class="container-wrapper">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <ul class="msi-navbar-main" id="msi-navbarmain">
+                                <li>
+                                    <nav id="msi-mmenu" aria-label="menu">
+                                        <ul id="msi-navbar" class="hidden">
+                                            <li>
+                                                <a href="javascript:void(0)">Application Area</a>
+                                                <ul class="sub-menu">
+                                                    {% for vsgs in vsgs %}
+                                                    <li>
+                                                        <a href="{% url 'visualizer' area=vsgs.area_slug %}" target="_self">{{vsgs.area | title}}</a>
+                                                    </li>
+                                                    {% endfor %}
+                                                    <!-- <li>
+                                                        <a href="#" target="_self">Kitchen</a>
+                                                        <ul class="nested-navbar-ul">
+                                                            <li class="nested-navbar-li"><a href="#">Wall</a></li>
+                                                            <li class="nested-navbar-li"><a href="#">Furniture</a></li>
+                                                        </ul>
+                                                    </li> -->
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="{% url 'products' %}">Explore More</a>
+                                                <!-- <a href="javascript:void(0)">Explore More</a>
+                                                <ul>
+                                                    {% for vsg_products in vsg_products %}
+                                                        <li><a href="#" target="_self">{% if vsg_products.fk_product %}{{vsg_products.fk_product.name | capfirst}} {% endif %} Series</a> </li>
+                                                    {% endfor %}
+                                                </ul> -->
+                                            </li>
+                                            <li>
+                                                <a href="{% url 'contact' %}" target="_self">Contact Us</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script type="text/javascript">
+                $(document).ready(function () {
+                
+
+                // $.ajax({
+                //     type: "POST",
+                //     url: 'https://www.msisurfaces.com/autofill.asmx/OSGetCount',
+                //     contentType: "application/json; charset=utf-8",
+                //     dataType: "json",
+                //     success: function (response) {
+                //         var count = response.d;
+                //         if (count != 0) {
+                //             $('#Header_lblCnt').html(count);
+                //         }
+                //         else {
+                //             $('#Header_lblCnt').visible = false;
+                //         }
+
+
+
+                //     },
+                //     error: function (xhr) {
+
+                //         console.log(xhr);
+                //     }
+                // });
+            });
+            </script>
+
+        </header>
+
+        <!-- main section -->
+        <section role="main">
+
+            <div class="ss-section">
+                <div class="container">
+
+                    <div class="row space-top-2x">
+
+                        <!-- right content -->
+                        <div class="col-xs-12 col-sm-12 col-lg-12 col-xl-4 col-xl-push-8" id="EnvisionBathroom">
+                            <h1 class="text-center vsg-title">ENVISION YOUR SPACE</h1>
+                            <p class="text-center bathroom_text">
+                                    Encounter the enlivened version of our products to ensure their presence and their beauty that we promise to bring to your space. 
+                            </p>
+                            <div class="hidden-xs hidden-sm hidden-md" id="instructions">
+                                <div class="instruct">
+                                    <h4 class="text-center instruct-heading">INSTRUCTIONS</h4>
+                                    <div class="image123">
+                                        <img class="img-responsive" Align="middle" src="{% static 'vsg/images/onetwothree.png' %}" alt="onetwothree" />
+                                    </div>
+                                    <div class="instruct-text">
+                                        <p class="p1">Choose Application Area.</p>
+                                        <p class="p2">Select any of our Product.</p>
+                                        <p class="p3">Witness the Magic!</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="hidden-xs hidden-sm hidden-md hidden-lg selected-opt">
+                                    <div class="h5 text-center">Selected option</div>
+                                    <br/>
+                                    <div class="col-lg-9 selected-backsplash-left">
+                                        <h3 class="text-center brand-name" style="margin-top: 0px;">Remark 1mm  :</h3>
+                                        <img id="backsplashthumbimg" class="image-selected img-responsive" style="height: 100px; width: 100px; object-fit: cover !important;" src="{% static 'front/images/666.jpg' %}"/>
+                                        <a class="backsplashprodid text-center post-title">666</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- left main image -->
+                        <div class="col-xs-12 col-sm-12 col-lg-12 col-xl-8 col-xl-pull-4 space-top">
+                            <canvas id="bhCanvas" class="hide" height="712" width="930"></canvas>
+                            
+                            <img src="{% if vsg.image1 %}{{vsg.image1.url}}{% endif %}" alt="" style="position: relative; width: 100%; background-image: url({% static 'front/images/666.jpg' %}); background-size: 16%; background-position-y: 41%;" class="main-image" id="main-image">
+                        </div>
+                        
+                    </div>
+
+                    <div class="row space-top bth_visualizerwidth" id="BathroomVisualizer">
+                        <div class="col-xs-12 tabs" id="tabsalign">
+
+                            <!-- needed for expand button function -->
+                            <!-- <div class="row space-top hide" id="Expand-row">
+                                <h2 id="ExpandText" class="text-center col-xs-12 col-sm-12 col-md-12 col-lg-6 col-lg-offset-5 space-bottom" style="display:none;">Choose from options below</h2>
+                                <br/>
+                                <p id="ExpandParagraph" class="text-center hide">Once your color options are selected, exit out of this window to view your ideal bathroom.<br /></p>
+                            </div>
+
+                            <a class="MagicZoom col-lg-5 img-responsive space-top-2x  hidden-xs hidden-sm hidden-md hide" id="Expandzoom" data-options="zoomPosition:inner; zoomDistance: 0;zoomCaption: bottom hint: always;zoomWidth:100%;zoomHeight:100%;" href="">
+                                <img src="images/demo.jpg" alt="" style="position: relative; width: 100%;">
+                            </a> -->
+
+                            <!-- Buttons right -->
+                            <ul class="nav nav-tabs">
+                                
+                                <!-- Expand -->
+                                <!-- <li class="pull-right">
+                                    <button class="btn btn-primary btn-sm mp-popup" id="Expand" href="#BathroomVisualizer"><img src="{% static 'vsg/images/expand.svg' %}" class="Expandimg" alt="expand svg" /> 
+                                        <span class="hidden-xs"> Expand</span>
+                                    </button>
+                                </li> -->
+
+                                <li class="hidden-sm hidden-md hidden-lg"> <br /><br /></li>
+
+                                <li class="col-xs-6 pull-left">
+                                    {% for vsg_products in vsg_products %}
+                                        <li class="backsplash {% if vsg_products.is_active == True %} active {% endif %}">
+                                            <a href="#product_{{vsg_products.pk}}" data-toggle="tab" >{% if vsg_products.fk_product %}{{vsg_products.fk_product.name}}{% endif %}</a>
+                                        </li>
+                                    {% endfor %}
+                                </li>
+
+                            </ul>
+
+                            <!-- Tab content -->
+                            <div class="tab-content">
+                                {% for vsg_products in vsg_products %}
+                                    {% if vsg_products.fk_product %}
+                                        <div id="product_{{vsg_products.pk}}" class="tab-pane fade backsplash in {% if vsg_products.is_active == True %} active {% endif %}">
+                                            <!-- title -->
+                                            <div class="row">
+                                                <label class="col-xs-12 prod-text">{{vsg_products.fk_product.name}} :<a class="backsplashprodname post-title"></a><br /></label>
+                                                <br />
+                                            </div>
+                                            <div class="row  tab-scroll subcategory-tab">
+                                                {% for full_sheets in full_sheets %}
+                                                    {% if full_sheets.fk == vsg_products.fk_product %}
+                                                    <div class="subcategory-img text-left" data-filter="2924" data-subcategory="backsplash">
+                                                        <span data-filter="2924" class="text-center">
+                                                            <a href="javascript:void(0)" style="cursor:pointer" class="crop">
+                                                                <img class="thumbimg product-image lazy" src="{% if full_sheets.image1 %}{{full_sheets.image1.url}}{% endif %}" loading="lazy" alt="{{sheet.number}}" onclick="doAction( '{% if full_sheets.image1 %}{{full_sheets.image1.url}}{% endif %}', '{{full_sheets.number}}', '{{vsg_products.fk_product.name}}');" style="object-fit: cover !important;">
+                                                            </a>
+                                                            <figcaption class="img-title">{{full_sheets.number}}</figcaption>
+                                                            <div style="width: 100%; margin-top: -50px; padding-bottom: 30px;"><a href="{{full_sheets.image1.url}}" target="_blank"><button class="buttonin"><i class="fa fa-search-plus" style="color: #8B6F4E"></i></button></a></div>
+                                                        </span>
+                                                    </div>
+                                                    {% endif %}
+                                                {% endfor %}
+                                            </div>
+                                        </div>
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <br/>
+
+                <!-- Needed for Expand -->
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myEmailModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true" onclick="Close()">×</button>
+                                <h4 class="modal-title" id="myEmailModalLabel">EMAIL</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div style="clear: both"></div>
+                                <div class="row">
+                                    <div class="col-lg-1">
+                                        <b>To</b>
+                                    </div>
+                                    <div class="col-lg-11">
+                                        <input type="text" class="required" placeholder="abc@msisurfaces.com" name="ToIds" id="ToIds" style="width:100%;" />
+                                        <span id="email" class="text-danger">please enter valid email address</span>
+                                    </div>
+                                </div>
+                                <br />
+                                <div class="row">
+                                    <div class="col-lg-1">
+                                        <b>CC</b>
+                                    </div>
+                                    <div class="col-lg-5">
+                                        <input type="text" name="CCIds" style="width:100%;" id="CCIds" placeholder="abc@msisurfaces.com,abc123@gmail.com" />
+                                    </div>
+                                    <div class="col-lg-1">
+                                        <b>BCC</b>
+                                    </div>
+                                    <div class="col-lg-5">
+                                        <input type="text" class="required" name="BCCIds" id="BCCIds" style="width:100%;" placeholder="abc@msisurfaces.com,abc123@gmail.com" />
+                                    </div>
+                                </div>
+                                <br />
+                                <div class="row">
+                                    <div class="col-lg-1" style="padding-top:15px;">
+                                        <b>Subject</b>
+                                    </div>
+                                    <div class="col-lg-11">
+                                        <input type="text" class="form-control" name="subject" id="subject" value="My Bathroom Design" />
+                                    </div>
+                                </div>
+                                <br />
+                                <textarea name="editor" id="editor"></textarea>
+                            </div>
+                            <div class="modal-footer">
+                                <div class="row">
+                                    <div class="col-xs-12 col-lg-6">
+                                        <button type="button" class="btn btn-primary" onclick="SendEmail()">SEND</button>
+                                        <button type="button" class="btn btn-warning" onclick="Close()">CANCEL</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <script  type="text/javascript" src="{% static 'vsg/js/ckeditor.js' %}"></script>
+            <script defer type="text/javascript" src="{% static 'vsg/js/pinit.js' %}"></script>
+
+        </section>
+
+        <!-- footer -->
+        <footer id="FooterSection" role="contentinfo">
+            <!-- <div class="copper-bar"></div> -->
+        <hr />
+        <div class="footer-bottom">
+            <div class="social-tools-container">
+                <div class="container-wrapper">
+                    <div class="row" style="display: flex;">
+
+                        <!-- Kriosk Logo -->
+                        <div class="col-88 col-sm-4 col-md-4">
+                            <div class="msi-logo">
+                                <a href="{% url 'home' %}"><img class="img-responsive msi-logo" src="{% static 'front/images/Levin.png' %}" alt="logo" style="height: 70px;" /></a>
+                            </div>
+                        </div>
+
+                        <!-- Social -->
+                        <div class="col-44 col-sm-8 col-md-8">
+                            <div class="social-tools">
+                                <div class="icon-container"><a class="facebook" href="https://www.facebook.com/levin.decor.7" target="_blank" aria-label="Facebook"></a></div>
+                                <div class="icon-container"><a class="instagram" href="https://www.instagram.com/levindecorllp/" target="_blank" aria-label="Instagram"></a></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="copyright-disclaimer" style="margin-top: 20px;">
+                <div class="container-wrapper">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <ul id="txt-align">
+                                <li id="msirights-text">
+                                    <p class="copyright-text">Levin Decor LLP, All rights reserved © 2021 | Developer by </p><a href="https://krioskcreata.com" target="_blank"><img src="{% static 'vsg/images/kriosk_logo.svg' %}" alt="KrioskCreata" style="width: 65px; margin-left: 12px;"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <script>
+            function setSignUpFormHeight() {
+                var doc = $(window).height(); // document height
+                var head = $(".modal-header").height(); // modal header height
+                var footer = $(".modal-footer").height(); // modal footer height
+                var modheight = doc - head - footer - 170; // 170 is extra margins and it will not effect the height of modal any way if not changed.
+                $('#email-body').css('height', modheight);
+            }
+            function openModal() {
+            
+                if ($('#txtEmail').val().length > 0) {
+                
+                    $('#myModal1').slideDown('slow');
+                    $('#myModal1').addClass('in');
+                    $('<div class="modal-backdrop"></div>').appendTo(document.body);
+                    setSignUpFormHeight();
+                    $('input[name=EMAIL]').val($('#txtEmail').val());
+                    $('#txtEmail').val('');
+                    return false;
+                }
+                else {
+                    alert('Please Enter Email Address');
+                }
+            }
+            function modalclose() {
+                    $(".modal-backdrop").remove();
+                    $("#myModal1").slideUp("fast", function () {
+                            });
+            
+                }
+            
+            
+            
+            
+                $("#mc-embedded-subscribe").on('click', function () {
+                    if ($('input[name = EMAIL]').length > 0) {
+                        
+            
+            
+                        if (!(/^[a-zA-Z0-9_\.-]+@([a-zA-Z0-9-]+\.)+[a-zA-Z]{2,6}$/.test($("#mce-EMAIL").val()))) {
+            
+            
+                    }
+                    else {
+            
+                        alert("Thank you for subscribing");
+                        modalclose();
+                    }
+            
+            
+            
+                }
+            
+                });
+            
+                $('#txtEmail').on('keypress', function (event) {
+                    if (event.which === 13) {
+                        if ($(this).val().length > 0) {
+                            $('#myModal1').slideDown('slow');
+                    $('#myModal1').addClass('in');
+                    $('<div class="modal-backdrop"></div>').appendTo(document.body);
+                    setSignUpFormHeight();
+                    $('input[name=EMAIL]').val($('#txtEmail').val());
+                    $('#txtEmail').val('');
+                    return false;
+                        }
+                        else {
+                            alert('Please Enter Email Address');
+                        }
+                    }
+                });
+            $(document).ready(function () { 
+                setSignUpFormHeight();
+                setfootertextalign();
+            
+            });
+            window.onresize = function (event) {
+                setSignUpFormHeight();
+                setfootertextalign();
+            };
+            function setfootertextalign() {
+            
+                if ($(window).width() >= 1200) {
+            
+                    $("#msirights-text").removeClass("col-xs-12").addClass("pull-right");
+                    $("#txt-align").removeClass("text-center");
+                }
+                else {
+                    $("#msirights-text").removeClass("pull-right").addClass("col-xs-12");
+                    $("#txt-align").addClass("text-center");
+                }
+            }
+        </script>
+        <script type='text/javascript' src='{% static "vsg/js/mc-validate.js" %}'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[5]='MMERGE5';ftypes[5]='zip';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[6]='MMERGE6';ftypes[6]='text';fnames[7]='MMERGE7';ftypes[7]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+        <script type="text/javascript" src="{% static 'vsg/js/embed.js' %}" data-dojo-config="usePlainJson: true, isDebug: false"></script>
+        <script type="text/javascript" src="{% static 'vsg/js/rum.js' %}"></script>
+        <script type="text/javascript">rum.start("a6c9128949730a6abb937a0dbbd10b00");</script>
+        <script type="text/javascript" src="{% static 'vsg/js/173033.js' %}"></script>
+        <noscript><img alt="" src="{% static 'vsg/173033.html' %}" style="display:none;" /></noscript>
+        <!--Start of Tawk.to Script-->
+        <script type="text/javascript">
+            var w = window;
+            var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+            (function () {
+                function l() {
+                    var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+                    s1.async = true;
+                    s1.src = 'https://embed.tawk.to/5de665d0d96992700fca8407/default';
+                    s1.charset = 'UTF-8';
+                    s1.setAttribute('crossorigin', '*');
+                    s0.parentNode.insertBefore(s1, s0);
+                }
+                if (w.attachEvent) {
+                    w.attachEvent('onload', l);
+                } else {
+                    w.addEventListener('load', l, false);
+                }
+            })();
+        </script>
+        <!--end-->
+        </footer>
+
+        <link href="{% static 'vsg/css/obec92.css' %}" rel="stylesheet"/>
+
+        <script src="{% static 'vsg/js/obec92.js' %}"></script>
+        <script src="{% static 'vsg/js/jqueryui3024.js' %}"></script>
+        <script src="{% static 'vsg/js/base7581.js' %}"></script>        
+
+        <!-- jquery -->
+        <!-- <script src="{% static 'front/js/jquery-3.3.1.min.js' %}"></script> -->
+        
+        <!-- lazy -->
+        <!-- <script>
+            $(function() {
+                $('.laazy').Lazy();
+            });
+        </script>
+        
+        <script type="text/javascript" src="{% static 'front/js/jquery.lazy.min.js' %}"></script> -->
+    
+    </body>
+
+</html>

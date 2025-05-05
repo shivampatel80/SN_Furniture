@@ -1,0 +1,96 @@
+{% extends 'back/master_back.html' %}
+
+{% load static %}
+
+
+    {% block headblock %}
+
+    {% endblock %}
+
+    
+    
+    {% block page_content %}     
+
+    <div class="container">
+        <div class="container">
+
+            <div class="layout-px-spacing">
+
+                <div class="row layout-top-spacing">
+
+                    <div class="col-xl-8 col-lg-12 col-md-8 col-sm-12 col-12 layout-spacing">
+                        <div class="widget widget-table-one" style="padding: 20px;">
+                            <div class="widget-heading">
+                                <h5 class="">Recent Inquiries</h5>
+                            </div>
+
+                            <style>
+                                @media(max-width:768px){
+                                    .btn{
+                                        padding: 5px 15px;
+                                        font-size: 10px;
+                                    }
+                                }
+                            </style>
+                            <div class="widget-content">
+                                
+                                {% for inquiry in inquiry %}
+                                <div class="transactions-list">
+                                    <div class="t-item">
+                                        <div class="t-company-name">
+                                            <div class="t-icon">
+                                                <div class="icon">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-smile"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
+                                                </div>
+                                            </div>
+                                            <div class="t-name">
+                                                <h4>{{inquiry.name | title}}</h4>
+                                                <p class="meta-date">{{inquiry.date}}</p>
+                                            </div>
+
+                                        </div>
+                                        <div class="t-rate rate-dec">
+                                            <a href="{% url 'enquiry_view' enquiry_pk=inquiry.pk %}" class="btn btn-dark">Know More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- <div class="col-xl-4 col-lg-6 col-md-4 col-sm-6 col-12 layout-spacing">
+                        <div class="widget widget-account-invoice-two" style="height: 100%;">
+                            <div class="widget-content">
+                                <div class="account-box">
+                                    <div class="info">
+                                        <h5 class="">Blogs</h5>
+                                        <p class="inv-balance" style="color: black;">{{blog_count}} ?</p>
+                                    </div>
+                                    <div class="acc-action">
+                                        <div class="">
+                                            <a href="#">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                                                ADD
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    {% endblock %}
+
+
+    {% block footerblock  %}
+
+    {% endblock %}

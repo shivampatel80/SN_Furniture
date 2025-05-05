@@ -1,0 +1,245 @@
+{% extends 'back/master_back.html' %}
+
+{% load static %}
+
+
+    {% block headblock %}
+
+        <style>
+            /* Chrome, Safari, Edge, Opera */
+            input::-webkit-outer-spin-button,
+            input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+            }
+            
+            /* Firefox */
+            input[type=number] {
+            -moz-appearance: textfield;
+            }
+        </style>
+
+        <!-- bootstrap for tags -->
+        <style>
+            .bootstrap-tagsinput {
+                background-color: #fff;
+                border: 1px solid #ccc;
+                box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+                display: block;
+                padding: 4px 6px;
+                color: #555;
+                vertical-align: middle;
+                border-radius: 4px;
+                max-width: 100%;
+                line-height: 32px;
+                cursor: text;
+            }
+            .bootstrap-tagsinput input {
+                border: none;
+                box-shadow: none;
+                outline: none;
+                background-color: transparent;
+                padding: 5px 16px;
+                margin: 0;
+                width: auto;
+                max-width: inherit;
+            }
+            .bootstrap-tagsinput .tag {
+                background: gray;
+                border: 1px solid;
+                padding: 0 6px;
+                margin-right: 2px;
+                color: white;
+                border-radius: 4px;
+                }
+        </style>
+
+        <link rel="stylesheet" type="text/css" href="{% static 'back/plugins/table/datatable/datatables.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'back/plugins/table/datatable/custom_dt_html5.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'back/plugins/table/datatable/dt-global_style.css' %}">
+
+    {% endblock %}
+
+    
+    
+    {% block page_content %}     
+
+    <div class="container">
+        <div class="container">
+
+            <!-- table -->
+            <div id="tableDropdown" class="col-lg-12 col-12 layout-spacing">
+                <div class="statbox widget box box-shadow">
+                    <div class="widget-header">
+                        <div class="row">
+
+                            <!-- page title -->
+                            <div class="col-xl-12 col-lg-11 col-md-11 col-sm-10 col-10 pt-4 pl-4">
+                                <h4>Event Images</h4>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="widget-content widget-content-area">
+                        <div class="table-responsive">
+
+                            <table id="html5-extension" class="table table-hover non-hover" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th class="text-center">Index</th>
+                                        <th class="text-center">Event Image</th>
+                                        <th class="text-center">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for event_images in event_images %}
+                                    <tr>
+                                        <td class="text-center">{{event_images.index}}</td>
+                                        <td class="text-center">
+                                            <img src="{% if event_images.image1 %}{{event_images.image1.url}}{% endif %}" alt="event_image" style="height: 50px; border-radius: 10px;">
+                                        </td>
+                                        
+                                        <td class="text-center">
+
+                                            <div class="dropdown custom-dropdown">
+                                                <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink7" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg>
+                                                </a>
+
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink7">
+                                                    <a class="dropdown-item" href="{% url 'event_image_edit' event_pk=event.pk event_image_pk=event_images.pk %}">Edit</a>
+                                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#event_{{event_images.pk}}">Delete</a>
+                                                </div>
+
+                                                    <!-- Delete Confirm -->
+                                                    <div class="modal fade bottom" id="event_{{event_images.pk}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="opacity: 1;">
+                                                    <div class="modal-dialog modal-frame modal-bottom" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-body">
+                                                                <div class="row d-flex justify-content-center align-items-center">
+
+                                                                    <p class="pt-3 pr-2">
+                                                                    This action will delete the Event Image No. <b>"{{event_images.index}}"</b> completely and it is
+                                                                    irreparable by nature. Once it is gone it is gone !
+                                                                    </p>
+
+                                                                    <button type="button" class="btn btn-light btn-sm" data-dismiss="modal">Close</button>
+                                                                    <a href="{% url 'event_image_delete' event_pk=event.pk event_image_pk=event_images.pk %}"><button type="button" class="btn btn-dark"><b>Delete</b></button></a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+                
+            <!-- form -->
+            <div id="ftFormArray" class="col-lg-12 layout-spacing" style="padding-bottom: 60px;">
+                <div class="statbox widget box box-shadow">  
+
+                    <div class="widget-header">
+                        <div class="row">
+                            <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                <h4>Event Image Add</h4>
+                            </div>          
+                        </div>
+                    </div>
+
+                    <div class="widget-content widget-content-area custom-autocomplete h-100">
+
+                        <!-- {{demo}} -->
+                        <form onsubmit="myFunction()" action="{% url 'event_image' event_pk=event.pk %}" method="post" id="quillForm1" name="quillForm1" enctype="multipart/form-data" class="form-horizontal">
+                            {% csrf_token %}
+
+                            <!-- <div class="form-row mb-4">
+                                <div class="form-group col-md-3">
+                                    <label for="event_pk">Select Event</label>
+                                    <select class="form-control form-small" name="event_pk" id="event_pk" style="margin-bottom: 0px;" required>
+                                        <option value="" selected>None</option>
+                                        {% for events in events %}
+                                            <option value="{{events.pk}}">{{events.name | title}}</option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                            </div> -->
+
+                            <div class="form-row mb-4">
+                                <div class="form-group col-md-6">
+                                    <label for="image1" style="margin-bottom: 0px;">Event Image</label>
+                                    <div class="custom-file-container" data-upload-id="myFirstImage">
+                                        <label><a href="javascript:void(0)" class="custom-file-container__image-clear" title="Clear Image"></a></label>
+                                        <label class="custom-file-container__custom-file" >
+                                            <input type="file" name="image1" id="image1" class="custom-file-container__custom-file__custom-file-input" readonly>
+                                            <input type="hidden" name="MAX_FILE_SIZE" value="10485760" />
+                                            <span class="custom-file-container__custom-file__custom-file-control"></span>
+                                        </label>
+                                        <div class="custom-file-container__image-preview"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <button type="submit" class="btn btn-primary mt-3">Add Image</button>
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    {% endblock %}
+
+
+    {% block footerblock  %}
+
+        <!-- for tags -->
+        <script src="{% static 'back/bootstrap/js/bootstrap-tagsinput.js' %}"></script>
+
+        <script>
+            //First upload
+            var firstUpload = new FileUploadWithPreview('myFirstImage')
+            //Second upload
+            // var secondUpload = new FileUploadWithPreview('mySecondImage')
+        </script>
+        
+        <!-- BEGIN PAGE LEVEL CUSTOM SCRIPTS -->
+        <script src="{% static 'back/plugins/table/datatable/datatables.js' %}"></script>
+        <!-- NOTE TO Use Copy CSV Excel PDF Print Options You Must Include These Files  -->
+        <script src="{% static 'back/plugins/table/datatable/button-ext/dataTables.buttons.min.js' %}"></script>
+        <script src="{% static 'back/plugins/table/datatable/button-ext/jszip.min.js' %}"></script>    
+        <script src="{% static 'back/plugins/table/datatable/button-ext/buttons.html5.min.js' %}"></script>
+        <script src="{% static 'back/plugins/table/datatable/button-ext/buttons.print.min.js' %}"></script>
+
+
+        <script>
+            $('#html5-extension').DataTable( {
+                "oLanguage": {
+                    "oPaginate": { "sPrevious": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>', "sNext": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>' },
+                    "sInfo": "Showing page _PAGE_ of _PAGES_",
+                    "sSearch": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>',
+                    "sSearchPlaceholder": "Search...",
+                    "sLengthMenu": "Results :  _MENU_",
+                },
+                "stripeClasses": [],
+                "lengthMenu": [7, 10, 20, 50],
+                "pageLength": 10 
+            } );
+        </script>
+
+
+    {% endblock %}

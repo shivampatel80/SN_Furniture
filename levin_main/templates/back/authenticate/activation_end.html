@@ -1,0 +1,96 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+    <title>Login Cover | KRIOSK </title>
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico"/>
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+    <link href="{% static 'back/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'back/assets/css/plugins.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'back/assets/css/authentication/form-1.css' %}" rel="stylesheet" type="text/css" />
+    <!-- END GLOBAL MANDATORY STYLES -->
+    <link rel="stylesheet" type="text/css" href="{% static 'back/assets/css/forms/theme-checkbox-radio.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'back/assets/css/forms/switches.css' %}">
+</head>
+<body class="form">
+    
+
+    <div class="form-container">
+        <div class="form-form">
+            <div class="form-form-wrap">
+                <div class="form-container">
+                    <div class="form-content">
+
+                        <h1 class="">Activation <a href="{% url 'home' %}"><span class="brand-name">KRIOSK</span></a></h1>
+                        <p class="signup-link">Already have activated account? <a href="{% url 'mylogin' %}">Login</a></p>
+
+                        {% if messages %}
+                            {% for message in messages %}
+                                <div class="alert alert-success alert-dismissible fade show text-center" role="alert" style="margin: 10px 20px;">
+                                    <strong>Voila, </strong> {{message}}
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+
+                        <form action="{% url 'myactivation_end' %}" method="post" enctype="multipart/form-data" class="form">
+                            {% csrf_token %}
+
+                            <div class="text-left">
+
+                                <div id="username-field" class="field-wrapper input">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                                    <input id="email" name="email" type="email" class="form-control" placeholder="Email" required>
+                                </div>
+
+                                <div id="password-field" class="field-wrapper input mb-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-key"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"></path></svg>
+                                    <input id="auth_code" name="auth_code" type="number" class="form-control" placeholder="Auth-Code" required>
+                                </div>
+
+                                <div class="d-sm-flex justify-content-between">
+                                    <div class="field-wrapper">
+                                        <a href="{% url 'myactivation_initiate' %}" class="forgot-pass-link">Haven't got code?</a>
+                                    </div>
+
+                                    <div class="field-wrapper">
+                                        <button type="submit" class="btn btn-primary" value="">Activate</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </form>
+
+                        <p class="terms-conditions">© 2021 All Rights Reserved. <a href="{% url 'home' %}">KRIOSK CREATA</a>.</p>
+
+                    </div>                    
+                </div>
+            </div>
+        </div>
+        <div class="form-image">
+            <div class="l-image" style="background-image: url({% static 'back/assets/img/bull.jpg' %});">
+            </div>
+        </div>
+    </div>
+
+    
+    <!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
+    <script src="{% static 'back/assets/js/libs/jquery-3.1.1.min.js' %}"></script>
+    <script src="{% static 'back/bootstrap/js/popper.min.js' %}"></script>
+    <script src="{% static 'back/bootstrap/js/bootstrap.min.js' %}"></script>
+    
+    <!-- END GLOBAL MANDATORY SCRIPTS -->
+    <script src="{% static 'back/assets/js/authentication/form-1.js' %}"></script>
+
+</body>
+
+
+</html>

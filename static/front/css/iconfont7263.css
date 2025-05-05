@@ -1,0 +1,2291 @@
+@font-face {
+  font-family: 'base-icon';
+  src: url("../fonts/base-iconca49.eot?dwj2e9");
+  src: url("../fonts/base-iconca49.eot?dwj2e9#iefix") format("embedded-opentype"), url("../fonts/base-iconca49.ttf?dwj2e9") format("truetype"), url("../fonts/base-iconca49.woff?dwj2e9") format("woff"), url("../fonts/base-iconca49.svg?dwj2e9#base-icon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="base-icon-"], [class*=" base-icon-"] {
+  font-family: 'base-icon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.base-icon-up:before {
+  content: "\e900";
+}
+
+.base-icon-404:before {
+  content: "\e901";
+}
+
+.base-icon-account:before {
+  content: "\e902";
+}
+
+.base-icon-child:before {
+  content: "\e903";
+}
+
+.base-icon-apple:before {
+  content: "\e904";
+}
+
+.base-icon-app-store:before {
+  content: "\e905";
+}
+
+.base-icon-calendar:before {
+  content: "\e906";
+}
+
+.base-icon-check-symbol:before {
+  content: "\e907";
+}
+
+.base-icon-close-button:before {
+  content: "\e908";
+}
+
+.base-icon-down:before {
+  content: "\e909";
+}
+
+.base-icon-envelope:before {
+  content: "\e90a";
+}
+
+.base-icon-expand:before {
+  content: "\e90b";
+}
+
+.base-icon-expand-2:before {
+  content: "\e90c";
+}
+
+.base-icon-facebook:before {
+  content: "\e90d";
+}
+
+.base-icon-github:before {
+  content: "\e90e";
+}
+
+.base-icon-google-play:before {
+  content: "\e90f";
+}
+
+.base-icon-heart:before {
+  content: "\e910";
+}
+
+.base-icon-heart-filled:before {
+  content: "\e911";
+}
+
+.base-icon-instagram:before {
+  content: "\e912";
+}
+
+.base-icon-keyhole:before {
+  content: "\e913";
+}
+
+.base-icon-link:before {
+  content: "\e914";
+}
+
+.base-icon-login:before {
+  content: "\e915";
+}
+
+.base-icon-mail:before {
+  content: "\e916";
+}
+
+.base-icon-next:before {
+  content: "\e917";
+}
+
+.base-icon-next-2:before {
+  content: "\e918";
+}
+
+.base-icon-padlock:before {
+  content: "\e919";
+}
+
+.base-icon-passion:before {
+  content: "\e91a";
+}
+
+.base-icon-phone:before {
+  content: "\e91b";
+}
+
+.base-icon-phone-call:before {
+  content: "\e91c";
+}
+
+.base-icon-pin:before {
+  content: "\e91d";
+}
+
+.base-icon-play-button:before {
+  content: "\e91e";
+}
+
+.base-icon-plus:before {
+  content: "\e91f";
+}
+
+.base-icon-prev:before {
+  content: "\e920";
+}
+
+.base-icon-prev-2:before {
+  content: "\e921";
+}
+
+.base-icon-quote:before {
+  content: "\e922";
+}
+
+.base-icon-reply:before {
+  content: "\e923";
+}
+
+.base-icon-search:before {
+  content: "\e924";
+}
+
+.base-icon-share:before {
+  content: "\e925";
+}
+
+.base-icon-shopping-bag:before {
+  content: "\e926";
+}
+
+.base-icon-shopping-cart:before {
+  content: "\e927";
+}
+
+.base-icon-speaker:before {
+  content: "\e928";
+}
+
+.base-icon-star:before {
+  content: "\e929";
+}
+
+.base-icon-tag:before {
+  content: "\e92a";
+}
+
+.base-icon-prev-3:before {
+  content: "\e92b";
+}
+
+.base-icon-next-3:before {
+  content: "\e92c";
+}
+
+.base-icon-return-up-back:before {
+  content: "\e92d";
+}
+
+@font-face {
+  font-family: 'hotel-icon';
+  src: url("../fonts/hotel-icon1e49.eot?pllo0w");
+  src: url("../fonts/hotel-icon1e49.eot?pllo0w#iefix") format("embedded-opentype"), url("../fonts/hotel-icon1e49.ttf?pllo0w") format("truetype"), url("../fonts/hotel-icon1e49.woff?pllo0w") format("woff"), url("../fonts/hotel-icon1e49.svg?pllo0w#hotel-icon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="hotel-icon-"], [class*=" hotel-icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'hotel-icon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.hotel-icon-bed-2:before {
+  content: "\ea0d";
+}
+
+.hotel-icon-open-sign:before {
+  content: "\ea0e";
+}
+
+.hotel-icon-customer-service:before {
+  content: "\ea0f";
+}
+
+.hotel-icon-document:before {
+  content: "\ea10";
+}
+
+.hotel-icon-golf:before {
+  content: "\ea11";
+}
+
+.hotel-icon-washbasin:before {
+  content: "\ea12";
+}
+
+.hotel-icon-power-socket:before {
+  content: "\ea13";
+}
+
+.hotel-icon-kettle:before {
+  content: "\ea14";
+}
+
+.hotel-icon-roll:before {
+  content: "\ea15";
+}
+
+.hotel-icon-air-conditioning:before {
+  content: "\ea16";
+}
+
+.hotel-icon-no-fire:before {
+  content: "\ea17";
+}
+
+.hotel-icon-plumber:before {
+  content: "\ea18";
+}
+
+.hotel-icon-bathroom:before {
+  content: "\ea19";
+}
+
+.hotel-icon-bowling:before {
+  content: "\ea1a";
+}
+
+.hotel-icon-snack:before {
+  content: "\ea1b";
+}
+
+.hotel-icon-barbershop:before {
+  content: "\ea1c";
+}
+
+.hotel-icon-lobby-boy:before {
+  content: "\ea1d";
+}
+
+.hotel-icon-feather-duster:before {
+  content: "\ea1e";
+}
+
+.hotel-icon-clock:before {
+  content: "\ea1f";
+}
+
+.hotel-icon-cleaner:before {
+  content: "\ea20";
+}
+
+.hotel-icon-bell:before {
+  content: "\ea21";
+}
+
+.hotel-icon-beer:before {
+  content: "\ea22";
+}
+
+.hotel-icon-hotel-signal:before {
+  content: "\ea23";
+}
+
+.hotel-icon-airport:before {
+  content: "\ea24";
+}
+
+.hotel-icon-bed-3:before {
+  content: "\ea25";
+}
+
+.hotel-icon-bike:before {
+  content: "\ea26";
+}
+
+.hotel-icon-car:before {
+  content: "\ea27";
+}
+
+.hotel-icon-coins:before {
+  content: "\ea28";
+}
+
+.hotel-icon-herbal:before {
+  content: "\ea29";
+}
+
+.hotel-icon-house-plans:before {
+  content: "\ea2a";
+}
+
+.hotel-icon-house-plan-scale:before {
+  content: "\ea2b";
+}
+
+.hotel-icon-leaf:before {
+  content: "\ea2c";
+}
+
+.hotel-icon-map:before {
+  content: "\ea2d";
+}
+
+.hotel-icon-meditation:before {
+  content: "\ea2e";
+}
+
+.hotel-icon-seats:before {
+  content: "\ea2f";
+}
+
+.hotel-icon-sunbathing:before {
+  content: "\ea30";
+}
+
+.hotel-icon-sunset:before {
+  content: "\ea31";
+}
+
+.hotel-icon-alarm-clock:before {
+  content: "\e900";
+}
+
+.hotel-icon-armchair:before {
+  content: "\e901";
+}
+
+.hotel-icon-bathtub:before {
+  content: "\e902";
+}
+
+.hotel-icon-bed:before {
+  content: "\e903";
+}
+
+.hotel-icon-bellboy:before {
+  content: "\e904";
+}
+
+.hotel-icon-chair:before {
+  content: "\e905";
+}
+
+.hotel-icon-chandelier:before {
+  content: "\e906";
+}
+
+.hotel-icon-chimney:before {
+  content: "\e907";
+}
+
+.hotel-icon-closet:before {
+  content: "\e908";
+}
+
+.hotel-icon-cocktail:before {
+  content: "\e909";
+}
+
+.hotel-icon-coffee-maker:before {
+  content: "\e90a";
+}
+
+.hotel-icon-credit-card:before {
+  content: "\e90b";
+}
+
+.hotel-icon-cup:before {
+  content: "\e90c";
+}
+
+.hotel-icon-cushion:before {
+  content: "\e90d";
+}
+
+.hotel-icon-cutlery:before {
+  content: "\e90e";
+}
+
+.hotel-icon-door:before {
+  content: "\e90f";
+}
+
+.hotel-icon-dumbbell:before {
+  content: "\e910";
+}
+
+.hotel-icon-elevator:before {
+  content: "\e911";
+}
+
+.hotel-icon-hair-dryer:before {
+  content: "\e912";
+}
+
+.hotel-icon-iron:before {
+  content: "\e913";
+}
+
+.hotel-icon-knob:before {
+  content: "\e914";
+}
+
+.hotel-icon-lamp:before {
+  content: "\e915";
+}
+
+.hotel-icon-mirror:before {
+  content: "\e916";
+}
+
+.hotel-icon-mobile-phone:before {
+  content: "\e917";
+}
+
+.hotel-icon-modem:before {
+  content: "\e918";
+}
+
+.hotel-icon-newspaper:before {
+  content: "\e919";
+}
+
+.hotel-icon-nightstand:before {
+  content: "\e91a";
+}
+
+.hotel-icon-palm-tree:before {
+  content: "\e91b";
+}
+
+.hotel-icon-perfume:before {
+  content: "\e91c";
+}
+
+.hotel-icon-plant:before {
+  content: "\e91d";
+}
+
+.hotel-icon-razor:before {
+  content: "\e91e";
+}
+
+.hotel-icon-reception:before {
+  content: "\e91f";
+}
+
+.hotel-icon-remote-control:before {
+  content: "\e920";
+}
+
+.hotel-icon-room-key:before {
+  content: "\e921";
+}
+
+.hotel-icon-room-service:before {
+  content: "\e922";
+}
+
+.hotel-icon-safebox:before {
+  content: "\e923";
+}
+
+.hotel-icon-shampoo:before {
+  content: "\e924";
+}
+
+.hotel-icon-sink:before {
+  content: "\e925";
+}
+
+.hotel-icon-soap:before {
+  content: "\e926";
+}
+
+.hotel-icon-suitcase:before {
+  content: "\e927";
+}
+
+.hotel-icon-swimming-pool:before {
+  content: "\e928";
+}
+
+.hotel-icon-television:before {
+  content: "\e929";
+}
+
+.hotel-icon-tennis:before {
+  content: "\e92a";
+}
+
+.hotel-icon-toilet:before {
+  content: "\e92b";
+}
+
+.hotel-icon-toothbrush:before {
+  content: "\e92c";
+}
+
+.hotel-icon-toothpaste:before {
+  content: "\e92d";
+}
+
+.hotel-icon-towel:before {
+  content: "\e92e";
+}
+
+.hotel-icon-vacuum-cleaner:before {
+  content: "\e92f";
+}
+
+.hotel-icon-washing-machine:before {
+  content: "\e930";
+}
+
+.hotel-icon-window:before {
+  content: "\e931";
+}
+
+.hotel-icon-dumbbell1:before {
+  content: "\e932";
+}
+
+.hotel-icon-elevator1:before {
+  content: "\e933";
+}
+
+.hotel-icon-key-card:before {
+  content: "\e934";
+}
+
+.hotel-icon-hand:before {
+  content: "\e935";
+}
+
+.hotel-icon-keycard:before {
+  content: "\e936";
+}
+
+.hotel-icon-luggage:before {
+  content: "\e937";
+}
+
+.hotel-icon-bathtub1:before {
+  content: "\e938";
+}
+
+.hotel-icon-air-conditioner:before {
+  content: "\e939";
+}
+
+.hotel-icon-bedroom:before {
+  content: "\e93a";
+}
+
+.hotel-icon-bedroom1:before {
+  content: "\e93b";
+}
+
+.hotel-icon-hot-coffee:before {
+  content: "\e93c";
+}
+
+.hotel-icon-calendar:before {
+  content: "\e93d";
+}
+
+.hotel-icon-parking:before {
+  content: "\e93e";
+}
+
+.hotel-icon-clipboard:before {
+  content: "\e93f";
+}
+
+.hotel-icon-clothes:before {
+  content: "\e940";
+}
+
+.hotel-icon-comb:before {
+  content: "\e941";
+}
+
+.hotel-icon-dryer:before {
+  content: "\e942";
+}
+
+.hotel-icon-fridge:before {
+  content: "\e943";
+}
+
+.hotel-icon-hand1:before {
+  content: "\e944";
+}
+
+.hotel-icon-smartphone:before {
+  content: "\e945";
+}
+
+.hotel-icon-keycard1:before {
+  content: "\e946";
+}
+
+.hotel-icon-key:before {
+  content: "\e947";
+}
+
+.hotel-icon-laptop:before {
+  content: "\e948";
+}
+
+.hotel-icon-location:before {
+  content: "\e949";
+}
+
+.hotel-icon-sink1:before {
+  content: "\e94a";
+}
+
+.hotel-icon-monitor:before {
+  content: "\e94b";
+}
+
+.hotel-icon-reception1:before {
+  content: "\e94c";
+}
+
+.hotel-icon-reception2:before {
+  content: "\e94d";
+}
+
+.hotel-icon-breakfast:before {
+  content: "\e94e";
+}
+
+.hotel-icon-router:before {
+  content: "\e94f";
+}
+
+.hotel-icon-strongbox:before {
+  content: "\e950";
+}
+
+.hotel-icon-slippers:before {
+  content: "\e951";
+}
+
+.hotel-icon-smartphone1:before {
+  content: "\e952";
+}
+
+.hotel-icon-toothbrush1:before {
+  content: "\e953";
+}
+
+.hotel-icon-towel1:before {
+  content: "\e954";
+}
+
+.hotel-icon-washer-machine:before {
+  content: "\e955";
+}
+
+.hotel-icon-maid:before {
+  content: "\e956";
+}
+
+.hotel-icon-waiter:before {
+  content: "\e957";
+}
+
+.hotel-icon-serving-dish:before {
+  content: "\e958";
+}
+
+.hotel-icon-wine-cooler:before {
+  content: "\e959";
+}
+
+.hotel-icon-tea-set:before {
+  content: "\e95a";
+}
+
+.hotel-icon-flip-flops:before {
+  content: "\e95b";
+}
+
+.hotel-icon-bed1:before {
+  content: "\e95c";
+}
+
+.hotel-icon-door-lock:before {
+  content: "\e95d";
+}
+
+.hotel-icon-tip:before {
+  content: "\e95e";
+}
+
+.hotel-icon-bathrobe:before {
+  content: "\e95f";
+}
+
+.hotel-icon-laundry-machine:before {
+  content: "\e960";
+}
+
+.hotel-icon-towels:before {
+  content: "\e961";
+}
+
+.hotel-icon-wake-up:before {
+  content: "\e962";
+}
+
+.hotel-icon-luggage-cart:before {
+  content: "\e963";
+}
+
+.hotel-icon-wifi:before {
+  content: "\e964";
+}
+
+.hotel-icon-location1:before {
+  content: "\e965";
+}
+
+.hotel-icon-mini-van:before {
+  content: "\e966";
+}
+
+.hotel-icon-transporting:before {
+  content: "\e967";
+}
+
+.hotel-icon-hotel-bell:before {
+  content: "\e968";
+}
+
+.hotel-icon-toothbrush2:before {
+  content: "\e969";
+}
+
+.hotel-icon-animals-allowed:before {
+  content: "\e96a";
+}
+
+.hotel-icon-cocktail1:before {
+  content: "\e96b";
+}
+
+.hotel-icon-breakfast1:before {
+  content: "\e96c";
+}
+
+.hotel-icon-receptionist:before {
+  content: "\e96d";
+}
+
+.hotel-icon-online-booking:before {
+  content: "\e96e";
+}
+
+.hotel-icon-do-not-disturb-sign:before {
+  content: "\e96f";
+}
+
+.hotel-icon-car-parking:before {
+  content: "\e970";
+}
+
+.hotel-icon-pool:before {
+  content: "\e971";
+}
+
+.hotel-icon-no-smoking:before {
+  content: "\e972";
+}
+
+.hotel-icon-air-conditioner1:before {
+  content: "\e973";
+}
+
+.hotel-icon-air-conditioner2:before {
+  content: "\e974";
+}
+
+.hotel-icon-bar:before {
+  content: "\e975";
+}
+
+.hotel-icon-business-center:before {
+  content: "\e976";
+}
+
+.hotel-icon-check-in:before {
+  content: "\e977";
+}
+
+.hotel-icon-cleaning-service:before {
+  content: "\e978";
+}
+
+.hotel-icon-coffee-cup:before {
+  content: "\e979";
+}
+
+.hotel-icon-conference:before {
+  content: "\e97a";
+}
+
+.hotel-icon-family-room:before {
+  content: "\e97b";
+}
+
+.hotel-icon-hotel:before {
+  content: "\e97c";
+}
+
+.hotel-icon-hotel-room:before {
+  content: "\e97d";
+}
+
+.hotel-icon-hotel-sign:before {
+  content: "\e97e";
+}
+
+.hotel-icon-hotel-staff:before {
+  content: "\e97f";
+}
+
+.hotel-icon-laundry-service:before {
+  content: "\e980";
+}
+
+.hotel-icon-luggage1:before {
+  content: "\e981";
+}
+
+.hotel-icon-no-smoking1:before {
+  content: "\e982";
+}
+
+.hotel-icon-not-disturb:before {
+  content: "\e983";
+}
+
+.hotel-icon-parking1:before {
+  content: "\e984";
+}
+
+.hotel-icon-reception3:before {
+  content: "\e985";
+}
+
+.hotel-icon-reception-bell:before {
+  content: "\e986";
+}
+
+.hotel-icon-restaurant:before {
+  content: "\e987";
+}
+
+.hotel-icon-room-key1:before {
+  content: "\e988";
+}
+
+.hotel-icon-room-service1:before {
+  content: "\e989";
+}
+
+.hotel-icon-safebox1:before {
+  content: "\e98a";
+}
+
+.hotel-icon-shower:before {
+  content: "\e98b";
+}
+
+.hotel-icon-spa:before {
+  content: "\e98c";
+}
+
+.hotel-icon-sport-centre:before {
+  content: "\e98d";
+}
+
+.hotel-icon-swimming-pool1:before {
+  content: "\e98e";
+}
+
+.hotel-icon-television1:before {
+  content: "\e98f";
+}
+
+.hotel-icon-toiletries:before {
+  content: "\e990";
+}
+
+.hotel-icon-wifi-room:before {
+  content: "\e991";
+}
+
+.hotel-icon-hotel1:before {
+  content: "\e992";
+}
+
+.hotel-icon-hotel-1:before {
+  content: "\e993";
+}
+
+.hotel-icon-hotel-2:before {
+  content: "\e994";
+}
+
+.hotel-icon-air-conditioner3:before {
+  content: "\e995";
+}
+
+.hotel-icon-taxi:before {
+  content: "\e996";
+}
+
+.hotel-icon-bar-service:before {
+  content: "\e997";
+}
+
+.hotel-icon-wine:before {
+  content: "\e998";
+}
+
+.hotel-icon-cleaning:before {
+  content: "\e999";
+}
+
+.hotel-icon-bathtub2:before {
+  content: "\e99a";
+}
+
+.hotel-icon-single-bed:before {
+  content: "\e99b";
+}
+
+.hotel-icon-cutlery1:before {
+  content: "\e99c";
+}
+
+.hotel-icon-budget:before {
+  content: "\e99d";
+}
+
+.hotel-icon-bunk-bed:before {
+  content: "\e99e";
+}
+
+.hotel-icon-payment:before {
+  content: "\e99f";
+}
+
+.hotel-icon-deck:before {
+  content: "\e9a0";
+}
+
+.hotel-icon-payment-1:before {
+  content: "\e9a1";
+}
+
+.hotel-icon-die:before {
+  content: "\e9a2";
+}
+
+.hotel-icon-check-in1:before {
+  content: "\e9a3";
+}
+
+.hotel-icon-skyscrapers:before {
+  content: "\e9a4";
+}
+
+.hotel-icon-check-in-1:before {
+  content: "\e9a5";
+}
+
+.hotel-icon-check-out:before {
+  content: "\e9a6";
+}
+
+.hotel-icon-check-out-1:before {
+  content: "\e9a7";
+}
+
+.hotel-icon-check-in-2:before {
+  content: "\e9a8";
+}
+
+.hotel-icon-credit-card1:before {
+  content: "\e9a9";
+}
+
+.hotel-icon-dinner:before {
+  content: "\e9aa";
+}
+
+.hotel-icon-do-not-disturb:before {
+  content: "\e9ab";
+}
+
+.hotel-icon-door-hanger:before {
+  content: "\e9ac";
+}
+
+.hotel-icon-double-bed:before {
+  content: "\e9ad";
+}
+
+.hotel-icon-double-bed-1:before {
+  content: "\e9ae";
+}
+
+.hotel-icon-family:before {
+  content: "\e9af";
+}
+
+.hotel-icon-family-1:before {
+  content: "\e9b0";
+}
+
+.hotel-icon-hotel-3:before {
+  content: "\e9b1";
+}
+
+.hotel-icon-hotel-4:before {
+  content: "\e9b2";
+}
+
+.hotel-icon-fire-extinguisher:before {
+  content: "\e9b3";
+}
+
+.hotel-icon-plane:before {
+  content: "\e9b4";
+}
+
+.hotel-icon-wifi1:before {
+  content: "\e9b5";
+}
+
+.hotel-icon-front-desk:before {
+  content: "\e9b6";
+}
+
+.hotel-icon-basketball:before {
+  content: "\e9b7";
+}
+
+.hotel-icon-hair-dryer1:before {
+  content: "\e9b8";
+}
+
+.hotel-icon-hanger:before {
+  content: "\e9b9";
+}
+
+.hotel-icon-information-desk:before {
+  content: "\e9ba";
+}
+
+.hotel-icon-family-2:before {
+  content: "\e9bb";
+}
+
+.hotel-icon-building:before {
+  content: "\e9bc";
+}
+
+.hotel-icon-skyscraper:before {
+  content: "\e9bd";
+}
+
+.hotel-icon-bill:before {
+  content: "\e9be";
+}
+
+.hotel-icon-bill-1:before {
+  content: "\e9bf";
+}
+
+.hotel-icon-website:before {
+  content: "\e9c0";
+}
+
+.hotel-icon-information-desk-1:before {
+  content: "\e9c1";
+}
+
+.hotel-icon-reception-desk:before {
+  content: "\e9c2";
+}
+
+.hotel-icon-reception-desk-1:before {
+  content: "\e9c3";
+}
+
+.hotel-icon-bedroom2:before {
+  content: "\e9c4";
+}
+
+.hotel-icon-bedroom-1:before {
+  content: "\e9c5";
+}
+
+.hotel-icon-service:before {
+  content: "\e9c6";
+}
+
+.hotel-icon-receptionist1:before {
+  content: "\e9c7";
+}
+
+.hotel-icon-website-1:before {
+  content: "\e9c8";
+}
+
+.hotel-icon-skyscraper-1:before {
+  content: "\e9c9";
+}
+
+.hotel-icon-real-estate:before {
+  content: "\e9ca";
+}
+
+.hotel-icon-ironing-board:before {
+  content: "\e9cb";
+}
+
+.hotel-icon-jackpot:before {
+  content: "\e9cc";
+}
+
+.hotel-icon-key1:before {
+  content: "\e9cd";
+}
+
+.hotel-icon-key-ring:before {
+  content: "\e9ce";
+}
+
+.hotel-icon-luggage2:before {
+  content: "\e9cf";
+}
+
+.hotel-icon-laundry:before {
+  content: "\e9d0";
+}
+
+.hotel-icon-lift:before {
+  content: "\e9d1";
+}
+
+.hotel-icon-lift-1:before {
+  content: "\e9d2";
+}
+
+.hotel-icon-address:before {
+  content: "\e9d3";
+}
+
+.hotel-icon-placeholder:before {
+  content: "\e9d4";
+}
+
+.hotel-icon-luggage-1:before {
+  content: "\e9d5";
+}
+
+.hotel-icon-luggage-2:before {
+  content: "\e9d6";
+}
+
+.hotel-icon-luggage-3:before {
+  content: "\e9d7";
+}
+
+.hotel-icon-luggage-4:before {
+  content: "\e9d8";
+}
+
+.hotel-icon-bedroom-2:before {
+  content: "\e9d9";
+}
+
+.hotel-icon-bedroom-3:before {
+  content: "\e9da";
+}
+
+.hotel-icon-menu:before {
+  content: "\e9db";
+}
+
+.hotel-icon-menu-1:before {
+  content: "\e9dc";
+}
+
+.hotel-icon-review:before {
+  content: "\e9dd";
+}
+
+.hotel-icon-like:before {
+  content: "\e9de";
+}
+
+.hotel-icon-no-alcohol:before {
+  content: "\e9df";
+}
+
+.hotel-icon-swimming-pool2:before {
+  content: "\e9e0";
+}
+
+.hotel-icon-no-smoking2:before {
+  content: "\e9e1";
+}
+
+.hotel-icon-booking:before {
+  content: "\e9e2";
+}
+
+.hotel-icon-booking-1:before {
+  content: "\e9e3";
+}
+
+.hotel-icon-booking-2:before {
+  content: "\e9e4";
+}
+
+.hotel-icon-passport:before {
+  content: "\e9e5";
+}
+
+.hotel-icon-passport-1:before {
+  content: "\e9e6";
+}
+
+.hotel-icon-dog:before {
+  content: "\e9e7";
+}
+
+.hotel-icon-dog-1:before {
+  content: "\e9e8";
+}
+
+.hotel-icon-no-pets:before {
+  content: "\e9e9";
+}
+
+.hotel-icon-telephone:before {
+  content: "\e9ea";
+}
+
+.hotel-icon-telephone-1:before {
+  content: "\e9eb";
+}
+
+.hotel-icon-beach-umbrella:before {
+  content: "\e9ec";
+}
+
+.hotel-icon-restaurant1:before {
+  content: "\e9ed";
+}
+
+.hotel-icon-restaurant-1:before {
+  content: "\e9ee";
+}
+
+.hotel-icon-key-card1:before {
+  content: "\e9ef";
+}
+
+.hotel-icon-room-key2:before {
+  content: "\e9f0";
+}
+
+.hotel-icon-service-1:before {
+  content: "\e9f1";
+}
+
+.hotel-icon-single-bed-1:before {
+  content: "\e9f2";
+}
+
+.hotel-icon-booking-3:before {
+  content: "\e9f3";
+}
+
+.hotel-icon-small-bell:before {
+  content: "\e9f4";
+}
+
+.hotel-icon-booking-4:before {
+  content: "\e9f5";
+}
+
+.hotel-icon-trolley:before {
+  content: "\e9f6";
+}
+
+.hotel-icon-shower1:before {
+  content: "\e9f7";
+}
+
+.hotel-icon-shower-1:before {
+  content: "\e9f8";
+}
+
+.hotel-icon-single-bed-2:before {
+  content: "\e9f9";
+}
+
+.hotel-icon-smoking:before {
+  content: "\e9fa";
+}
+
+.hotel-icon-drop:before {
+  content: "\e9fb";
+}
+
+.hotel-icon-stairs:before {
+  content: "\e9fc";
+}
+
+.hotel-icon-stairs-1:before {
+  content: "\e9fd";
+}
+
+.hotel-icon-hotel-5:before {
+  content: "\e9fe";
+}
+
+.hotel-icon-swimming-pool-1:before {
+  content: "\e9ff";
+}
+
+.hotel-icon-table-lamp:before {
+  content: "\ea00";
+}
+
+.hotel-icon-tag:before {
+  content: "\ea01";
+}
+
+.hotel-icon-taxi-1:before {
+  content: "\ea02";
+}
+
+.hotel-icon-taxi-2:before {
+  content: "\ea03";
+}
+
+.hotel-icon-tea:before {
+  content: "\ea04";
+}
+
+.hotel-icon-towel2:before {
+  content: "\ea05";
+}
+
+.hotel-icon-verified:before {
+  content: "\ea06";
+}
+
+.hotel-icon-verified-1:before {
+  content: "\ea07";
+}
+
+.hotel-icon-beach-umbrella-1:before {
+  content: "\ea08";
+}
+
+.hotel-icon-washing-machine1:before {
+  content: "\ea09";
+}
+
+.hotel-icon-wheelchair:before {
+  content: "\ea0a";
+}
+
+.hotel-icon-wifi-1:before {
+  content: "\ea0b";
+}
+
+.hotel-icon-location2:before {
+  content: "\ea0c";
+}
+
+@font-face {
+  font-family: "social-icon";
+  src: url("../fonts/social-icon.eot");
+  src: url("../fonts/social-icond41d.eot?#iefix") format("eot"), url("../fonts/social-icon.woff2") format("woff2"), url("../fonts/social-icon.woff") format("woff"), url("../fonts/social-icon.ttf") format("truetype"), url("../fonts/social-icon.svg#social-icon") format("svg");
+}
+
+[class*="social-icon-"],
+[class^="social-icon-"] {
+  font-family: "social-icon";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  /* speak: none; only necessary if not using the private unicode range (firstGlyph option) */
+  text-decoration: none;
+  text-transform: none;
+}
+
+.social-icon-500px-logo-1:before {
+  content: "\E001";
+}
+
+.social-icon-500px-logo:before {
+  content: "\E002";
+}
+
+.social-icon-ads-of-the-world-logo:before {
+  content: "\E003";
+}
+
+.social-icon-ads-scuttlepad-logo:before {
+  content: "\E004";
+}
+
+.social-icon-arte10-logo:before {
+  content: "\E005";
+}
+
+.social-icon-ashley-madison-social-logo:before {
+  content: "\E006";
+}
+
+.social-icon-asmallworld-logo:before {
+  content: "\E007";
+}
+
+.social-icon-badoo-social-logotype:before {
+  content: "\E008";
+}
+
+.social-icon-baidu-logo:before {
+  content: "\E009";
+}
+
+.social-icon-bananity-social-logo:before {
+  content: "\E00A";
+}
+
+.social-icon-bandcamp-logo:before {
+  content: "\E00B";
+}
+
+.social-icon-bebo-social-logotype:before {
+  content: "\E00C";
+}
+
+.social-icon-behance-logo:before {
+  content: "\E00D";
+}
+
+.social-icon-bettercodes-logo:before {
+  content: "\E00E";
+}
+
+.social-icon-bisquits-logo:before {
+  content: "\E00F";
+}
+
+.social-icon-bitacoras-logo:before {
+  content: "\E010";
+}
+
+.social-icon-bitacoras-symbol:before {
+  content: "\E011";
+}
+
+.social-icon-blackplanet-logotype:before {
+  content: "\E012";
+}
+
+.social-icon-blogbus-logo:before {
+  content: "\E013";
+}
+
+.social-icon-blogger-logotype:before {
+  content: "\E014";
+}
+
+.social-icon-bloson-logo:before {
+  content: "\E015";
+}
+
+.social-icon-bola-a-logo:before {
+  content: "\E016";
+}
+
+.social-icon-buzznet-logo:before {
+  content: "\E017";
+}
+
+.social-icon-cafemom-logo:before {
+  content: "\E018";
+}
+
+.social-icon-care2-logo:before {
+  content: "\E019";
+}
+
+.social-icon-caringbridge-logo:before {
+  content: "\E01A";
+}
+
+.social-icon-cellufun-logo:before {
+  content: "\E01B";
+}
+
+.social-icon-citeulike-logo:before {
+  content: "\E01C";
+}
+
+.social-icon-classmates-logotype-symbol:before {
+  content: "\E01D";
+}
+
+.social-icon-club-dante-social-logotype:before {
+  content: "\E01E";
+}
+
+.social-icon-coderwall-logo:before {
+  content: "\E01F";
+}
+
+.social-icon-colourlovers-logo:before {
+  content: "\E020";
+}
+
+.social-icon-coroflot:before {
+  content: "\E021";
+}
+
+.social-icon-couchsurfing-logo:before {
+  content: "\E022";
+}
+
+.social-icon-creattica-logo:before {
+  content: "\E023";
+}
+
+.social-icon-cross-tv-logo:before {
+  content: "\E024";
+}
+
+.social-icon-dailymotion-logo:before {
+  content: "\E025";
+}
+
+.social-icon-deezer-logo:before {
+  content: "\E026";
+}
+
+.social-icon-delicious-logotype-of-squares:before {
+  content: "\E027";
+}
+
+.social-icon-desarrollo-web-or-web-development-logo:before {
+  content: "\E028";
+}
+
+.social-icon-designrelated-logotype:before {
+  content: "\E029";
+}
+
+.social-icon-deviantart-logo:before {
+  content: "\E02A";
+}
+
+.social-icon-digg-logo:before {
+  content: "\E02B";
+}
+
+.social-icon-digg-logotype:before {
+  content: "\E02C";
+}
+
+.social-icon-divoblogger-logo:before {
+  content: "\E02D";
+}
+
+.social-icon-doodle-ly-logotype:before {
+  content: "\E02E";
+}
+
+.social-icon-douban-logo:before {
+  content: "\E02F";
+}
+
+.social-icon-dribbble-logo:before {
+  content: "\E030";
+}
+
+.social-icon-ebay-logo:before {
+  content: "\E031";
+}
+
+.social-icon-etsy-logo:before {
+  content: "\E032";
+}
+
+.social-icon-everloop-logo:before {
+  content: "\E033";
+}
+
+.social-icon-ex-fm-logo:before {
+  content: "\E034";
+}
+
+.social-icon-eyeem-logo:before {
+  content: "\E035";
+}
+
+.social-icon-facebook-logo:before {
+  content: "\E036";
+}
+
+.social-icon-fanlala-logo:before {
+  content: "\E037";
+}
+
+.social-icon-flickr-logo:before {
+  content: "\E038";
+}
+
+.social-icon-flipkart-logo:before {
+  content: "\E039";
+}
+
+.social-icon-flixster-logo:before {
+  content: "\E03A";
+}
+
+.social-icon-fod-social-logo:before {
+  content: "\E03B";
+}
+
+.social-icon-fontli-logo:before {
+  content: "\E03C";
+}
+
+.social-icon-fotki-logo:before {
+  content: "\E03D";
+}
+
+.social-icon-fotolog-social-network-logo:before {
+  content: "\E03E";
+}
+
+.social-icon-foursquare-logo:before {
+  content: "\E03F";
+}
+
+.social-icon-friendster-logo:before {
+  content: "\E040";
+}
+
+.social-icon-funny-or-die-logo:before {
+  content: "\E041";
+}
+
+.social-icon-gaiaonline-logo:before {
+  content: "\E042";
+}
+
+.social-icon-gather-logo:before {
+  content: "\E043";
+}
+
+.social-icon-geni-social-logo:before {
+  content: "\E044";
+}
+
+.social-icon-geonick-logo:before {
+  content: "\E045";
+}
+
+.social-icon-glipho-logo:before {
+  content: "\E046";
+}
+
+.social-icon-glogster-logo:before {
+  content: "\E047";
+}
+
+.social-icon-google-plus-social-logotype:before {
+  content: "\E048";
+}
+
+.social-icon-grooveshark-logotype:before {
+  content: "\E049";
+}
+
+.social-icon-grou-ps-logo:before {
+  content: "\E04A";
+}
+
+.social-icon-habbo-logotype-1:before {
+  content: "\E04B";
+}
+
+.social-icon-habbo-logotype:before {
+  content: "\E04C";
+}
+
+.social-icon-heello-logo:before {
+  content: "\E04D";
+}
+
+.social-icon-hexun-logo:before {
+  content: "\E04E";
+}
+
+.social-icon-hi5-social-logo:before {
+  content: "\E04F";
+}
+
+.social-icon-hipstamatic-logo:before {
+  content: "\E050";
+}
+
+.social-icon-hubbub-logo:before {
+  content: "\E051";
+}
+
+.social-icon-inside-the-hotel-logotype:before {
+  content: "\E052";
+}
+
+.social-icon-instagram-social-network-logo-of-photo-camera:before {
+  content: "\E053";
+}
+
+.social-icon-intellectconnect-logo:before {
+  content: "\E054";
+}
+
+.social-icon-iqyi-logo:before {
+  content: "\E055";
+}
+
+.social-icon-itsmy-logo-1:before {
+  content: "\E056";
+}
+
+.social-icon-itsmy-logo:before {
+  content: "\E057";
+}
+
+.social-icon-jiepang-logotype:before {
+  content: "\E058";
+}
+
+.social-icon-jux-logo:before {
+  content: "\E059";
+}
+
+.social-icon-kaixin101-logotype-of-a-smiling-star:before {
+  content: "\E05A";
+}
+
+.social-icon-kiwibox-logo:before {
+  content: "\E05B";
+}
+
+.social-icon-ku6-logo:before {
+  content: "\E05C";
+}
+
+.social-icon-last-fm-logo:before {
+  content: "\E05D";
+}
+
+.social-icon-linkedin-logo:before {
+  content: "\E05E";
+}
+
+.social-icon-literatura-nova-logo:before {
+  content: "\E05F";
+}
+
+.social-icon-meetic-logo:before {
+  content: "\E060";
+}
+
+.social-icon-meetme-logo:before {
+  content: "\E061";
+}
+
+.social-icon-meetup-logo:before {
+  content: "\E062";
+}
+
+.social-icon-meetyourfriends-logotype:before {
+  content: "\E063";
+}
+
+.social-icon-meneame-social-network-logo-of-an-elephant:before {
+  content: "\E064";
+}
+
+.social-icon-metacafe-logo:before {
+  content: "\E065";
+}
+
+.social-icon-mixi-logo:before {
+  content: "\E066";
+}
+
+.social-icon-mocospace-logo:before {
+  content: "\E067";
+}
+
+.social-icon-my-heritage-logo:before {
+  content: "\E068";
+}
+
+.social-icon-my-life-logo:before {
+  content: "\E069";
+}
+
+.social-icon-my-life-social-logo:before {
+  content: "\E06A";
+}
+
+.social-icon-my-space-logo:before {
+  content: "\E06B";
+}
+
+.social-icon-myfolio-logo:before {
+  content: "\E06C";
+}
+
+.social-icon-myspace-logotype:before {
+  content: "\E06D";
+}
+
+.social-icon-ning-social-logo:before {
+  content: "\E06E";
+}
+
+.social-icon-nk-social-symbol:before {
+  content: "\E06F";
+}
+
+.social-icon-notasweb-logo:before {
+  content: "\E070";
+}
+
+.social-icon-odnoklassniki-logo:before {
+  content: "\E071";
+}
+
+.social-icon-on-social-logo:before {
+  content: "\E072";
+}
+
+.social-icon-orkut-logo:before {
+  content: "\E073";
+}
+
+.social-icon-p1-social-logotype:before {
+  content: "\E074";
+}
+
+.social-icon-panamo-logo:before {
+  content: "\E075";
+}
+
+.social-icon-path-social-logotype:before {
+  content: "\E076";
+}
+
+.social-icon-pengyu-logotype:before {
+  content: "\E077";
+}
+
+.social-icon-pheed-logo:before {
+  content: "\E078";
+}
+
+.social-icon-pictify-logo:before {
+  content: "\E079";
+}
+
+.social-icon-pinspire-logo-symbol:before {
+  content: "\E07A";
+}
+
+.social-icon-pinstagram-logo:before {
+  content: "\E07B";
+}
+
+.social-icon-pinterest-social-logo:before {
+  content: "\E07C";
+}
+
+.social-icon-podio-social-logo:before {
+  content: "\E07D";
+}
+
+.social-icon-qq-social-logo-of-a-penguin:before {
+  content: "\E07E";
+}
+
+.social-icon-questionity-logotype:before {
+  content: "\E07F";
+}
+
+.social-icon-qzone-logo:before {
+  content: "\E080";
+}
+
+.social-icon-ravelry-logo-1:before {
+  content: "\E081";
+}
+
+.social-icon-ravelry-logo:before {
+  content: "\E082";
+}
+
+.social-icon-redalyc-logo:before {
+  content: "\E083";
+}
+
+.social-icon-reddit-logo:before {
+  content: "\E084";
+}
+
+.social-icon-reddit-social-logo-character:before {
+  content: "\E085";
+}
+
+.social-icon-rendezvous-logo:before {
+  content: "\E086";
+}
+
+.social-icon-renren-logo:before {
+  content: "\E087";
+}
+
+.social-icon-researchgate-logo:before {
+  content: "\E088";
+}
+
+.social-icon-reverbnation-logo:before {
+  content: "\E089";
+}
+
+.social-icon-ryze-logo:before {
+  content: "\E08A";
+}
+
+.social-icon-ryze-social-logo:before {
+  content: "\E08B";
+}
+
+.social-icon-scoop-it-logo-1:before {
+  content: "\E08C";
+}
+
+.social-icon-scoop-it-logo:before {
+  content: "\E08D";
+}
+
+.social-icon-scribd-logo:before {
+  content: "\E08E";
+}
+
+.social-icon-sina-logo:before {
+  content: "\E08F";
+}
+
+.social-icon-sina-social-logo-of-an-eye:before {
+  content: "\E090";
+}
+
+.social-icon-skyrock-logo:before {
+  content: "\E091";
+}
+
+.social-icon-slideshare-logo:before {
+  content: "\E092";
+}
+
+.social-icon-social-logo:before {
+  content: "\E093";
+}
+
+.social-icon-socialcam-logo:before {
+  content: "\E094";
+}
+
+.social-icon-sonico-logo:before {
+  content: "\E095";
+}
+
+.social-icon-sonico-social-logo:before {
+  content: "\E096";
+}
+
+.social-icon-soundcloud-logo:before {
+  content: "\E097";
+}
+
+.social-icon-spotbros-logo:before {
+  content: "\E098";
+}
+
+.social-icon-spotify-logo:before {
+  content: "\E099";
+}
+
+.social-icon-studivz-social-logo:before {
+  content: "\E09A";
+}
+
+.social-icon-stumbleupon-logo:before {
+  content: "\E09B";
+}
+
+.social-icon-symbaloo-logotype:before {
+  content: "\E09C";
+}
+
+.social-icon-tadaa-logotype:before {
+  content: "\E09D";
+}
+
+.social-icon-tagged-logotype:before {
+  content: "\E09E";
+}
+
+.social-icon-tagworld-logotype-symbol:before {
+  content: "\E09F";
+}
+
+.social-icon-taringa-logo:before {
+  content: "\E0A0";
+}
+
+.social-icon-telly-social-symbol:before {
+  content: "\E0A1";
+}
+
+.social-icon-tencent-weibo-logo:before {
+  content: "\E0A2";
+}
+
+.social-icon-threadless-logotype:before {
+  content: "\E0A3";
+}
+
+.social-icon-tianji-logotype-symbol:before {
+  content: "\E0A4";
+}
+
+.social-icon-travbuddy-social-logotype:before {
+  content: "\E0A5";
+}
+
+.social-icon-tribe-social-logotype:before {
+  content: "\E0A6";
+}
+
+.social-icon-tripadvisor-logotype:before {
+  content: "\E0A7";
+}
+
+.social-icon-tu-tv-logo:before {
+  content: "\E0A8";
+}
+
+.social-icon-tudou-logo:before {
+  content: "\E0A9";
+}
+
+.social-icon-tuenti-social-logo:before {
+  content: "\E0AA";
+}
+
+.social-icon-tumblr-logo:before {
+  content: "\E0AB";
+}
+
+.social-icon-tv-tag-logotype-symbol:before {
+  content: "\E0AC";
+}
+
+.social-icon-twitpic-symbol:before {
+  content: "\E0AD";
+}
+
+.social-icon-twitter-logo:before {
+  content: "\E0AE";
+}
+
+.social-icon-twitter-social-logotype:before {
+  content: "\E0AF";
+}
+
+.social-icon-twoo-logo:before {
+  content: "\E0B0";
+}
+
+.social-icon-typophile-logo:before {
+  content: "\E0B1";
+}
+
+.social-icon-ushi-logo:before {
+  content: "\E0B2";
+}
+
+.social-icon-vampirefreaks-logo:before {
+  content: "\E0B3";
+}
+
+.social-icon-viadeo-logo:before {
+  content: "\E0B4";
+}
+
+.social-icon-viddy-logotype:before {
+  content: "\E0B5";
+}
+
+.social-icon-vimeo-social-logo:before {
+  content: "\E0B6";
+}
+
+.social-icon-vine-logo-1:before {
+  content: "\E0B7";
+}
+
+.social-icon-vine-logo:before {
+  content: "\E0B8";
+}
+
+.social-icon-vk-social-logotype:before {
+  content: "\E0B9";
+}
+
+.social-icon-wayn-social-network-logo:before {
+  content: "\E0BA";
+}
+
+.social-icon-weeworld-logo:before {
+  content: "\E0BB";
+}
+
+.social-icon-weheartit-logo:before {
+  content: "\E0BC";
+}
+
+.social-icon-weibo-social-logo:before {
+  content: "\E0BD";
+}
+
+.social-icon-widbook-logo:before {
+  content: "\E0BE";
+}
+
+.social-icon-wikiloc-logo:before {
+  content: "\E0BF";
+}
+
+.social-icon-wikipedia-logo:before {
+  content: "\E0C0";
+}
+
+.social-icon-wikipedia-logotype-of-earth-puzzle:before {
+  content: "\E0C1";
+}
+
+.social-icon-wordpress-logo:before {
+  content: "\E0C2";
+}
+
+.social-icon-xanga-logo:before {
+  content: "\E0C3";
+}
+
+.social-icon-xanga-symbol:before {
+  content: "\E0C4";
+}
+
+.social-icon-xiami-social-symbol:before {
+  content: "\E0C5";
+}
+
+.social-icon-xing-social-logotype:before {
+  content: "\E0C6";
+}
+
+.social-icon-yelp-logo:before {
+  content: "\E0C7";
+}
+
+.social-icon-youku-logo:before {
+  content: "\E0C8";
+}
+
+.social-icon-yoursphere-logo:before {
+  content: "\E0C9";
+}
+
+.social-icon-youtube-logotype:before {
+  content: "\E0CA";
+}
+
+.social-icon-youtube-symbol:before {
+  content: "\E0CB";
+}
+
+.social-icon-yupoo-logo:before {
+  content: "\E0CC";
+}
+
+.social-icon-zorpia-logo:before {
+  content: "\E0CD";
+}

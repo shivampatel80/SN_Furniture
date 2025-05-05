@@ -1,0 +1,482 @@
+{% extends 'front/master_front.html' %}
+
+{% load static %}
+
+
+    {% block headblock %}
+
+        <link rel='stylesheet' id='wp-color-picker-css'  href='{% static "front/css/color-picker.min7263.css" %}' type='text/css' media='all' />
+        <link rel='stylesheet' id='wp-block-library-css'  href='{% static "front/css/style.min7263.css" %}' type='text/css' media='all' />
+        <link rel='stylesheet' id='wc-block-style-css'  href='{% static "front/css/style60a8.css" %}' type='text/css' media='all' />
+        <link rel='stylesheet' id='contact-form-7-css'  href='{% static "front/css/styles5fba.css" %}' type='text/css' media='all' />
+        <link rel='stylesheet' id='mphb-kbwood-datepick-css-css'  href='{% static "front/css/jquery.datepickcd70.css" %}' type='text/css' media='all' />
+        <link rel='stylesheet' id='mphb-css'  href='{% static "front/css/mphb.mincd70.css" %}' type='text/css' media='all' />
+
+        <link rel='stylesheet' id='holleta-icons-css'  href='{% static "front/css/iconfont7263.css" %}' type='text/css' media='all' />
+        <link rel='stylesheet' id='js_composer_front-css'  href='{% static "front/css/js_composer.min10df.css" %}' type='text/css' media='all' />
+        <link rel='stylesheet' id='fontawesome-css'  href='{% static "front/css/fontawesome.min7263.css" %}' type='text/css' media='all' />
+        <link rel='stylesheet' id='holleta-style-css'  href='{% static "front/css/style7263.css" %}' type='text/css' media='all' />
+        <link rel='stylesheet' id='swiper-css'  href='{% static "front/css/swiper268f.css" %}' type='text/css' media='all' />
+        <link rel='stylesheet' id='holleta-main-style-css'  href='{% static "front/css/main7263.css" %}' type='text/css' media='all' />
+        <link rel='stylesheet' id='woocommerce-general-css'  href='{% static "front/css/woocommerce7263.css" %}' type='text/css' media='all' />
+        <link rel='stylesheet' id='woocommerce-layout-css'  href='{% static "front/css/woocommerce-layout7263.css" %}' type='text/css' media='all' />
+        <link rel='stylesheet' id='select2-css'  href='{% static "front/css/select27263.css" %}' type='text/css' media='all' />
+
+        <link rel='stylesheet' id='photoswipe-css'  href='{% static "front/css/photoswipe.css" %}' type='text/css' media='all' />
+        <link rel='stylesheet' id='pt-addons-css'  href='{% static "front/css/pt-addons7263.css" %}' type='text/css' media='all' />
+        <script type='text/javascript' src='{% static "front/js/jquery4a5f.js" %}'></script>
+        <script type='text/javascript' src='{% static "front/js/jquery-migrate.min330a.js" %}'></script>
+        <script type='text/javascript' src='{% static "front/js/jquery.blockUI.min44fd.js" %}'></script>
+
+        <script type='text/javascript' src='{% static "front/js/add-to-cart.min3a05.js" %}'></script>
+        <script type='text/javascript' src='{% static "front/js/woocommerce-add-to-cart10df.js" %}'></script>
+
+        <script type='text/javascript' src='{% static "front/js/zilla-likes7263.js" %}'></script>
+        <script type='text/javascript' src='{% static "front/js/pace.min8a54.js" %}'></script>
+
+        <style type="text/css" title="dynamic-css" class="options-output">body{font-family: lato,Arial, Helvetica, sans-serif;font-weight: 400;font-size: 16px;}h1, .h1{font-family: lato,Arial, Helvetica, sans-serif;font-weight: 600;font-size: 72px;}h2, .h2{font-family: lato,Arial, Helvetica, sans-serif;font-weight: 600;font-size: 62px;}h3, .h3{font-family: lato,Arial, Helvetica, sans-serif;font-weight: 600;font-size: 52px;}h4, .h4{font-family: lato,Arial, Helvetica, sans-serif;font-weight: 600;font-size: 42px;}h5, .h5{font-family: lato,Arial, Helvetica, sans-serif;font-weight: 600;font-size: 30px;}h6, .h6{font-family: lato,Arial, Helvetica, sans-serif;font-weight: 600;font-size: 18px;}</style>
+
+
+    {% endblock %}
+
+
+
+    {% block page_content %}
+
+    {% if messages %}
+        {% for message in messages %}
+            
+            {% if message.tags == 'error' %}
+            <div class="alert alert-danger alert-dismissible fade show text-center" role="alert" style="margin: 30px 20px 10px 20px;">
+                <strong> {{message}} </strong> 
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            {% elif message.tags == 'success' %}
+                <p style="background-color: antiquewhite; height: 30px; text-align: center;"><strong> {{message}} </strong></p>
+            {% endif %}
+
+        {% endfor %}
+    {% endif %}
+
+    <!-- title -->
+    <div class="page-top-block type-page">
+        <div class="container">
+            <div class="heading-block">
+                <h1 class="h h3">Contact</h1>
+            </div>
+        </div>
+    </div>
+
+    <main class="main-container">
+        <div class="container">
+
+            <div id="post-3149" class="post-3149 page type-page status-publish hentry">
+                <div class="content-area clearfix">
+                    <div data-vc-full-width="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid vc_row-5e9853368b538">
+                        
+                        <!-- contact: header -->
+                        <div class="wpb_column vc_column_container vc_col-sm-12 vc_col-lg-6 vc_col-md-5 vc_column_container-5e98597905739">
+                            <div class="vc_column-inner ">
+                                <div class="wpb_wrapper">
+                                    <div class="heading-block heading-5e9847bb4445f tal h-h5">
+                                        <h5 class="h">Don’t hesitate to contact<br />
+                                            us if you need more help.
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- locate us -->
+                        <!--<div class="wpb_column vc_column_container vc_col-sm-12 vc_col-lg-3 vc_col-md-4 vc_column_container-5e9859904cad4">-->
+                        <!--    <div class="vc_column-inner ">-->
+                        <!--        <div class="wpb_wrapper">-->
+                        <!--            <div class="wpb_raw_code wpb_content_element wpb_raw_html" >-->
+                        <!--                <div class="wpb_wrapper">-->
+                        <!--                    <div class="contact-item">-->
+                        <!--                        <div class="label">Locate Us</div>-->
+
+                        <!--                        <div class="value">Poglu-Piludra Crossing, <br>NH. No. 8, At Poglu, <br>Ta. Prantij, Sabarkantha, <br>Gujarat — 383205<br><span>Open: Mon-Sat - 8:30 AM 6:00 PM</span></div>-->
+                        <!--                    </div>-->
+                        <!--                </div>-->
+                        <!--            </div>-->
+                        <!--        </div>-->
+                        <!--    </div>-->
+                        <!--</div>-->
+
+                        <!-- contact us -->
+                        <div class="wpb_column vc_column_container vc_col-sm-12 vc_col-md-6 vc_column_container-5e9859a3def97">
+                            <div class="vc_column-inner ">
+                                <div class="wpb_wrapper">
+                                    <div class="wpb_raw_code wpb_content_element wpb_raw_html" >
+                                        <div class="wpb_wrapper">
+                                            <div class="contact-item">
+                                                <div class="label">Locate Us</div>
+
+                                                <div class="value">Poglu-Piludra Crossing, <br>NH. No. 48, At Poglu, <br>Ta. Prantij, Sabarkantha, <br>Gujarat — 383205<br><span>Open: Mon-Sat - 8:30 AM 6:00 PM</span></div>
+                                            </div>
+                                            <div class="contact-item">
+                                                <div class="label">Contacts</div>
+                                                <div class="value">
+                                                    North INDIA <br>(Rajasthan, Haryana, Punjab, Uttar Pradesh, Madhya Pradesh) : <br><b>+91 9913475034</b><br><br>
+                                                    Central East INDIA <br>(Maharastra,Odisha, West Bengal) : <br><b>+91 9825540015</b><br><br>
+                                                    South INDIA <br>(Karnataka, Andhra Pradesh, Tamilnadu ,Kerala) : <br><b>+91 8095625909</b><br><br>
+                                                    Western INDIA <br>(Gujarat) : <br><b>+91 7069018381</b> <br><br>
+                                                
+                                                    <b>levindecor@yahoo.com</b></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- form -->
+                        <div class="wpb_column vc_column_container vc_col-sm-12 vc_column_container-5efd6f5c21601">
+                            <div class="vc_column-inner ">
+                                <div class="wpb_wrapper">
+                                    <div class="heading-block heading-5efd6ef75618b tal h-h5">
+                                        <div class="sub-h">Write to us</div>
+                                    </div>
+                                    <div class="wpb_text_column wpb_content_element  wpb_text_column-5e984823058fc" >
+                                        <div class="wpb_wrapper">
+                                            <div role="form" class="wpcf7" id="wpcf7-f3160-p3149-o1" lang="en-US" dir="ltr">
+                                                <div class="screen-reader-response" role="alert" aria-live="polite"></div>
+                                                
+                                                <!-- form -->
+                                                <form action="{% url 'enquiry' %}" method="post" enctype="multipart/form-data" class="wpcf7-form init" novalidate="novalidate">
+                                                    {% csrf_token %}
+
+                                                    <div class="contact-form-style3 row">
+                                                        
+                                                        <div class="col-12 col-sm-6 col-md-4">
+                                                            <div class="input-row">
+                                                                <span class="wpcf7-form-control-wrap f-name">
+                                                                    <input type="text" name="name" value="" size="40" class="wpcf7-form-control wpcf7-text style1" aria-invalid="false" placeholder="Your Name*" maxlength="240" required />
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <div class="col-12 col-sm-6 col-md-4">
+                                                            <div class="input-row">
+                                                                <span class="wpcf7-form-control-wrap f-email">
+                                                                    <input type="text" name="email" value="" size="40" class="wpcf7-form-control wpcf7-text style1" aria-invalid="false" placeholder="Your Email*" maxlength="240" required />
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <div class="col-12 col-sm-6 col-md-4">
+                                                            <div class="input-row">
+                                                                <span class="wpcf7-form-control-wrap f-phone">
+                                                                    <input type="number" name="phone" value="" size="40" class="wpcf7-form-control wpcf7-text style1" aria-invalid="false" placeholder="Your Phone Number" maxlength="50" required />
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <!-- <div class="col-12 col-sm-6 col-md-4">
+                                                            <div class="input-row">
+                                                                <span class="wpcf7-form-control-wrap f-destination">
+                                                                    <select name="f-destination" class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required style1" aria-required="true" aria-invalid="false">
+                                                                        <option value="Destination*">Destination*</option>
+                                                                        <option value="destination 1">destination 1</option>
+                                                                        <option value="destination 2">destination 2</option>
+                                                                        <option value="destination 3">destination 3</option>
+                                                                    </select>
+                                                                </span>
+                                                            </div>
+                                                        </div> -->
+                                                        
+                                                        <div class="col-12">
+                                                            <div class="input-row">
+                                                                <span class="wpcf7-form-control-wrap f-message">
+                                                                    <textarea name="message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea style1" aria-invalid="false" placeholder="Your message*" required></textarea>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <div class="require-text">All fields marked with "*" are required to send this form</div>
+
+                                                        <div class="col-12">
+                                                            <button class="button-style1" type="submit">
+                                                                <span>Send</span>
+                                                            </button>
+                                                        </div>
+
+                                                    </div>
+
+                                                    {% for messages in messages %}
+                                                    <div class="wpcf7-response-output" role="alert" aria-hidden="true">{{messages}}</div>
+                                                    {% endfor %}
+
+                                                </form>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="vc_row-full-width vc_clearfix"></div>
+                    <div data-vc-full-width="true" data-vc-full-width-init="false" data-vc-stretch-content="true" class="vc_row wpb_row vc_row-fluid vc_row-5e9847957836e vc_row-no-padding">
+                        <div class="wpb_column vc_column_container vc_col-sm-12 vc_column_container-5efd7011132b1">
+                            <div class="vc_column-inner ">
+                                <div class="wpb_wrapper">
+                                    <div class="map-block map-5e984783c78b6" style="height: 480px;width: 100%;">
+                                        
+                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3659.872783642234!2d72.87663531542832!3d23.465052905532737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395dc8ca9d9f9fdd%3A0x154bd8cd0bd80641!2sLevin%20Decor%20LLP!5e0!3m2!1sen!2sin!4v1616570613524!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vc_row-full-width vc_clearfix"></div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    {% endblock %}
+
+
+
+    {% block footerblock  %}
+
+        <!-- <link rel='stylesheet' id='pt-inline-css'  href='{% static "front/css/pt-inline7263.css" %}' type='text/css' media='all' /> -->
+        <style id='pt-inline-inline-css' type='text/css'>
+            .vc_row-5e9853368b538{margin-top:45px !important;padding-bottom:55px !important}
+            .heading-5e9847bb4445f{margin-top:-5px !important}
+            .vc_column_container-5efd6f5c21601{padding-top:51px !important}
+            .heading-5efd6ef75618b{margin-top:-5px !important}
+            .vc_column_container-5efd7011132b1{margin-bottom:-45px !important}
+        </style>
+
+        <script type='text/javascript' src='{% static "front/js/scripts5fba.js" %}'></script>
+        <!-- <script type='text/javascript' src='{% static "front/js/can.custom.mincd70.js" %}'></script>
+        <script type='text/javascript' src='{% static "front/js/jquery.plugin.mincd70.js" %}'></script>
+        <script type='text/javascript' src='{% static "front/js/jquery.datepick.mincd70.js" %}'></script> -->
+
+        <!-- <script type='text/javascript' src='{% static "front/js/js.cookie.min6b25.js" %}'></script>
+
+        <script type='text/javascript' src='{% static "front/js/woocommerce.min3a05.js" %}'></script>
+        <script type='text/javascript' src='{% static "front/js/jquery.cookie.min330a.js" %}'></script> -->
+
+        <!-- <script type='text/javascript' src='{% static "front/js/Cart.min370e.js" %}'></script>
+        <script type='text/javascript' src='{% static "front/js/magic-cursor8a54.js" %}'></script>
+        <script type='text/javascript' src='{% static "front/js/isotope.pkgd.min7c45.js" %}'></script>
+        <script type='text/javascript' src='{% static "front/js/jquery.scrollbar.min22c9.js" %}'></script>
+        <script type='text/javascript' src='{% static "front/js/swiper.min48f5.js" %}'></script>
+        <script type='text/javascript' src='{% static "front/js/scripts.js" %}'></script>
+        <script type='text/javascript' src='{% static "front/js/js_composer_front.min8a54.js" %}'></script>
+        <script type='text/javascript' src='{% static "front/js/parallax.min.js" %}'></script>
+        <script type='text/javascript' src='{% static "front/js/photoswipe.min0235.js" %}'></script>
+        <script type='text/javascript' src='{% static "front/js/photoswipe-ui-default.min0235.js" %}'></script>
+        <script type='text/javascript' src='{% static "front/js/imagesloaded.min55a0.js" %}'></script>
+        <script type='text/javascript' src='{% static "front/js/load-posts8a54.js" %}'></script>
+
+        <script type='text/javascript' src='{% static "front/js/pt-scripts8a54.js" %}'></script> -->
+
+		<!-- long script -->
+        <script type='text/javascript'>
+            jQuery(document).ready(function (jQuery) {
+                jQuery('#map-5e984783c78b6').each(function () {
+                    function initialize() {
+                        var myLatlng = new google.maps.LatLng(51.5237817, -0.15843700000005);
+                        var mapOptions = {
+                            zoom: 16,
+                            center: myLatlng,
+                            disableDefaultUI: true,
+                            scrollwheel: false,
+                            mapTypeId: google.maps.MapTypeId.ROADMAP,
+                            styles: [
+                                {
+                                    "featureType": "water",
+                                    "elementType": "geometry",
+                                    "stylers": [{
+                                            "color": "#e9e9e9"
+                                        },
+                                        {
+                                            "lightness": 17
+                                        }
+                                    ]
+                                },
+                                {
+                                    "featureType": "landscape",
+                                    "elementType": "geometry",
+                                    "stylers": [{
+                                            "color": "#f5f5f5"
+                                        },
+                                        {
+                                            "lightness": 20
+                                        }
+                                    ]
+                                },
+                                {
+                                    "featureType": "road.highway",
+                                    "elementType": "geometry.fill",
+                                    "stylers": [{
+                                            "color": "#ffffff"
+                                        },
+                                        {
+                                            "lightness": 17
+                                        }
+                                    ]
+                                },
+                                {
+                                    "featureType": "road.highway",
+                                    "elementType": "geometry.stroke",
+                                    "stylers": [{
+                                            "color": "#ffffff"
+                                        },
+                                        {
+                                            "lightness": 29
+                                        },
+                                        {
+                                            "weight": 0.2
+                                        }
+                                    ]
+                                },
+                                {
+                                    "featureType": "road.arterial",
+                                    "elementType": "geometry",
+                                    "stylers": [{
+                                            "color": "#ffffff"
+                                        },
+                                        {
+                                            "lightness": 18
+                                        }
+                                    ]
+                                },
+                                {
+                                    "featureType": "road.local",
+                                    "elementType": "geometry",
+                                    "stylers": [{
+                                            "color": "#ffffff"
+                                        },
+                                        {
+                                            "lightness": 16
+                                        }
+                                    ]
+                                },
+                                {
+                                    "featureType": "poi",
+                                    "elementType": "geometry",
+                                    "stylers": [{
+                                            "color": "#f5f5f5"
+                                        },
+                                        {
+                                            "lightness": 21
+                                        }
+                                    ]
+                                },
+                                {
+                                    "featureType": "poi.park",
+                                    "elementType": "geometry",
+                                    "stylers": [{
+                                            "color": "#dedede"
+                                        },
+                                        {
+                                            "lightness": 21
+                                        }
+                                    ]
+                                },
+                                {
+                                    "elementType": "labels.text.stroke",
+                                    "stylers": [{
+                                            "visibility": "on"
+                                        },
+                                        {
+                                            "color": "#ffffff"
+                                        },
+                                        {
+                                            "lightness": 16
+                                        }
+                                    ]
+                                },
+                                {
+                                    "elementType": "labels.text.fill",
+                                    "stylers": [{
+                                            "saturation": 36
+                                        },
+                                        {
+                                            "color": "#333333"
+                                        },
+                                        {
+                                            "lightness": 40
+                                        }
+                                    ]
+                                },
+                                {
+                                    "elementType": "labels.icon",
+                                    "stylers": [{
+                                        "visibility": "off"
+                                    }]
+                                },
+                                {
+                                    "featureType": "transit",
+                                    "elementType": "geometry",
+                                    "stylers": [{
+                                            "color": "#f2f2f2"
+                                        },
+                                        {
+                                            "lightness": 19
+                                        }
+                                    ]
+                                },
+                                {
+                                    "featureType": "administrative",
+                                    "elementType": "geometry.fill",
+                                    "stylers": [{
+                                            "color": "#fefefe"
+                                        },
+                                        {
+                                            "lightness": 20
+                                        }
+                                    ]
+                                },
+                                {
+                                    "featureType": "administrative",
+                                    "elementType": "geometry.stroke",
+                                    "stylers": [{
+                                            "color": "#fefefe"
+                                        },
+                                        {
+                                            "lightness": 17
+                                        },
+                                        {
+                                            "weight": 1.2
+                                        }
+                                    ]
+                                }
+                            ]
+                        };
+                        var map = new google.maps.Map(document.getElementById('map-5e984783c78b6'), mapOptions);
+                
+                        var myLatLng = new google.maps.LatLng(51.5237817, -0.15843700000005);
+                        var beachMarker = new google.maps.Marker({
+                            position: myLatLng,
+                            map: map
+                        });
+                        google.maps.event.addDomListener(window, 'resize', function () {
+                            var center = map.getCenter();
+                            google.maps.event.trigger(map, 'resize');
+                            map.setCenter(center);
+                        });
+                    }
+                    google.maps.event.addDomListener(window, 'load', initialize);
+                });
+            });
+        </script>
+
+        <script type='text/javascript' src='{% static "front/js/wp-embed.min7263.js" %}'></script>
+        <!-- <script type='text/javascript' src='http://maps.googleapis.com/maps/api/js?v=3.exp&amp;key=AIzaSyDylXKvHSLVfE4JPgroujRd9ik7hJigOuc&amp;sensor=false&amp;ver=1.0.0'></script> -->
+        <script type='text/javascript' src='{% static "front/js/forms.mine049.js" %}'></script>
+
+
+    {% endblock %}

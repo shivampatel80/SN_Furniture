@@ -1,0 +1,1 @@
+var rum=function(){function t(t){if(t&&32===t.trim().length){var n=[""],m=document.createElement("script");m.src="",m.onload=function(){Footprint.start("atm",n,5,t)},document.body.appendChild(m)}}return{start:t}}();

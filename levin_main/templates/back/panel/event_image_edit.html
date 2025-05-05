@@ -1,0 +1,184 @@
+{% extends 'back/master_back.html' %}
+
+{% load static %}
+
+
+    {% block headblock %}
+
+        <style>
+            /* Chrome, Safari, Edge, Opera */
+            input::-webkit-outer-spin-button,
+            input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+            }
+            
+            /* Firefox */
+            input[type=number] {
+            -moz-appearance: textfield;
+            }
+        </style>
+
+        <!-- bootstrap for tags -->
+        <style>
+            .bootstrap-tagsinput {
+                background-color: #fff;
+                border: 1px solid #ccc;
+                box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+                display: block;
+                padding: 4px 6px;
+                color: #555;
+                vertical-align: middle;
+                border-radius: 4px;
+                max-width: 100%;
+                line-height: 32px;
+                cursor: text;
+            }
+            .bootstrap-tagsinput input {
+                border: none;
+                box-shadow: none;
+                outline: none;
+                background-color: transparent;
+                padding: 5px 16px;
+                margin: 0;
+                width: auto;
+                max-width: inherit;
+            }
+            .bootstrap-tagsinput .tag {
+                background: gray;
+                border: 1px solid;
+                padding: 0 6px;
+                margin-right: 2px;
+                color: white;
+                border-radius: 4px;
+                }
+        </style>
+            
+        <!-- smartphoto -->
+        <link rel="stylesheet" href="{% static 'back/plugins/smartphoto/smartphoto.min.css' %}">
+
+    {% endblock %}
+
+    
+    
+    {% block page_content %}     
+
+    <div class="container">
+        <div class="container">
+                
+            <!-- form -->
+            <div id="ftFormArray" class="col-lg-12 layout-spacing" style="padding-bottom: 60px;">
+                <div class="statbox widget box box-shadow">  
+
+                    <div class="widget-header">
+                        <div class="row">
+                            <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                <h4>Event Image Edit</h4>
+                            </div>          
+                        </div>
+                    </div>
+
+                    <div class="widget-content widget-content-area custom-autocomplete h-100">
+
+                        <!-- {{demo}} -->
+                        <form onsubmit="myFunction()" action="{% url 'event_image_edit' event_pk=event.pk event_image_pk=event_image.pk %}" method="post" id="quillForm1" name="quillForm1" enctype="multipart/form-data" class="form-horizontal">
+                            {% csrf_token %}
+
+                            <div class="form-row mb-4">
+                                <div class="form-group col-md-3">
+                                    <label for="index">Index</label>
+                                    <input type="number" id="index" name="index" value="{{event_image.index}}" required>
+                                    <!-- have to initiate the TouchSpin -->
+                                </div>
+                            </div>
+
+                            <!-- <div class="form-row mb-4">
+                                <div class="form-group col-md-3">
+                                    <label for="event_pk">Select Event</label>
+                                    <select class="form-control form-small" name="event_pk" id="event_pk" style="margin-bottom: 0px;" required>
+                                        <option value="{{event.pk}}" selected>{{event.name | title}}</option>
+                                        {% for events in events %}
+                                            {% if events.pk != event.pk %}
+                                                <option value="{{events.pk}}">{{events.name | title}}</option>
+                                            {% endif %}
+                                        {% endfor %}
+                                        <option value="">None</option>
+                                    </select>
+                                </div>
+                            </div> -->
+
+                            <div class="form-row mb-4">
+                                <div class="form-group col-md-6">
+                                    <label for="image1" style="margin-bottom: 0px;">Event Image</label>
+                                    
+                                    <!-- selected -->
+                                    <h6 class="mt-2">Selected : &nbsp;&nbsp; 
+                                        {% if event_image.image1 %}
+                                        <a href="{{event_image.image1.url}}" class="js-smartPhoto" data-caption="" >
+                                            <img src="{{event_image.image1.url}}" alt="event_image" style="height: 50px; border-radius: 10%;">
+                                        </a>
+                                        {% else %}
+                                            <h6>None</h6>
+                                        {% endif %}
+                                    </h6>
+
+                                    <div class="custom-file-container" data-upload-id="myFirstImage">
+                                        <label><a href="javascript:void(0)" class="custom-file-container__image-clear" title="Clear Image"></a></label>
+                                        <label class="custom-file-container__custom-file" >
+                                            <input type="file" name="image1" id="image1" class="custom-file-container__custom-file__custom-file-input" readonly>
+                                            <input type="hidden" name="MAX_FILE_SIZE" value="10485760" />
+                                            <span class="custom-file-container__custom-file__custom-file-control"></span>
+                                        </label>
+                                        <div class="custom-file-container__image-preview"></div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        
+                            <button type="submit" class="btn btn-primary mt-3">Edit Image</button>
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    {% endblock %}
+
+
+    {% block footerblock  %}
+
+        <script>
+
+            $("input[name='index']").TouchSpin({
+                max: 100000,
+                verticalbuttons: true,
+                buttondown_class: "btn btn-classic btn-outline-info",
+                buttonup_class: "btn btn-classic btn-outline-danger"
+            });
+
+        </script>
+
+        <!-- smartphoto -->
+        <script src="{% static 'back/plugins/smartphoto/smartphoto.min.js' %}"></script>
+        <script>
+            window.addEventListener('DOMContentLoaded',function(){
+                new SmartPhoto(".js-smartPhoto");
+            });
+        </script>
+
+        <!-- for tags -->
+        <script src="{% static 'back/bootstrap/js/bootstrap-tagsinput.js' %}"></script>
+
+        <script>
+            //First upload
+            var firstUpload = new FileUploadWithPreview('myFirstImage')
+            //Second upload
+            // var secondUpload = new FileUploadWithPreview('mySecondImage')
+        </script>
+
+
+    {% endblock %}

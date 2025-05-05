@@ -1,0 +1,49 @@
+{% extends 'back/master_back.html' %}
+
+{% load static %}
+
+
+    {% block headblock %}
+
+    <link href="{% static 'back/assets/css/components/cards/card.css' %}" rel="stylesheet" type="text/css" />
+
+    {% endblock %}
+
+    
+    
+    {% block page_content %}   
+    <div class="row" style="margin-top: 50px;">
+        <div id="card_4" class="col-lg-6 layout-spacing">
+            <div class="statbox widget box box-shadow">
+                <div class="widget-header">
+                    <div class="row">
+                        <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                            <h4>Lead View</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="widget-content widget-content-area">
+                    <div class="card component-card_4">
+                        <div class="card-body">
+                            <div class="user-profile">
+                                
+                            </div>
+                            <div class="user-info">
+                                Name : <h5 class="card-user_name">{{enquiry.name}}</h5>
+                                Email : <h5 class="card-user_name">{{enquiry.email}}</h5>
+                                Contact No. : <h5 class="card-user_name">{{enquiry.phone}}</h5>
+                                Message : <p class="card-text">{{enquiry.message}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% endblock %}
+
+
+    {% block footerblock  %}
+
+    {% endblock %}

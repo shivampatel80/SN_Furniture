@@ -1,0 +1,610 @@
+{% load static %}
+
+<!doctype html>
+<html>
+    <head>
+        <title> LEVIN DECOR </title>
+        <meta name="viewport" content="width = 1050, user-scalable = no" />
+        <link rel="icon" type="image/icon" href="../images/faviconicon.ico">
+        <!-- favicon-icon -->
+        <script type="text/javascript" src="{% static 'front/catalogue_ultima/js/jquery.min.1.7.js' %}"></script>
+        <script type="text/javascript" src="{% static 'front/catalogue_ultima/js/modernizr.2.5.3.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'front/catalogue_ultima/js/hash.js' %}"></script>
+        <script type="text/javascript" src="{% static 'front/catalogue_ultima/js/magazine.js' %}"></script>
+        <script type="text/javascript" src="{% static 'front/catalogue_ultima/js/turn.js' %}"></script>
+        <script type="text/javascript" src="{% static 'front/catalogue_ultima/js/zoom.min.js' %}"></script>
+        <link href="{% static 'front/catalogue_ultima/css/magazine.css' %}">
+    </head>
+    <body>
+        <!-- preloader -->
+        <div class="preloader">
+            <div class="contpre">
+                <div class="loader">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <!-- end preloader -->
+        <div id="canvas">
+            <div class="zoom-icon zoom-icon-in"></div>
+            <div class="magazine-viewport">
+                <!--<div class="button">
+                    <p> <a download="pdf/Ultima vol-2.pdf" href="pdf/Ultima vol-2.pdf"  download target="_blank"> DOWNLOAD </a> </p>
+                    </div> -->
+                <div class="button-1" style="z-index:99">
+                    <p> <a href="{% url 'catalogues' %}" > Back  </a> </p>
+                </div>
+                <div class="container">
+                    <div class="magazine">
+                        <!-- Next button -->
+                        <div ignore="1" class="next-button"></div>
+                        <!-- Previous button -->
+                        <div ignore="1" class="previous-button"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Thumbnails -->
+            <div class="thumbnails">
+                <div>
+                    <ul>
+                        <li class="i">
+                            <img src="{% static 'front/catalogue_ultima/pages/1.jpg' %}" width="76" height="100" class="page-1" loading="lazy">
+                            <span>1</span>
+                        </li>
+                        <li class="d">
+                            <img src="{% static 'front/catalogue_ultima/pages/2.jpg' %}" width="76" height="100" class="page-2" loading="lazy">
+                            <img src="{% static 'front/catalogue_ultima/pages/3.jpg' %}" width="76" height="100" class="page-3" loading="lazy">
+                            <span>2-3</span>
+                        </li>
+                        <li class="d">
+                            <img src="{% static 'front/catalogue_ultima/pages/4.jpg' %}" width="76" height="100" class="page-4" loading="lazy">
+                            <img src="{% static 'front/catalogue_ultima/pages/5.jpg' %}" width="76" height="100" class="page-5" loading="lazy">
+                            <span>4-5</span>
+                        </li>
+                        <li class="d">
+                            <img src="{% static 'front/catalogue_ultima/pages/6.jpg' %}" width="76" height="100" class="page-6" loading="lazy">
+                            <img src="{% static 'front/catalogue_ultima/pages/7.jpg' %}" width="76" height="100" class="page-7" loading="lazy">
+                            <span>6-7</span>
+                        </li>
+                        <li class="d">
+                            <img src="{% static 'front/catalogue_ultima/pages/8.jpg' %}" width="76" height="100" class="page-8" loading="lazy">
+                            <img src="{% static 'front/catalogue_ultima/pages/9.jpg' %}" width="76" height="100" class="page-9" loading="lazy">
+                            <span>8-9</span>
+                        </li>
+                        <li class="d">
+                            <img src="{% static 'front/catalogue_ultima/pages/10.jpg' %}" width="76" height="100" class="page-10" loading="lazy">
+                            <img src="{% static 'front/catalogue_ultima/pages/11.jpg' %}" width="76" height="100" class="page-11" loading="lazy">
+                            <span>10-11</span>
+                        </li>
+                        <li class="d">
+                            <img src="{% static 'front/catalogue_ultima/pages/12.jpg' %}" width="76" height="100" class="page-12" loading="lazy">
+                            <img src="{% static 'front/catalogue_ultima/pages/13.jpg' %}" width="76" height="100" class="page-13" loading="lazy">
+                            <span>12-13</span>
+                        </li>
+                        <li class="d">
+                            <img src="{% static 'front/catalogue_ultima/pages/14.jpg' %}" width="76" height="100" class="page-14" loading="lazy">
+                            <img src="{% static 'front/catalogue_ultima/pages/15.jpg' %}" width="76" height="100" class="page-15" loading="lazy">
+                            <span>14-15</span>
+                        </li>
+                        <li class="d">
+                            <img src="{% static 'front/catalogue_ultima/pages/16.jpg' %}" width="76" height="100" class="page-16" loading="lazy">
+                            <img src="{% static 'front/catalogue_ultima/pages/17.jpg' %}" width="76" height="100" class="page-17" loading="lazy">
+                            <span>16-17</span>
+                        </li>
+                        <li class="d">
+                            <img src="{% static 'front/catalogue_ultima/pages/18.jpg' %}" width="76" height="100" class="page-18" loading="lazy">
+                            <img src="{% static 'front/catalogue_ultima/pages/19.jpg' %}" width="76" height="100" class="page-19" loading="lazy">
+                            <span>18-19</span>
+                        </li>
+                        <li class="d">
+                            <img src="{% static 'front/catalogue_ultima/pages/20.jpg' %}" width="76" height="100" class="page-20" loading="lazy">
+                            <img src="{% static 'front/catalogue_ultima/pages/21.jpg' %}" width="76" height="100" class="page-21" loading="lazy">
+                            <span>20-21</span>
+                        </li>
+                        <li class="d">
+                            <img src="{% static 'front/catalogue_ultima/pages/22.jpg' %}" width="76" height="100" class="page-22" loading="lazy">
+                            <img src="{% static 'front/catalogue_ultima/pages/23.jpg' %}" width="76" height="100" class="page-23" loading="lazy">
+                            <span>22-23</span>
+                        </li>
+                        <li class="d">
+                            <img src="{% static 'front/catalogue_ultima/pages/24.jpg' %}" width="76" height="100" class="page-24" loading="lazy">
+                            <img src="{% static 'front/catalogue_ultima/pages/25.jpg' %}" width="76" height="100" class="page-25" loading="lazy">
+                            <span>24-25</span>
+                        </li>
+                        <li class="d">
+                            <img src="{% static 'front/catalogue_ultima/pages/26.jpg' %}" width="76" height="100" class="page-26" loading="lazy">
+                            <img src="{% static 'front/catalogue_ultima/pages/27.jpg' %}" width="76" height="100" class="page-27" loading="lazy">
+                            <span>26-27</span>
+                        </li>
+                        <li class="d">
+                            <img src="{% static 'front/catalogue_ultima/pages/28.jpg' %}" width="76" height="100" class="page-28" loading="lazy">
+                            <img src="{% static 'front/catalogue_ultima/pages/29.jpg' %}" width="76" height="100" class="page-29" loading="lazy">
+                            <span>28-29</span>
+                        </li>
+                        <li class="d">
+                            <img src="{% static 'front/catalogue_ultima/pages/30.jpg' %}" width="76" height="100" class="page-30" loading="lazy">
+                            <img src="{% static 'front/catalogue_ultima/pages/31.jpg' %}" width="76" height="100" class="page-31" loading="lazy">
+                            <span>30-31</span>
+                        </li>
+                        <li class="d">
+                            <img src="{% static 'front/catalogue_ultima/pages/32.jpg' %}" width="76" height="100" class="page-32" loading="lazy">
+                            <img src="{% static 'front/catalogue_ultima/pages/33.jpg' %}" width="76" height="100" class="page-33" loading="lazy">
+                            <span>32-33</span>
+                        </li>
+                        <li class="d">
+                            <img src="{% static 'front/catalogue_ultima/pages/34.jpg' %}" width="76" height="100" class="page-34" loading="lazy">
+                            <img src="{% static 'front/catalogue_ultima/pages/35.jpg' %}" width="76" height="100" class="page-35" loading="lazy">
+                            <span>34-35</span>
+                        </li>
+                        <li class="d">
+                            <img src="{% static 'front/catalogue_ultima/pages/36.jpg' %}" width="76" height="100" class="page-36" loading="lazy">
+                            <img src="{% static 'front/catalogue_ultima/pages/37.jpg' %}" width="76" height="100" class="page-37" loading="lazy">
+                            <span>36-37</span>
+                        </li>
+                        <li class="d">
+                            <img src="{% static 'front/catalogue_ultima/pages/38.jpg' %}" width="76" height="100" class="page-38" loading="lazy">
+                            <img src="{% static 'front/catalogue_ultima/pages/39.jpg' %}" width="76" height="100" class="page-39" loading="lazy">
+                            <span>38-39</span>
+                        </li>
+                        <li class="d">
+                            <img src="{% static 'front/catalogue_ultima/pages/40.jpg' %}" width="76" height="100" class="page-40" loading="lazy">
+                            <img src="{% static 'front/catalogue_ultima/pages/41.jpg' %}" width="76" height="100" class="page-41" loading="lazy">
+                            <span>40-41</span>
+                        </li>
+                        <li class="d">
+                            <img src="{% static 'front/catalogue_ultima/pages/42.jpg' %}" width="76" height="100" class="page-42" loading="lazy">
+                            <img src="{% static 'front/catalogue_ultima/pages/43.jpg' %}" width="76" height="100" class="page-43" loading="lazy">
+                            <span>42-43</span>
+                        </li>
+                        <li class="d">
+                            <img src="{% static 'front/catalogue_ultima/pages/44.jpg' %}" width="76" height="100" class="page-44" loading="lazy">
+                            <img src="{% static 'front/catalogue_ultima/pages/45.jpg' %}" width="76" height="100" class="page-45" loading="lazy">
+                            <span>44-45</span>
+                        </li>
+                        <li class="d">
+                            <img src="{% static 'front/catalogue_ultima/pages/46.jpg' %}" width="76" height="100" class="page-46" loading="lazy">
+                            <img src="{% static 'front/catalogue_ultima/pages/47.jpg' %}" width="76" height="100" class="page-47" loading="lazy">
+                            <span>46-47</span>
+                        </li>
+                        <li class="d">
+                            <img src="{% static 'front/catalogue_ultima/pages/48.jpg' %}" width="76" height="100" class="page-48" loading="lazy">
+                            <img src="{% static 'front/catalogue_ultima/pages/49.jpg' %}" width="76" height="100" class="page-49" loading="lazy">
+                            <span>48-49</span>
+                        </li>
+                        <li class="d">
+                            <img src="{% static 'front/catalogue_ultima/pages/50.jpg' %}" width="76" height="100" class="page-50" loading="lazy">
+                            <img src="{% static 'front/catalogue_ultima/pages/51.jpg' %}" width="76" height="100" class="page-51" loading="lazy">
+                            <span>50-51</span>
+                        </li>
+                        <li class="d">
+                            <img src="{% static 'front/catalogue_ultima/pages/52.jpg' %}" width="76" height="100" class="page-52" loading="lazy">
+                            <img src="{% static 'front/catalogue_ultima/pages/53.jpg' %}" width="76" height="100" class="page-53" loading="lazy">
+                            <span>52-53</span>
+                        </li>
+                        <li class="d">
+                            <img src="{% static 'front/catalogue_ultima/pages/54.jpg' %}" width="76" height="100" class="page-54" loading="lazy">
+                            <img src="{% static 'front/catalogue_ultima/pages/55.jpg' %}" width="76" height="100" class="page-55" loading="lazy">
+                            <span>54-55</span>
+                        </li>
+                        <li class="d">
+                            <img src="{% static 'front/catalogue_ultima/pages/56.jpg' %}" width="76" height="100" class="page-56" loading="lazy">
+                            <img src="{% static 'front/catalogue_ultima/pages/57.jpg' %}" width="76" height="100" class="page-57" loading="lazy">
+                            <span>56-57</span>
+                        </li>
+                        <li class="d">
+                            <img src="{% static 'front/catalogue_ultima/pages/58.jpg' %}" width="76" height="100" class="page-58" loading="lazy">
+                            <img src="{% static 'front/catalogue_ultima/pages/59.jpg' %}" width="76" height="100" class="page-59" loading="lazy">
+                            <span>58-59</span>
+                        </li>
+                        <li class="d">
+                            <img src="{% static 'front/catalogue_ultima/pages/60.jpg' %}" width="76" height="100" class="page-60" loading="lazy">
+                            <img src="{% static 'front/catalogue_ultima/pages/61.jpg' %}" width="76" height="100" class="page-61" loading="lazy">
+                            <span>60-61</span>
+                        </li>
+                        <li class="i">
+                            <img src="{% static 'front/catalogue_ultima/pages/62.jpg' %}" width="76" height="100" class="page-62" loading="lazy">
+                            <span>68</span>
+                        </li>
+                    </ul>
+                    <div>	</div>
+                </div>
+                <script type="text/javascript">
+                    function loadApp() {
+                    
+                     	$('#canvas').fadeIn(1000);
+                    
+                     	var flipbook = $('.magazine');
+                    
+                     	// Check if the CSS was already loaded
+                    	
+                    	if (flipbook.width()==0 || flipbook.height()==0) {
+                    		setTimeout(loadApp, 10);
+                    		return;
+                    	}
+                    	
+                    	// Create the flipbook
+                    
+                    	flipbook.turn({
+                    			
+                    			// Magazine width
+                    
+                    			width: 1200,
+                    
+                    			// Magazine height
+                    
+                    			height: 800,
+                    
+                    			// Duration in millisecond
+                    
+                    			duration: 1000,
+                    
+                    			// Hardware acceleration
+                    
+                    			acceleration: !isChrome(),
+                    
+                    			// Enables gradients
+                    
+                    			gradients: true,
+                    			
+                    			// Auto center this flipbook
+                    
+                    			autoCenter: true,
+                    
+                    			// Elevation from the edge of the flipbook when turning a page
+                    
+                    			elevation: 50,
+                    
+                    			// The number of pages
+                    
+                    			pages: 62,
+                    
+                    			// Events
+                    
+                    			when: {
+                    				turning: function(event, page, view) {
+                    					
+                    					var book = $(this),
+                    					currentPage = book.turn('page'),
+                    					pages = book.turn('pages');
+                    			
+                    					// Update the current URI
+                    
+                    					Hash.go('page/' + page).update();
+                    
+                    					// Show and hide navigation buttons
+                    
+                    					disableControls(page);
+                    					
+                    
+                    					$('.thumbnails .page-'+currentPage).
+                    						parent().
+                    						removeClass('current');
+                    
+                    					$('.thumbnails .page-'+page).
+                    						parent().
+                    						addClass('current');
+                    
+                    
+                    
+                    				},
+                    
+                    				turned: function(event, page, view) {
+                    
+                    					disableControls(page);
+                    
+                    					$(this).turn('center');
+                    
+                    					if (page==1) { 
+                    						$(this).turn('peel', 'br');
+                    					}
+                    
+                    				},
+                    
+                    				missing: function (event, pages) {
+                    
+                    					// Add pages that aren't in the magazine
+                    
+                    					for (var i = 0; i < pages.length; i++)
+                    						addPage(pages[i], $(this));
+                    
+                    				}
+                    			}
+                    
+                    	});
+                    
+                    	// Zoom.js
+                    
+                    	$('.magazine-viewport').zoom({
+                    		flipbook: $('.magazine'),
+                    
+                    		max: function() { 
+                    			
+                    			return largeMagazineWidth()/$('.magazine').width();
+                    
+                    		}, 
+                    
+                    		when: {
+                    
+                    			swipeLeft: function() {
+                    
+                    				$(this).zoom('flipbook').turn('next');
+                    
+                    			},
+                    
+                    			swipeRight: function() {
+                    				
+                    				$(this).zoom('flipbook').turn('previous');
+                    
+                    			},
+                    
+                    			resize: function(event, scale, page, pageElement) {
+                    
+                    				if (scale==1)
+                    					loadSmallPage(page, pageElement);
+                    				else
+                    					loadLargePage(page, pageElement);
+                    
+                    			},
+                    
+                    			zoomIn: function () {
+                    
+                    				$('.thumbnails').hide();
+                    				$('.made').hide();
+                    				$('.magazine').removeClass('animated').addClass('zoom-in');
+                    				$('.zoom-icon').removeClass('zoom-icon-in').addClass('zoom-icon-out');
+                    				
+                    				if (!window.escTip && !$.isTouch) {
+                    					escTip = true;
+                    
+                    					$('<div />', {'class': 'exit-message'}).
+                    						html('<div>Press ESC to exit</div>').
+                    							appendTo($('body')).
+                    							delay(2000).
+                    							animate({opacity:0}, 500, function() {
+                    								$(this).remove();
+                    							});
+                    				}
+                    			},
+                    
+                    			zoomOut: function () {
+                    
+                    				$('.exit-message').hide();
+                    				$('.thumbnails').hide();
+                    				$('.made').fadeIn();
+                    				$('.zoom-icon').removeClass('zoom-icon-out').addClass('zoom-icon-in');
+                    
+                    				setTimeout(function(){
+                    					$('.magazine').addClass('animated').removeClass('zoom-in');
+                    					resizeViewport();
+                    				}, 0);
+                    
+                    			}
+                    		}
+                    	});
+                    
+                    	// Zoom event
+                    
+                    	if ($.isTouch)
+                    		$('.magazine-viewport').bind('zoom.doubleTap', zoomTo);
+                    	else
+                    		$('.magazine-viewport').bind('zoom.tap', zoomTo);
+                    
+                    
+                    	// Using arrow keys to turn the page
+                    
+                    	$(document).keydown(function(e){
+                    
+                    		var previous = 37, next = 39, esc = 27;
+                    
+                    		switch (e.keyCode) {
+                    			case previous:
+                    
+                    				// left arrow
+                    				$('.magazine').turn('previous');
+                    				e.preventDefault();
+                    
+                    			break;
+                    			case next:
+                    
+                    				//right arrow
+                    				$('.magazine').turn('next');
+                    				e.preventDefault();
+                    
+                    			break;
+                    			case esc:
+                    				
+                    				$('.magazine-viewport').zoom('zoomOut');	
+                    				e.preventDefault();
+                    
+                    			break;
+                    		}
+                    	});
+                    
+                    	// URIs - Format #/page/1 
+                    
+                    	Hash.on('^page\/([0-9]*)$', {
+                    		yep: function(path, parts) {
+                    			var page = parts[1];
+                    
+                    			if (page!==undefined) {
+                    				if ($('.magazine').turn('is'))
+                    					$('.magazine').turn('page', page);
+                    			}
+                    
+                    		},
+                    		nop: function(path) {
+                    
+                    			if ($('.magazine').turn('is'))
+                    				$('.magazine').turn('page', 1);
+                    		}
+                    	});
+                    
+                    
+                    	$(window).resize(function() {
+                    		resizeViewport();
+                    	}).bind('orientationchange', function() {
+                    		resizeViewport();
+                    	});
+                    
+                    	// Events for thumbnails
+                    
+                    	$('.thumbnails').click(function(event) {
+                    		
+                    		var page;
+                    
+                    		if (event.target && (page=/page-([0-9]+)/.exec($(event.target).attr('class'))) ) {
+                    		
+                    			$('.magazine').turn('page', page[1]);
+                    		}
+                    	});
+                    
+                    	$('.thumbnails li').
+                    		bind($.mouseEvents.over, function() {
+                    			
+                    			$(this).addClass('thumb-hover');
+                    
+                    		}).bind($.mouseEvents.out, function() {
+                    			
+                    			$(this).removeClass('thumb-hover');
+                    
+                    		});
+                    
+                    	if ($.isTouch) {
+                    	
+                    		$('.thumbnails').
+                    			addClass('thumbanils-touch').
+                    			bind($.mouseEvents.move, function(event) {
+                    				event.preventDefault();
+                    			});
+                    
+                    	} else {
+                    
+                    		$('.thumbnails ul').mouseover(function() {
+                    
+                    			$('.thumbnails').addClass('thumbnails-hover');
+                    
+                    		}).mousedown(function() {
+                    
+                    			return false;
+                    
+                    		}).mouseout(function() {
+                    
+                    			$('.thumbnails').removeClass('thumbnails-hover');
+                    
+                    		});
+                    
+                    	}
+                    
+                    
+                    	// Regions
+                    
+                    	if ($.isTouch) {
+                    		$('.magazine').bind('touchstart', regionClick);
+                    	} else {
+                    		$('.magazine').click(regionClick);
+                    	}
+                    
+                    	// Events for the next button
+                    
+                    	$('.next-button').bind($.mouseEvents.over, function() {
+                    		
+                    		$(this).addClass('next-button-hover');
+                    
+                    	}).bind($.mouseEvents.out, function() {
+                    		
+                    		$(this).removeClass('next-button-hover');
+                    
+                    	}).bind($.mouseEvents.down, function() {
+                    		
+                    		$(this).addClass('next-button-down');
+                    
+                    	}).bind($.mouseEvents.up, function() {
+                    		
+                    
+                    		$(this).removeClass('next-button-down');
+                    
+                    	}).click(function() {
+                    		
+                    		$('.magazine').turn('next');
+                    
+                    	});
+                    
+                    	// Events for the next button
+                    	
+                    	$('.previous-button').bind($.mouseEvents.over, function() {
+                    		
+                    		$(this).addClass('previous-button-hover');
+                    
+                    	}).bind($.mouseEvents.out, function() {
+                    		
+                    		$(this).removeClass('previous-button-hover');
+                    
+                    	}).bind($.mouseEvents.down, function() {
+                    		
+                    		$(this).addClass('previous-button-down');
+                    
+                    	}).bind($.mouseEvents.up, function() {
+                    		
+                    		$(this).removeClass('previous-button-down');
+                    
+                    	}).click(function() {
+                    		
+                    		$('.magazine').turn('previous');
+                    
+                    	});
+                    
+                    
+                    	resizeViewport();
+                    
+                    	$('.magazine').addClass('animated');
+                    
+                    }
+                    
+                    // Zoom icon
+                    
+                     $('.zoom-icon').bind('mouseover', function() { 
+                     	
+                     	if ($(this).hasClass('zoom-icon-in'))
+                     		$(this).addClass('zoom-icon-in-hover');
+                    
+                     	if ($(this).hasClass('zoom-icon-out'))
+                     		$(this).addClass('zoom-icon-out-hover');
+                     
+                     }).bind('mouseout', function() { 
+                     	
+                     	 if ($(this).hasClass('zoom-icon-in'))
+                     		$(this).removeClass('zoom-icon-in-hover');
+                     	
+                     	if ($(this).hasClass('zoom-icon-out'))
+                     		$(this).removeClass('zoom-icon-out-hover');
+                    
+                     }).bind('click', function() {
+                    
+                     	if ($(this).hasClass('zoom-icon-in'))
+                     		$('.magazine-viewport').zoom('zoomIn');
+                     	else if ($(this).hasClass('zoom-icon-out'))	
+                    		$('.magazine-viewport').zoom('zoomOut');
+                    
+                     });
+                    
+                     $('#canvas').hide();
+                    
+                    
+                    // Load the HTML4 version if there's not CSS transform
+                    
+                    yepnope({
+                    	test : Modernizr.csstransforms,
+                    	yep: ['{% static "front/catalogue_ultima/js/turn.js" %}'],
+                    	nope: ['{% static "front/catalogue_ultima/js/turn.html4.min.js" %}'],
+                    	both: ['{% static "front/catalogue_ultima/js/zoom.min.js" %}', '{% static "front/catalogue_ultima/js/magazine.js" %}', '{% static "front/catalogue_ultima/css/magazine.css" %}'],
+                    	complete: loadApp
+                    });
+                    
+                </script>
+            </div>
+        </div>
+    </body>
+</html>

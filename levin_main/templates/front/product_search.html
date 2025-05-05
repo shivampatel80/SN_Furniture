@@ -1,0 +1,179 @@
+{% extends 'front/master_front.html' %}
+
+{% load static %}
+
+
+        {% block headblock %}
+
+            <link rel='stylesheet' id='wp-color-picker-css'  href='{% static "front/css/color-picker.min7263.css" %}' type='text/css' media='all' />
+            <link rel='stylesheet' id='wp-block-library-css'  href='{% static "front/css/style.min7263.css" %}' type='text/css' media='all' />
+            <link rel='stylesheet' id='wc-block-style-css'  href='{% static "front/css/style60a8.css" %}' type='text/css' media='all' />
+            <link rel='stylesheet' id='contact-form-7-css'  href='{% static "front/css/styles5fba.css" %}' type='text/css' media='all' />
+            <link rel='stylesheet' id='mphb-kbwood-datepick-css-css'  href='{% static "front/css/jquery.datepickcd70.css" %}' type='text/css' media='all' />
+            <link rel='stylesheet' id='mphb-css'  href='{% static "front/css/mphb.mincd70.css" %}' type='text/css' media='all' />
+
+            <link rel='stylesheet' id='holleta-icons-css'  href='{% static "front/css/iconfont7263.css" %}' type='text/css' media='all' />
+            <link rel='stylesheet' id='js_composer_front-css'  href='{% static "front/css/js_composer.min10df.css" %}' type='text/css' media='all' />
+            <link rel='stylesheet' id='fontawesome-css'  href='{% static "front/css/fontawesome.min7263.css" %}' type='text/css' media='all' />
+            <link rel='stylesheet' id='holleta-style-css'  href='{% static "front/css/style7263.css" %}' type='text/css' media='all' />
+            <link rel='stylesheet' id='swiper-css'  href='{% static "front/css/swiper268f.css" %}' type='text/css' media='all' />
+            <link rel='stylesheet' id='holleta-main-style-css'  href='{% static "front/css/main7263.css" %}' type='text/css' media='all' />
+            <link rel='stylesheet' id='woocommerce-general-css'  href='{% static "front/css/woocommerce7263.css" %}' type='text/css' media='all' />
+            <link rel='stylesheet' id='woocommerce-layout-css'  href='{% static "front/css/woocommerce-layout7263.css" %}' type='text/css' media='all' />
+            <link rel='stylesheet' id='select2-css'  href='{% static "front/css/select27263.css" %}' type='text/css' media='all' />
+            <link rel='stylesheet' id='holleta-typekit-css'  href='{% static "front/css/qca6mqh68b3.css" %}' type='text/css' media='all' />
+            <link rel='stylesheet' id='photoswipe-css'  href='{% static "front/css/photoswipe.css" %}' type='text/css' media='all' />
+            <link rel='stylesheet' id='pt-addons-css'  href='{% static "front/css/pt-addons7263.css" %}' type='text/css' media='all' />
+            <script type='text/javascript' src='{% static "front/js/jquery4a5f.js" %}'></script>
+            <script type='text/javascript' src='{% static "front/js/jquery-migrate.min330a.js" %}'></script>
+            <script type='text/javascript' src='{% static "front/js/jquery.blockUI.min44fd.js" %}'></script>
+
+            <script type='text/javascript' src='{% static "front/js/add-to-cart.min3a05.js" %}'></script>
+            <script type='text/javascript' src='{% static "front/js/woocommerce-add-to-cart10df.js" %}'></script>
+
+            <script type='text/javascript' src='{% static "front/js/zilla-likes7263.js" %}'></script>
+            <script type='text/javascript' src='{% static "front/js/pace.min8a54.js" %}'></script>
+
+            <style type="text/css" title="dynamic-css" class="options-output">body{font-family: lato,Arial, Helvetica, sans-serif;font-weight: 400;font-size: 16px;}h1, .h1{font-family: lato,Arial, Helvetica, sans-serif;font-weight: 600;font-size: 72px;}h2, .h2{font-family: lato,Arial, Helvetica, sans-serif;font-weight: 600;font-size: 62px;}h3, .h3{font-family: lato,Arial, Helvetica, sans-serif;font-weight: 600;font-size: 52px;}h4, .h4{font-family: lato,Arial, Helvetica, sans-serif;font-weight: 600;font-size: 42px;}h5, .h5{font-family: lato,Arial, Helvetica, sans-serif;font-weight: 600;font-size: 30px;}h6, .h6{font-family: lato,Arial, Helvetica, sans-serif;font-weight: 600;font-size: 18px;}</style>
+
+            <link href="{% static 'front/css/lightgallery.css' %}" rel="stylesheet">
+
+        {% endblock %}
+
+
+
+        {% block page_content %}
+
+        <main class="main-container">
+            <div class="container">
+
+                <!-- title -->
+                <div class="vc_row wpb_row vc_row-fluid vc_row-5efc62787e106">
+                    <div class="wpb_column vc_column_container vc_col-sm-12 vc_column_container-603def37672bb">
+                        <div class="vc_column-inner ">
+                            <div class="wpb_wrapper">
+                                <div class="heading-block heading-5efc62b0bc070 tal h-h1">
+                                    <h1 class="h">Product Search</h1>
+                                </div>
+                                <div class="wpb_text_column wpb_content_element  text-t1 wpb_text_column-5efc332815159" >
+                                    <div class="wpb_wrapper">
+                                        <h4>{% if sheets %}{{sheets.count}}{% else %}No{% endif %} Product found !</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <style>
+                    .indi-product {
+                        text-align: center;
+                        margin-top: 50px;
+                    }
+                    .indi-title-wrapper {
+                        margin-bottom: 15px !important;
+                    }
+                    .indi-title {
+                        margin-bottom: 0px !important;
+                    }
+                    .product-image {
+                        height: 500px;
+                        box-shadow: 5px 5px 10px rgb(0 0 0 / 30%);
+                        transition: all 300ms;
+                    }
+                    .product-image:hover {
+                        box-shadow: 15px 15px 30px rgb(0 0 0 / 30%);
+                        transform: translateY(-10px);
+                        transition: all 300ms;
+                        cursor: pointer;
+                    }
+                    
+                </style>
+
+                <!-- row -->
+                <div id="lightgallery" class="vc_row wpb_row vc_row-fluid vc_row-603def3767513">
+
+                    {% for sheet in sheet %}
+                        {% if sheet.has_detail == True and sheet.fk %}
+                        <div class="wpb_column vc_column_container vc_col-sm-4 indi-product" data-src="{% if sheet.image1 %}{{sheet.image1.url}}{% endif %}" data-sub-html="{{sheet.number}}">
+                            <div class="menu-block indi-title-wrapper">
+                                <div class="title indi-title">{{sheet.number}}</div>
+                            </div>
+                            <a href="{% url 'product_detail_single' name_slug=sheet.fk.name_slug sheet_number=sheet.number %}">
+                                <img src="{% if sheet.image1 %}{{sheet.image1.url}}{% endif %}" class="product-image" alt="">
+                            </a>
+                        </div>
+                        {% elif sheet.has_detail == False %}
+                        <div class="wpb_column vc_column_container vc_col-sm-4 indi-product" data-src="{% if sheet.image1 %}{{sheet.image1.url}}{% endif %}" data-sub-html="{{sheet.number}}">
+                            <div class="menu-block indi-title-wrapper">
+                                <div class="title indi-title">{{sheet.number}}</div>
+                            </div>
+                            <a href="{% if sheet.image1 %}{{sheet.image1.url}}{% endif %}">
+                                <img src="{% if sheet.image1 %}{{sheet.image1.url}}{% endif %}" class="product-image" alt="">
+                            </a>
+                        </div>
+                        {% endif %}
+                    {% endfor %}
+
+                </div>
+
+                <!-- lightgallery script -->
+                <!-- <script src="{% static 'front/js/jquery-3.3.1.min.js' %}"></script>
+                <script type="text/javascript">
+                $(document).ready(function(){
+                    $('#lightgallery').lightGallery();
+                });
+                </script>
+                <script src="{% static 'front/js/lightgallery-all.min.js' %}"></script> -->
+
+                <!-- pagination -->
+                {% if sheets|length > 0 %}
+                <div class="loadmore-button-block tac" style="margin-top: 100px; padding-bottom: 50px;">
+                    <style>
+                        .pagination-active{
+                            background-color: #EAB98D;
+                            color: white;
+                        }
+                    </style>
+
+                    {% for num in sheet.paginator.page_range %}
+                        {% ifequal num sheet.number %}
+                            <a href="#" class="page button-style1 pagination-active" name="page" data-type="grid" data-action="blog" data-magic-cursor="link">
+                                <span>{{ num }}</span>
+                                <span class="load-dots">
+                                    <em></em>
+                                </span>
+                            </a>
+                        {% else %}
+                            <a href="?page={{ num }}&search={{ search|urlencode }}" class="page button-style1" name="page" data-type="grid" data-action="blog" data-magic-cursor="link">
+                                <span>{{ num }}</span>
+                                <span class="load-dots">
+                                    <em></em>
+                                </span>
+                            </a>
+                        {% endifequal %}
+                    {% endfor %}
+
+                </div>
+                {% endif %}
+
+            </div>
+        </main>
+
+        {% endblock %}
+
+
+
+        {% block footerblock  %} 
+
+            <style id='pt-inline-inline-css' type='text/css'>
+                .vc_row-5efc62787e106{padding-top:29px !important;padding-bottom:49px !important}
+                .heading-5efc62b0bc070{margin-bottom:70px !important}
+                .heading-5efc62b0bc070 .h{font-size:36px !important}@media (min-width:576px){.heading-5efc62b0bc070 .h{font-size:48px !important}}@media (min-width:768px){.heading-5efc62b0bc070 .h{font-size:64px !important}}@media (min-width:992px){.heading-5efc62b0bc070 .h{font-size:72px !important}}@media (min-width:1200px){.heading-5efc62b0bc070 .h{font-size:80px !important}}
+                .heading-5efc62b0bc070 .h{font-weight:700 !important}
+                .heading-5efc694deb2db{margin-top:0px !important;margin-bottom:25px !important}@media (min-width:768px){.heading-5efc694deb2db{margin-bottom:40px !important}}
+            </style>
+
+        {% endblock %}
+
+

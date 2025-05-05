@@ -1,0 +1,223 @@
+{% extends 'front/master_front.html' %}
+
+{% load static %}
+
+
+        {% block headblock %}
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="profile" href="http://gmpg.org/xfn/11">
+        <meta name="theme-color" content="#fff">
+        <title>Restaurant &#8211; Holleta</title>
+        <link rel='dns-prefetch' href='http://use.typekit.net/' />
+        <link rel='dns-prefetch' href='http://s.w.org/' />
+        <link rel="alternate" type="application/rss+xml" title="Holleta &raquo; Feed" href="../feed/index.html" />
+        <link rel="alternate" type="application/rss+xml" title="Holleta &raquo; Comments Feed" href="../comments/feed/index.html" />
+        <script type="text/javascript">
+            window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"#"}};
+            /*! This file is auto-generated */
+            !function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+        </script>
+        <style type="text/css">
+            img.wp-smiley,
+            img.emoji {
+            display: inline !important;
+            border: none !important;
+            box-shadow: none !important;
+            height: 1em !important;
+            width: 1em !important;
+            margin: 0 .07em !important;
+            vertical-align: -0.1em !important;
+            background: none !important;
+            padding: 0 !important;
+            }
+        </style>
+        <link rel='stylesheet' id='wp-color-picker-css'  href='{% static "front/css/color-picker.min7263.css" %}' type='text/css' media='all' />
+        <link rel='stylesheet' id='wp-block-library-css'  href='{% static "front/css/style.min7263.css" %}' type='text/css' media='all' />
+        <link rel='stylesheet' id='wc-block-style-css'  href='{% static "front/css/style60a8.css" %}' type='text/css' media='all' />
+        <link rel='stylesheet' id='contact-form-7-css'  href='{% static "front/css/styles5fba.css" %}' type='text/css' media='all' />
+        <link rel='stylesheet' id='mphb-kbwood-datepick-css-css'  href='{% static "front/css/jquery.datepickcd70.css" %}' type='text/css' media='all' />
+        <link rel='stylesheet' id='mphb-css'  href='{% static "front/css/mphb.mincd70.css" %}' type='text/css' media='all' />
+        <style id='woocommerce-inline-inline-css' type='text/css'>
+            .woocommerce form .form-row .required { visibility: visible; }
+        </style>
+        <link rel='stylesheet' id='holleta-icons-css'  href='{% static "front/css/iconfont7263.css" %}' type='text/css' media='all' />
+        <link rel='stylesheet' id='js_composer_front-css'  href='{% static "front/css/js_composer.min10df.css" %}' type='text/css' media='all' />
+        <link rel='stylesheet' id='fontawesome-css'  href='{% static "front/css/fontawesome.min7263.css" %}' type='text/css' media='all' />
+        <link rel='stylesheet' id='holleta-style-css'  href='{% static "front/css/style7263.css" %}' type='text/css' media='all' />
+        <link rel='stylesheet' id='swiper-css'  href='{% static "front/css/swiper268f.css" %}' type='text/css' media='all' />
+        <link rel='stylesheet' id='holleta-main-style-css'  href='{% static "front/css/main7263.css" %}' type='text/css' media='all' />
+        <link rel='stylesheet' id='woocommerce-general-css'  href='{% static "front/css/woocommerce7263.css" %}' type='text/css' media='all' />
+        <link rel='stylesheet' id='woocommerce-layout-css'  href='{% static "front/css/woocommerce-layout7263.css" %}' type='text/css' media='all' />
+        <link rel='stylesheet' id='select2-css'  href='{% static "front/css/select27263.css" %}' type='text/css' media='all' />
+        <link rel='stylesheet' id='holleta-typekit-css'  href='{% static "front/css/qca6mqh68b3.css" %}' type='text/css' media='all' />
+        <link rel='stylesheet' id='photoswipe-css'  href='{% static "front/css/photoswipe.css" %}' type='text/css' media='all' />
+        <link rel='stylesheet' id='pt-addons-css'  href='{% static "front/css/pt-addons7263.css" %}' type='text/css' media='all' />
+        <script type='text/javascript' src='{% static "front/js/jquery4a5f.js" %}'></script>
+        <script type='text/javascript' src='{% static "front/js/jquery-migrate.min330a.js" %}'></script>
+        <script type='text/javascript' src='{% static "front/js/jquery.blockUI.min44fd.js" %}'></script>
+        <script type='text/javascript'>
+            /* <![CDATA[ */
+            var wc_add_to_cart_params = {"ajax_url":"\/holleta\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/holleta\/?wc-ajax=%%endpoint%%","i18n_view_cart":"View cart","cart_url":"#","is_cart":"","cart_redirect_after_add":"no"};
+            /* ]]> */
+        </script>
+        <script type='text/javascript' src='{% static "front/js/add-to-cart.min3a05.js" %}'></script>
+        <script type='text/javascript' src='{% static "front/js/woocommerce-add-to-cart10df.js" %}'></script>
+        <script type='text/javascript'>
+            /* <![CDATA[ */
+            var zilla_likes = {"ajaxurl":"#"};
+            /* ]]> */
+        </script>
+        <script type='text/javascript' src='{% static "front/js/zilla-likes7263.js" %}'></script>
+        <script type='text/javascript' src='{% static "front/js/pace.min8a54.js" %}'></script>
+        <link rel='https://api.w.org/' href='../wp-json/index.html' />
+        <link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc0db0.php?rsd" />
+        <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../wp-includes/wlwmanifest.xml" />
+        <meta name="generator" content="WordPress 5.4.4" />
+        <meta name="generator" content="WooCommerce 4.2.2" />
+        <link rel="canonical" href="index.html" />
+        <link rel='shortlink' href='../index9c22.html?p=3090' />
+
+        <noscript>
+            <style>.woocommerce-product-gallery{ opacity: 1 !important; }</style>
+        </noscript>
+        <meta name="generator" content="Levin Decor"/>
+
+        <style type="text/css" title="dynamic-css" class="options-output">body{font-family: lato,Arial, Helvetica, sans-serif;font-weight: 400;font-size: 16px;}h1, .h1{font-family: lato,Arial, Helvetica, sans-serif;font-weight: 600;font-size: 72px;}h2, .h2{font-family: lato,Arial, Helvetica, sans-serif;font-weight: 600;font-size: 62px;}h3, .h3{font-family: lato,Arial, Helvetica, sans-serif;font-weight: 600;font-size: 52px;}h4, .h4{font-family: lato,Arial, Helvetica, sans-serif;font-weight: 600;font-size: 42px;}h5, .h5{font-family: lato,Arial, Helvetica, sans-serif;font-weight: 600;font-size: 30px;}h6, .h6{font-family: lato,Arial, Helvetica, sans-serif;font-weight: 600;font-size: 18px;}</style>
+        <noscript>
+            <style> .wpb_animate_when_almost_visible { opacity: 1; }</style>
+        </noscript>
+        <link href="{% static 'front/css/lightgallery.css' %}" rel="stylesheet">
+
+        <style>
+            @media(max-width: 764px){
+                .text-align-center-mobile{p
+                    text-align: center;
+                }
+                .button-align-center-mobile{
+                    justify-content: center;
+                }
+            }
+        </style>
+        {% endblock %}
+
+
+
+        {% block page_content %}
+
+        <div class="page-top-block type-page" style="">
+            <div class="container">
+                <div class="heading-block">
+                    <!--<h1 class="h h3" style="text-align: center;">Fullsheet-View</h1>-->
+                </div>
+            </div>
+        </div>
+        <main class="main-container">
+            <div class="container">
+                <div id="post-3145" class="post-3145 page type-page status-publish hentry">
+                    <div class="content-area clearfix">
+                        
+                        <div class="vc_row-full-width vc_clearfix"></div>
+                        <div class="vc_row wpb_row vc_row-fluid vc_row-5e98515fd55cd">
+
+                            <div class="wpb_column vc_column_container vc_col-sm-2 indi-product" style="padding: 25px;"></div>
+
+                            <div class="wpb_column vc_column_container vc_col-sm-4 indi-product" data-src="{% if sheet.image1 %}{{sheet.image1.url}}{% endif %}" data-sub-html="{{sheet.number}}" style="padding: 25px; text-align: center;">
+                                <div class="menu-block indi-title-wrapper">
+                                    <div class="title indi-title"></div>
+                                </div>
+                                <a href="{% if sheet.image1 %}{{sheet.image1.url}}{% endif %}">
+                                    <img src="{% if sheet.image1 %}{{sheet.image1.url}}{% endif %}" class="product-image" alt="" style="width: 90% !important; box-shadow: 5px 5px 10px rgb(0 0 0 / 30%);">
+                                </a>
+                            </div>
+
+                            <div class="wpb_column vc_column_container vc_col-sm-1 indi-product" style="padding: 25px;"></div>
+
+
+                            <div class="wpb_column vc_column_container vc_col-sm-4 indi-product text-align-center-mobile" data-src="{% if sheets.image1 %}{{sheets.image1.url}}{% endif %}" data-sub-html="{{sheets.number}}" style="margin-top: 10%;">
+                                <div class="wpb_wrapper">
+                                        <div class="heading-block heading-5e9847bb4445f tal h-h5 text-align-center-mobile">
+                                            <!--<h2 class="h">{% if sheet.fk.name == '1mm' %}Remark{% else %}{{ sheet.fk.name }}{% endif %} - <b> {{ sheet.number }} </b></h2>-->
+                                            <h2 class="h"><b> {{ sheet.number }} </b></h2>
+                                        </div>
+                                        <div class="wpb_raw_code wpb_content_element wpb_raw_html" >
+                                            <div class="wpb_wrapper">
+                                                <br>
+                                                <div class="contact-item">
+                                                    <div class="label">Name</div>
+                                                    <div class="value">{{sheet.name}}</div>
+                                                </div>
+                                                <br>
+                                                <div class="contact-item">
+                                                    <div class="label">Finish</div>
+                                                    <div class="value">{{sheet.finish}}</div>
+                                                </div>
+                                                <br>
+                                                <div class="contact-item">
+                                                    <div class="label">Size</div>
+                                                    <div class="value">1220x2440 mm</div>
+                                                </div>
+                                                <br>
+                                                <div class="contact-item">
+                                                    <div class="button-container button-5ef0ae0364f25 button-align-center-mobile">
+                                                        <a class="button-style1" href="{{ sheet.image1.url }}" target="_self" download>
+                                                            <span>Download</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                            
+                            <!-- <div class="wpb_column vc_column_container vc_col-sm-6 vc_col-lg-5 vc_column_container-5e9847e45fa8a">
+                                <div class="vc_column-inner">
+                                    <div class="wpb_wrapper">
+                                        <div class="heading-block heading-5e9847bb4445f tal h-h5">
+                                            <h5 class="h">666</h5>
+                                        </div>
+                                        <div class="wpb_raw_code wpb_content_element wpb_raw_html" >
+                                            <div class="wpb_wrapper">
+                                                <div class="contact-item">
+                                                    <div class="label">Name</div>
+                                                    <div class="value">FALANA-DHIMKANA</div>
+                                                </div>
+                                                <br>
+                                                <div class="contact-item">
+                                                    <div class="label">Finish</div>
+                                                    <div class="value">AB-12, BC-69, ND-18</div>
+                                                </div>
+                                                <br>
+                                                <div class="contact-item">
+                                                    <div class="label">Size</div>
+                                                    <div class="value">1220x2440 mm</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        {% endblock %}
+
+
+
+        {% block footerblock  %}
+
+            <style id='pt-inline-inline-css' type='text/css'>
+                /* .site-footer{background-color:#ffffff;color:#000000} */
+                .vc_row-5efc62787e106{padding-top:29px !important;padding-bottom:49px !important}
+                .heading-5efc62b0bc070{margin-bottom:70px !important}
+                .heading-5efc62b0bc070 .h{font-size:36px !important}@media (min-width:576px){.heading-5efc62b0bc070 .h{font-size:48px !important}}@media (min-width:768px){.heading-5efc62b0bc070 .h{font-size:64px !important}}@media (min-width:992px){.heading-5efc62b0bc070 .h{font-size:72px !important}}@media (min-width:1200px){.heading-5efc62b0bc070 .h{font-size:80px !important}}
+                .heading-5efc62b0bc070 .h{font-weight:700 !important}
+                .heading-5efc694deb2db{margin-top:0px !important;margin-bottom:25px !important}@media (min-width:768px){.heading-5efc694deb2db{margin-bottom:40px !important}}
+            </style>
+
+
+        {% endblock %}

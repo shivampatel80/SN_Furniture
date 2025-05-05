@@ -1,0 +1,499 @@
+{% extends 'front/master_front.html' %}
+
+{% load static %}
+
+
+        {% block headblock %}
+
+            <link rel='stylesheet' id='wp-color-picker-css'  href='{% static "front/css/color-picker.min7263.css" %}' type='text/css' media='all' />
+            <link rel='stylesheet' id='wp-block-library-css'  href='{% static "front/css/style.min7263.css" %}' type='text/css' media='all' />
+            <link rel='stylesheet' id='wc-block-style-css'  href='{% static "front/css/style60a8.css" %}' type='text/css' media='all' />
+            <link rel='stylesheet' id='contact-form-7-css'  href='{% static "front/css/styles5fba.css" %}' type='text/css' media='all' />
+            <link rel='stylesheet' id='mphb-kbwood-datepick-css-css'  href='{% static "front/css/jquery.datepickcd70.css" %}' type='text/css' media='all' />
+            <link rel='stylesheet' id='mphb-css'  href='{% static "front/css/mphb.mincd70.css" %}' type='text/css' media='all' />
+
+            <link rel='stylesheet' id='holleta-icons-css'  href='{% static "front/css/iconfont7263.css" %}' type='text/css' media='all' />
+            <link rel='stylesheet' id='fontawesome-css'  href='{% static "front/css/fontawesome.min7263.css" %}' type='text/css' media='all' />
+            <link rel='stylesheet' id='holleta-style-css'  href='{% static "front/css/style7263.css" %}' type='text/css' media='all' />
+            <link rel='stylesheet' id='swiper-css'  href='{% static "front/css/swiper268f.css" %}' type='text/css' media='all' />
+            <link rel='stylesheet' id='holleta-main-style-css'  href='{% static "front/css/main7263.css" %}' type='text/css' media='all' />
+            <link rel='stylesheet' id='woocommerce-general-css'  href='{% static "front/css/woocommerce7263.css" %}' type='text/css' media='all' />
+            <link rel='stylesheet' id='woocommerce-layout-css'  href='{% static "front/css/woocommerce-layout7263.css" %}' type='text/css' media='all' />
+            <link rel='stylesheet' id='select2-css'  href='{% static "front/css/select27263.css" %}' type='text/css' media='all' />
+            <link rel='stylesheet' id='holleta-starting-styles-css'  href='{% static "front/css/main-starting7263.css" %}' type='text/css' media='all' />
+            <link rel='stylesheet' id='holleta-typekit-css'  href='{% static "front/css/qca6mqh68b3.css" %}' type='text/css' media='all' />
+            <link rel='stylesheet' id='photoswipe-css'  href='{% static "front/css/photoswipe.css" %}' type='text/css' media='all' />
+            <link rel='stylesheet' id='pt-addons-css'  href='{% static "front/css/pt-addons7263.css" %}' type='text/css' media='all' />
+            <script type='text/javascript' src='{% static "front/js/jquery4a5f.js" %}'></script>
+            <script type='text/javascript' src='{% static "front/js/jquery-migrate.min330a.js" %}'></script>
+            <script type='text/javascript' src='{% static "front/js/jquery.blockUI.min44fd.js" %}'></script>
+
+            <script type='text/javascript' src='{% static "front/js/add-to-cart.min3a05.js" %}'></script>
+            <script type='text/javascript' src='{% static "front/js/woocommerce-add-to-cart10df.js" %}'></script>
+
+            <script type='text/javascript' src='{% static "front/js/zilla-likes7263.js" %}'></script>
+            <script type='text/javascript' src='{% static "front/js/pace.min8a54.js" %}'></script>
+
+            <style type="text/css" title="dynamic-css" class="options-output">body{font-family: lato,Arial, Helvetica, sans-serif;font-weight: 400;font-size: 16px;}h1, .h1{font-family: lato,Arial, Helvetica, sans-serif;font-weight: 600;font-size: 72px;}h2, .h2{font-family: lato,Arial, Helvetica, sans-serif;font-weight: 600;font-size: 62px;}h3, .h3{font-family: lato,Arial, Helvetica, sans-serif;font-weight: 600;font-size: 52px;}h4, .h4{font-family: lato,Arial, Helvetica, sans-serif;font-weight: 600;font-size: 42px;}h5, .h5{font-family: lato,Arial, Helvetica, sans-serif;font-weight: 600;font-size: 30px;}h6, .h6{font-family: lato,Arial, Helvetica, sans-serif;font-weight: 600;font-size: 18px;}</style>
+
+
+        {% endblock %}
+
+
+
+        {% block page_content %}
+
+            <!-- title -->
+            <!-- starting-banner has the bg in main-starting7263.css -->
+            <div class="banner-area starting-banner current-white" id="banner-area">
+                <div class="banner-item white">
+                    <div class="bg-overlay">
+                        <div class="image" style="background-image: url({% static 'front/images/new/title-banner.png' %})"></div>
+                        <div class="color"></div>
+                    </div>
+                    <div class="container full-height">
+                        <style>
+                            @media(min-width: 1400px) {
+                                .product-title-content {
+                                    padding-bottom: 25%;
+                                    margin-left: -10%;
+                                }
+                            }
+                            @media(min-width: 768px) and (max-width: 1400px) {
+                                .product-title-content {
+                                    padding-bottom: 15%;
+                                }
+                            }
+                        </style>
+                        <div class="content product-title-content">
+                            <div class="heading-block">
+                                <h1 class="h">Witness The Finest</h1>
+                            </div>
+                            <div class="text">Elite collection of products,<br>crafted just for you.</div>
+                            <!-- <a href="https://themeforest.net/item/holleta-hotel-booking-wordpress-theme/27595977?license=regular&amp;open_purchase_for_item_id=26559750&amp;purchasable=source&amp;ref=ypromo" class="button-style2" target="_blank">
+                            <span>Show</span>
+                            <i class="base-icon-next-2"></i>
+                            </a> -->
+                        </div>
+                        <div class="side-image">
+                            <div data-depth='0.2'></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="banner-bottom container">
+                    <div class="social-links">
+                        <div class="label">Follow us:</div>
+                        <a href="https://www.facebook.com/levin.decor.7" target="_blank"><i class="base-icon-facebook"></i></a>
+                        <a href="https://www.instagram.com/levindecorllp/" target="_blank"><i class="base-icon-instagram"></i></a>	
+                    </div>
+                </div>
+            </div>
+
+            <!-- characteristics -->
+            <div class="main-row addons-block main-row-f1c3e036e298">
+                <div class="bg-overlay">
+                    <div class="pattern type1" style="background-image: url({% static 'front/images/pattern3575.svg' %})"></div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-lg-5">
+                            <div class="heading-block">
+                                <h4 class="h">Product Characteristics</h4>
+                            </div>
+                            <div class="text-block">Laminate that fits your space</div>
+                            <!-- <a href="#" class="button-style1">More about</a> -->
+                        </div>
+                        <div class="col-12 col-lg-7">
+                            <div class="icon-box-area">
+                                <div class="row">
+                                    <div class="icon-box-type2 col-12 col-sm-6">
+                                        <div class="top">
+                                            <div class="icon">
+                                                <img src="{% static 'front/images/icons/water.png' %}" alt="Water Repellent">
+                                            </div>
+                                            <div class="title">Water Repellent</div>
+                                        </div>
+                                        <div class="text">prevents your laminates from getting torn and eroded because of water.</div>
+                                    </div>
+                                    <div class="icon-box-type2 col-12 col-sm-6">
+                                        <div class="top">
+                                            <div class="icon">
+                                                <img src="{% static 'front/images/icons/kitchen.png' %}" alt="Kitchen Safe">
+                                            </div>
+                                            <div class="title">Kitchen Safe</div>
+                                        </div>
+                                        <div class="text">Say good-bye to the hassle of taking extra care while in kitchen.</div>
+                                    </div>
+                                    <div class="icon-box-type2 col-12 col-sm-6">
+                                        <div class="top">
+                                            <div class="icon">
+                                                <img src="{% static 'front/images/icons/knife.png' %}" alt="Scratch Resistant">
+                                            </div>
+                                            <div class="title">Scratch Resistant</div>
+                                        </div>
+                                        <div class="text">It's scratch resistant characteristic makes it last way longer that expected.</div>
+                                    </div>
+                                    <div class="icon-box-type2 col-12 col-sm-6">
+                                        <div class="top">
+                                            <div class="icon">
+                                                <img src="{% static 'front/images/icons/bend-2.png' %}" alt="Flexible">
+                                            </div>
+                                            <div class="title">Flexible</div>
+                                        </div>
+                                        <div class="text">Durability is increased by vast margin because of it's flexible nature.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <main class="main-container" style="margin-top: 50px;">
+                <div class="container">
+                    
+                    <!-- slider -->
+                    <style>
+                        @media(max-width: 768px) {
+                            .product-slider-div {
+                                margin-bottom: 0px !important;
+                            }
+                        }
+                    </style>
+
+                    <div id="post-3118" class="post-3118 page type-page status-publish has-post-thumbnail hentry">
+                        <div class="content-area clearfix product-slider-div">
+
+                            <div class="vc_row-full-width vc_clearfix"></div>
+                            <div data-vc-full-width="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid vc_row-5efc80c03e1bf">
+                                <div class="bg-overlay">					</div>
+                                <div class="wpb_column vc_column_container vc_col-sm-12 vc_column_container-603def330f84a">
+                                    <div class="vc_column-inner ">
+                                        <div class="wpb_wrapper">
+                                            <!-- <div class="heading-block heading-5efc816b68b44 tal h-h4">
+                                                <h4 class="h">Products</h4>
+                                            </div> -->
+                                                            
+                                            <div class="qoute-block application-block-top">
+                                                <div class="quote" style="padding-left: 25px;">
+                                                    <h4>
+                                                        <b>Products</b>
+                                                    </h4>
+                                                </div>
+                                            </div>
+
+                                            <div class="blog-carousel blog-5efc7fef6a0a0">
+                                                <div class="carousel-nav">
+                                                    <div class="prev base-icon-prev-2"></div>
+                                                    <div class="next base-icon-next-2"></div>
+                                                </div>
+                                                <div class="swiper-container">
+                                                    <div class="swiper-wrapper">
+                                                        
+                                                        {% for products in products %}
+                                                        <div class="swiper-slide">
+                                                            <article class="blog-item category-branding category-design istp-item">
+                                                                <div class="wrap">
+                                                                    <div class="img">
+                                                                        <a href="{% url 'product_detail' name_slug=products.name_slug %}" style="background-image: url({% if products.image1 %}{{products.image1.url}}{% endif %})"></a>
+                                                                    </div>
+                                                                    <a class="title" href="{% url 'product_detail' name_slug=products.name_slug %}">{{products.name | title}}</a>
+                                                                    <div class="desc justify-text">{{products.intro}}</div>
+                                                                    <div class="button">
+                                                                        <a href="{% url 'product_detail' name_slug=products.name_slug %}" class="readmore-link button-style2">
+                                                                            <span>Explore</span>
+                                                                            <i class="base-icon-next-2"></i>
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            </article>
+                                                        </div>
+                                                        {% endfor %}
+
+                                                        <!-- <div class="swiper-slide">
+                                                            <article class="blog-item category-creativity category-development istp-item">
+                                                                <div class="wrap">
+                                                                    <div class="img">
+                                                                        <a href="../creativity/modern-building/index.html" style="background-image: url({% static 'front/images/img2-1024x684.jpg' %})"></a>
+                                                                    </div>
+                                                                    <a class="title" href="../creativity/modern-building/index.html">Elite</a>
+                                                                    <div class="desc">This study shows us where the pipeline for women and people of color is robust and where more support is needed movies of the p...</div>
+                                                                    <div class="button">
+                                                                        <a href="../creativity/modern-building/index.html" class="readmore-link button-style2">
+                                                                        <span>Explore</span>
+                                                                        <i class="base-icon-next-2"></i>
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            </article>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <article class="blog-item category-creativity category-design istp-item">
+                                                                <div class="wrap">
+                                                                    <div class="img">
+                                                                        <a href="../creativity/roof-beams/index.html" style="background-image: url({% static 'front/images/img4-1024x853.jpg' %})"></a>
+                                                                    </div>
+                                                                    <a class="title" href="../creativity/roof-beams/index.html">Doorwin</a>
+                                                                    <div class="desc">This study shows us where the pipeline for women and people of color is robust and where more support is needed movies of the p...</div>
+                                                                    <div class="button">
+                                                                        <a href="../creativity/roof-beams/index.html" class="readmore-link button-style2">
+                                                                        <span>Explore</span>
+                                                                        <i class="base-icon-next-2"></i>
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            </article>
+                                                        </div> -->
+                                                    
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="vc_row-full-width vc_clearfix"></div>
+                        
+                        </div>
+                    </div>
+
+                </div>
+            </main>
+
+            <!-- application slider -->
+            <style>
+                @media(min-width:768px) {
+                    .motopress-features-block {
+                        margin-top: -70px;
+                    }
+                }
+            </style>
+            <div class="main-row motopress-features-block" style="padding-bottom: 40px;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-md-12">
+
+                            <!-- <style>
+                                @media(max-width:768px){
+                                    .application-block-bottom {
+                                        display: none !important;
+                                    }
+                                }
+                                @media(min-width:768px){
+                                    .application-block-top {
+                                        display: none !important;
+                                    }
+                                    .application-image {
+                                        box-sizing: border-box; box-shadow: inset 45px 0 40px 0px #FFF;
+                                    }
+                                }
+                            </style> -->
+
+                            <div class="qoute-block application-block-top">
+                                <div class="quote" style="padding-left: 25px;">
+                                    <h4>
+                                        <b>Applications</b>
+                                    </h4>
+                                </div>
+                            </div>
+
+                            <!-- slider -->
+                            <div class="icon-box-block">
+                                <div class="prev base-icon-prev-2"></div>
+                                <div class="next base-icon-next-2"></div>
+                                <div class="swiper-container">
+                                    <div class="swiper-wrapper">
+
+                                        <div class="swiper-slide">
+                                            <div class="icon-box">
+                                                <div class="icon">
+                                                    <img src="{% static 'front/images/icons/office.png' %}" alt="Office">
+                                                </div>
+                                                <div class="wrap">
+                                                    <h6 class="title">Office</h6>
+                                                    <div class="desc" style="text-align: justify;">
+                                                        Levin's exclusive collection of laminates is a perfect choice for professional-commercial establishments 
+                                                        like offices.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="swiper-slide">
+                                            <div class="icon-box">
+                                                <div class="icon">
+                                                    <img src="{% static 'front/images/icons/mall.png' %}" alt="Mall">
+                                                </div>
+                                                <div class="wrap">
+                                                    <h6 class="title">Mall</h6>
+                                                    <div class="desc" style="text-align: justify;">
+                                                        Levin presents products containing properties such as scratch-free & water-proof which 
+                                                        makes them perfect choice premises like mall.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="swiper-slide">
+                                            <div class="icon-box">
+                                                <div class="icon">
+                                                    <img src="{% static 'front/images/icons/bedroom.png' %}" alt="Home">
+                                                </div>
+                                                <div class="wrap">
+                                                    <h6 class="title">Home</h6>
+                                                    <div class="desc" style="text-align: justify;">
+                                                        From furniture and cabinetry to walls, our laminate products are perfect choice to decorate any part of home in all the different ways possible.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="swiper-slide">
+                                            <div class="icon-box">
+                                                <div class="icon">
+                                                    <img src="{% static 'front/images/icons/hotel.png' %}" alt="Hotel">
+                                                </div>
+                                                <div class="wrap">
+                                                    <h6 class="title">Hotel</h6>
+                                                    <div class="desc" style="text-align: justify;">
+                                                        With more than 600 products, levin offers wide range of premium laminates specifically 
+                                                        keeping need of hospitality industry in mind.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="swiper-slide">
+                                            <div class="icon-box">
+                                                <div class="icon">
+                                                    <img src="{% static 'front/images/icons/hospital.png' %}" alt="Hospital">
+                                                </div>
+                                                <div class="wrap">
+                                                    <h6 class="title">Hospital</h6>
+                                                    <div class="desc" style="text-align: justify;">
+                                                        Anti-bacterial characteristic of our laminates takes total-care of hygiene, making them 
+                                                        an ideal choice for health-centric premises.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- <div class="swiper-slide">
+                                            <div class="icon-box">
+                                                <div class="icon">
+                                                    <img src="{% static 'front/images/icons/kitchen-2.png' %}" alt="Kitchen">
+                                                </div>
+                                                <div class="wrap">
+                                                    <h6 class="title">Kitchen</h6>
+                                                    <div class="desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit, natus.</div>
+                                                </div>
+                                            </div>
+                                        </div> -->
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- <div class="qoute-block application-block-bottom">
+                                <div class="quote" style="padding-left: 25px;">
+                                    <h5>
+                                        Applications
+                                    </h5>
+                                </div>
+                            </div> -->
+                            
+                        </div>
+
+                        <!-- <div class="col">
+                            <div class="side-img-block to-right">
+                                <div class="application-image" style="background-image: url({% static 'front/images/new/applications.jpg' %});"></div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        
+        {% endblock %}
+
+
+
+        {% block footerblock  %}
+
+            <!-- for slider -->
+            <script type='text/javascript'>
+                jQuery(document).ready(function (jQuery) {
+                            var $icon_box_carousel = jQuery('.icon-box-block-5eecbef1fe64d'),
+                    $icon_box_carousel_swiper = new Swiper($icon_box_carousel.find('.swiper-container'), {
+                        loop: true,
+                        
+                        spaceBetween: 30,
+                        watchSlidesVisibility: true,
+                        loopAdditionalSlides: 2,
+                        navigation: {
+                        nextEl: $icon_box_carousel.find('.next'),
+                        prevEl: $icon_box_carousel.find('.prev'),
+                        },
+                        breakpointsInverse: true,
+                        breakpoints: {
+                        200: { slidesPerView: 1 }, 576: { slidesPerView: 2 }, 768: { slidesPerView: 3 },
+                        }
+                    });
+                        });
+                jQuery(document).ready(function (jQuery) {
+                            var $blog_carousel = jQuery('.blog-5efc7fef6a0a0'),
+                            $blog_carousel_swiper = new Swiper($blog_carousel.find('.swiper-container'), {
+                                loop: true,
+                                spaceBetween: 30,
+                                watchSlidesVisibility: true,
+                                autoplay: {
+                                    delay: 5000,
+                                },
+                                navigation: {
+                                    nextEl: $blog_carousel.find('.next'),
+                                    prevEl: $blog_carousel.find('.prev'),
+                                },
+                                breakpointsInverse: true,
+                                loopAdditionalSlides: 4,
+                                breakpoints: {
+                                    200: { slidesPerView: 1 }, 768: { slidesPerView: 2 },
+                                },
+                            });
+                        });
+                jQuery(document).ready(function (jQuery) {
+                            var $testimonials_slider = jQuery('.testimonials-block-5ef0b6f2297d4'),
+                    $testimonials_slider_swiper = new Swiper($testimonials_slider.find('.swiper-container'), {
+                    loop: true,
+                    
+                    slidesPerView: 1,
+                    spaceBetween: 30,
+                    watchSlidesVisibility: true,
+                    navigation: {
+                        nextEl: $testimonials_slider.find('.next'),
+                        prevEl: $testimonials_slider.find('.prev'),
+                    },
+                    pagination: {
+                        el: $testimonials_slider.find('.swiper-dots'),
+                        clickable: true
+                    },
+                    breakpoints: {
+                        200: { slidesPerView: 1 }, 768: { slidesPerView: 2 },
+                    }
+                    });
+                        });
+            </script>
+
+
+            <style id='pt-inline-inline-css' type='text/css'>
+                .main-row-f1c3e036e298 .bg-overlay{background-color:#404040 !important}
+                .main-row-218c89ad3e34 .bg-overlay{background-color:#404040 !important}
+            </style>
+
+            <script type='text/javascript' src='{% static "front/js/swiper.min48f5.js" %}'></script>
+
+            <script type='text/javascript' src='{% static "front/js/parallax.min7263.js" %}'></script>
+            <script type='text/javascript' src='{% static "front/js/script7263.js" %}'></script>
+        
+
+        {% endblock %}

@@ -1,0 +1,1873 @@
+{% extends 'front/master_front.html' %}
+
+{% load static %}
+
+
+        {% block headblock %}
+
+            <link rel='stylesheet' id='wp-color-picker-css'  href='{% static "front/css/color-picker.min7263.css" %}' type='text/css' media='all' />
+            <link rel='stylesheet' id='wp-block-library-css'  href='{% static "front/css/style.min7263.css" %}' type='text/css' media='all' />
+            <link rel='stylesheet' id='wc-block-style-css'  href='{% static "front/css/style60a8.css" %}' type='text/css' media='all' />
+            <link rel='stylesheet' id='contact-form-7-css'  href='{% static "front/css/styles5fba.css" %}' type='text/css' media='all' />
+            <link rel='stylesheet' id='mphb-kbwood-datepick-css-css'  href='{% static "front/css/jquery.datepickcd70.css" %}' type='text/css' media='all' />
+            <link rel='stylesheet' id='mphb-css'  href='{% static "front/css/mphb.mincd70.css" %}' type='text/css' media='all' />
+
+            <link rel='stylesheet' id='holleta-icons-css'  href='{% static "front/css/iconfont7263.css" %}' type='text/css' media='all' />
+            <link rel='stylesheet' id='js_composer_front-css'  href='{% static "front/css/js_composer.min10df.css" %}' type='text/css' media='all' />
+            <link rel='stylesheet' id='fontawesome-css'  href='{% static "front/css/fontawesome.min7263.css" %}' type='text/css' media='all' />
+            <link rel='stylesheet' id='holleta-style-css'  href='{% static "front/css/style7263.css" %}' type='text/css' media='all' />
+            <link rel='stylesheet' id='swiper-css'  href='{% static "front/css/swiper268f.css" %}' type='text/css' media='all' />
+            <link rel='stylesheet' id='holleta-main-style-css'  href='{% static "front/css/main7263.css" %}' type='text/css' media='all' />
+            <link rel='stylesheet' id='woocommerce-general-css'  href='{% static "front/css/woocommerce7263.css" %}' type='text/css' media='all' />
+            <link rel='stylesheet' id='woocommerce-layout-css'  href='{% static "front/css/woocommerce-layout7263.css" %}' type='text/css' media='all' />
+            <link rel='stylesheet' id='select2-css'  href='{% static "front/css/select27263.css" %}' type='text/css' media='all' />
+            <link rel='stylesheet' id='holleta-typekit-css'  href='{% static "front/css/qca6mqh68b3.css" %}' type='text/css' media='all' />
+            <link rel='stylesheet' id='photoswipe-css'  href='{% static "front/css/photoswipe.css" %}' type='text/css' media='all' />
+            <link rel='stylesheet' id='pt-addons-css'  href='{% static "front/css/pt-addons7263.css" %}' type='text/css' media='all' />
+            <script type='text/javascript' src='{% static "front/js/jquery4a5f.js" %}'></script>
+            <script type='text/javascript' src='{% static "front/js/jquery-migrate.min330a.js" %}'></script>
+            <script type='text/javascript' src='{% static "front/js/jquery.blockUI.min44fd.js" %}'></script>
+
+            <script type='text/javascript' src='{% static "front/js/add-to-cart.min3a05.js" %}'></script>
+            <script type='text/javascript' src='{% static "front/js/woocommerce-add-to-cart10df.js" %}'></script>
+
+            <script type='text/javascript' src='{% static "front/js/zilla-likes7263.js" %}'></script>
+            <script type='text/javascript' src='{% static "front/js/pace.min8a54.js" %}'></script>
+
+            <style type="text/css" title="dynamic-css" class="options-output">body{font-family: lato,Arial, Helvetica, sans-serif;font-weight: 400;font-size: 16px;}h1, .h1{font-family: lato,Arial, Helvetica, sans-serif;font-weight: 600;font-size: 72px;}h2, .h2{font-family: lato,Arial, Helvetica, sans-serif;font-weight: 600;font-size: 62px;}h3, .h3{font-family: lato,Arial, Helvetica, sans-serif;font-weight: 600;font-size: 52px;}h4, .h4{font-family: lato,Arial, Helvetica, sans-serif;font-weight: 600;font-size: 42px;}h5, .h5{font-family: lato,Arial, Helvetica, sans-serif;font-weight: 600;font-size: 30px;}h6, .h6{font-family: lato,Arial, Helvetica, sans-serif;font-weight: 600;font-size: 18px;}</style>
+        
+            <style>
+                /* The Modal (background) */
+                .modal {
+                  display: none; /* Hidden by default */
+                  position: fixed; /* Stay in place */
+                  z-index: 1; /* Sit on top */
+                  padding-top: 100px; /* Location of the box */
+                  left: 0;
+                  top: 0;
+                  width: 100%; /* Full width */
+                  height: 100%; /* Full height */
+                  overflow: auto; /* Enable scroll if needed */
+                  background-color: rgb(0,0,0); /* Fallback color */
+                  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+                }
+                
+                /* Modal Content */
+                .modal-content {
+                  background-color: #fefefe;
+                  margin: auto;
+                  padding: 7px;
+                  padding-top:0px !important;
+                  border: 1px solid #888;
+                  width: 50%;
+                }
+                
+                @media (max-width: 760px) {
+                    .modal-content {
+                      background-color: #fefefe;
+                      margin: auto;
+                      padding: 7px;
+                      padding-top:0px !important;
+                      border: 1px solid #888;
+                      width: 90% !important;
+                    }
+                    .custom_modal_video {
+                        width: 100%;
+                    }
+                }
+                .custom_modal_video {
+                    width: 100%;
+                }
+                
+                /* The Close Button */
+                .close_modal {
+                  color: #aaaaaa;
+                  float: right;
+                  font-size: 15px;
+                  font-weight: bold;
+                }
+                
+                .close_modal:hover,
+                .close_modal:focus {
+                  color: #000;
+                  text-decoration: none;
+                  cursor: pointer;
+                }
+            </style>
+
+        {% endblock %}
+
+
+
+        {% block page_content %}
+
+            <main class="main-container">
+                <div class="container">
+
+                    <style>
+                        @media(min-width:768px){
+                            .home-top-title {
+                                padding-top: 10%;
+                            }
+                        }
+                    </style>
+
+                    <!-- slider -->
+                    <div data-vc-full-width="true" data-vc-full-width-init="false" data-vc-stretch-content="true" class="vc_row wpb_row vc_row-fluid vc_row-5ef5f19ca2575 vc_row-no-padding">
+                        <div class="wpb_column vc_column_container vc_col-sm-12 vc_column_container-603deecbe0633">
+                            <div class="vc_column-inner ">
+                                <div class="wpb_wrapper">
+                                    <div class="banner-area banner-area-5ef5f192da3a1 banner-with-booking-form stretch-container">
+                                        <div class="banner-slider swiper-container  full-height">
+                                            <div class="swiper-wrapper">
+                                                
+                                                <!--<div class="swiper-slide">-->
+                                                <!--    <div class="banner-item banner-item-5ef5f1ff76b5f white current-white tal middle">-->
+                                                <!--        <div class="bg-overlay">-->
+                                                <!--            <div class="image" style="background-image: url({% static 'front/images/new/slider-4.jpg' %})"></div>-->
+                                                <!--            <div class="color"></div>-->
+                                                <!--        </div>-->
+                                                <!--        <div class="container  full-height">-->
+                                                <!--            <div class="content-row" style="">-->
+                                                                
+                                                <!--            </div>-->
+                                                <!--        </div>-->
+                                                <!--    </div>-->
+                                                <!--</div>-->
+                                                
+                                                <!--<div class="swiper-slide">-->
+                                                <!--    <div class="banner-item banner-item-5ef5f1ff76b5f white current-white tal middle">-->
+                                                <!--        <div class="bg-overlay">-->
+                                                <!--            <div class="image" style="background-image: url({% static 'front/images/new/slider-5.jpg' %})"></div>-->
+                                                <!--            <div class="color"></div>-->
+                                                <!--        </div>-->
+                                                <!--        <div class="container  full-height">-->
+                                                <!--            <div class="content-row" style="">-->
+                                                                
+                                                <!--            </div>-->
+                                                <!--        </div>-->
+                                                <!--    </div>-->
+                                                <!--</div>-->
+
+                                                
+                                                <div class="swiper-slide">
+                                                    <div class="banner-item banner-item-5ef5f1e89de74 white current-white tal middle">
+                                                        <div class="bg-overlay">
+                                                            <div class="image" style="background-image: url({% static 'front/images/lecolors_new.jpg' %})"></div>
+                                                            <div class="color"></div>
+                                                        </div>
+                                                        <div class="container  full-height">
+                                                            <div class="content-row" style="">
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="swiper-slide">
+                                                    <div class="banner-item banner-item-5ef5f1e89de74 white current-white tal middle">
+                                                        <div class="bg-overlay">
+                                                            <div class="image" style="background-image: url({% static 'front/images/lemore_new.jpg' %})"></div>
+                                                            <div class="color"></div>
+                                                        </div>
+                                                        <div class="container  full-height">
+                                                            <div class="content-row" style="">
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="swiper-slide">
+                                                    <div class="banner-item banner-item-5ef5f1f368250 white current-white tal middle">
+                                                        <div class="bg-overlay">
+                                                            <div class="image" style="background-image: url({% static 'front/images/new/slider-2.jpg' %})"></div>
+                                                            <div class="color"></div>
+                                                        </div>
+                                                        <div class="container  full-height">
+                                                            <div class="content-row" style="">
+                                                                <!-- <div class="heading-block tal">
+                                                                    <div class="h h2">Enjoy the Nature.</div>
+                                                                </div>
+                                                                <div class="clear"></div>
+                                                                <div class="text">World-famous, deeply relaxing. Quality in<br />
+                                                                    everything we do.
+                                                                </div>
+                                                                <div class="clear"></div>
+                                                                <a class="button-style2" href="#" target="_self" data-magic-cursor="link">
+                                                                <span>Check now</span>
+                                                                <i class="base-icon-next-2"></i>
+                                                                </a> -->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="swiper-slide">
+                                                    <div class="banner-item banner-item-5ef5f1ff76b5f white current-white tal middle">
+                                                        <div class="bg-overlay">
+                                                            <div class="image" style="background-image: url({% static 'front/images/new/slider-3.jpg' %})"></div>
+                                                            <div class="color"></div>
+                                                        </div>
+                                                        <div class="container  full-height">
+                                                            <div class="content-row" style="">
+                                                                
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                
+                                            </div>
+                                            <div class="progress-line autoplay-on">
+                                                <div></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- title-para (below slider) -->
+                    <div class="vc_row-full-width vc_clearfix"></div>
+                    <div data-vc-full-width="true" data-vc-full-width-init="false" data-vc-stretch-content="true" class="vc_row wpb_row vc_row-fluid vc_row-5eea14ea24b7c vc_row-no-padding">
+                        <div class="wpb_column vc_column_container vc_col-sm-12 vc_column_container-603de4a5e841b">
+                            <div class="vc_column-inner ">
+                                <div class="wpb_wrapper">
+                                    <div class="image-slider-block image-slider-5ee9b5de712d5">
+                                        <div class="content-block">
+                                            <div class="container">
+                                                <div class="content">
+                                                    <h2 class="heading">Who We Are ?</h2>
+                                                    <div class="text justify-text" style="color: #606060; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+                                                        Levin Décor endeavors your dreams into destination. We have set the benchmark for creating
+                                                        unique piece of art and have delivered designs of excellent quality for over a decade. Decorative
+                                                        laminates under our brand are perfect example of luxury and simplicity; we provide variety of products
+                                                        for you to pick the best design that compliments your style. Levin acknowledges the dynamics of
+                                                        changing trends and preferences of our customers and hence the products launched are combined with
+                                                        cotemporary and futuristic approach.
+                                                    </div>
+                                                    <!-- <div class="button">
+                                                        <a href="https://krioskcreata.com" class="button-style1 open-form">Explore</a>
+                                                    </div> -->
+                                                </div>
+                                                <div class="right">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- creative side-slider -->
+                    <div class="vc_row-full-width vc_clearfix"></div>
+                    <div data-vc-full-width="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid vc_row-5eeb60dd228e3">
+                        <div class="bg-overlay">					</div>
+                        <div class="wpb_column vc_column_container vc_col-sm-6 vc_column_container-603deecbe5511">
+                            <div class="vc_column-inner ">
+                                <div class="wpb_wrapper home-top-title">
+                                    <div class="heading-block heading-5eeb5ba1f2b84 tal h-h4">
+                                        <h4 class="h">Our Product Spectrum</h4>
+                                    </div>
+                                    <div class="qoute-block qoute-block-5ef98311bb2aa">
+                                        <div class="quote justify-text">
+                                            Aesthetic laminate designs has always been a statement of sobriety and elegance. Our product accentuates the
+                                            beauty of a space it’s placed in, laminates on minimal furniture enhances entire ambience. Our chic
+                                            designs are ravishingly versatile; they are best suited for modern and colorful interiors of homes,
+                                            showrooms, offices etcetera. 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wpb_column vc_column_container vc_col-sm-6 vc_column_container-603deecbe5a02">
+                            <div class="vc_column-inner ">
+                                <div class="wpb_wrapper">
+                                    <div class="portfolio-block portfolio-type-carousel portfolio-5eeb62601fc14 popup-gallery gap-on carousel-style1">
+                                        <div class="next base-icon-prev"></div>
+                                        <div class="swiper-container">
+                                            <div class="swiper-wrapper">
+                                                
+                                                <article class="portfolio-item swiper-slide category-88 popup-item">
+                                                    <div class="wrap">
+                                                        <div class="icon base-icon-plus"></div>
+                                                        <div class="img" style='background-image: url({% static "front/images/new/second-slider/slide_1.jpg" %})'></div>
+                                                        <!-- <div class="content">
+                                                            <h6 class="title">Hall of a cozy restaurant</h6>
+                                                        </div> -->
+                                                        <a href='{% static "front/images/new/second-slider/slide_1.jpg" %}' class="link" data-size="680x1024" data-magic-cursor="link-w-text" data-magic-cursor-text="View" data-id="1"></a>				
+                                                    </div>
+                                                </article>
+                                                
+                                                <article class="portfolio-item swiper-slide category-89 popup-item">
+                                                    <div class="wrap">
+                                                        <div class="icon base-icon-plus"></div>
+                                                        <div class="img" style='background-image: url({% static "front/images/new/second-slider/slide_2.jpg" %})'></div>
+                                                        <a href='{% static "front/images/new/second-slider/slide_2.jpg" %}' class="link" data-size="680x1024" data-magic-cursor="link-w-text" data-magic-cursor-text="View" data-id="2"></a>				
+                                                    </div>
+                                                </article>
+                                                
+                                                <!-- <article class="portfolio-item swiper-slide category-86 popup-item">
+                                                    <div class="wrap">
+                                                        <div class="with-video"></div>
+                                                        <div class="icon base-icon-plus"></div>
+                                                        <div class="img" style='background-image: url({% static "front/images/new/second-slider/slide_3.jpg" %})'></div>
+                                                        <a href="front/images/new/second-slider/slide_3.jpg" class="link" data-type="video" data-size="1920x1080" data-video='<div class="wrapper"><div class="video-wrapper"><iframe class="pswp__video" width="1920" height="1080" src="https://youtube.com/embed/8plwv25NYRo" frameborder="0" allowfullscreen=""></iframe></div></div>' data-magic-cursor="link-w-text" data-magic-cursor-text="" data-id="3"></a>				
+                                                    </div>
+                                                </article> -->
+
+                                                <article class="portfolio-item swiper-slide category-89 popup-item">
+                                                    <div class="wrap">
+                                                        <div class="icon base-icon-plus"></div>
+                                                        <div class="img" style='background-image: url({% static "front/images/new/second-slider/slide_3.jpg" %})'></div>
+                                                        <a href='{% static "front/images/new/second-slider/slide_3.jpg" %}' class="link" data-size="680x1024" data-magic-cursor="link-w-text" data-magic-cursor-text="View" data-id="2"></a>				
+                                                    </div>
+                                                </article>
+                                                
+                                                <article class="portfolio-item swiper-slide category-87 popup-item">
+                                                    <div class="wrap">
+                                                        <div class="icon base-icon-plus"></div>
+                                                        <div class="img" style='background-image: url({% static "front/images/new/second-slider/slide_4.jpg" %})'></div>
+                                                        <a href='{% static "front/images/new/second-slider/slide_4.jpg" %}' class="link" data-size="680x1024" data-magic-cursor="link-w-text" data-magic-cursor-text="View" data-id="4"></a>				
+                                                    </div>
+                                                </article>
+
+                                                <article class="portfolio-item swiper-slide category-87 popup-item">
+                                                    <div class="wrap">
+                                                        <div class="icon base-icon-plus"></div>
+                                                        <div class="img" style='background-image: url({% static "front/images/new/second-slider/slide_5.jpg" %})'></div>
+                                                        <a href='{% static "front/images/new/second-slider/slide_5.jpg" %}' class="link" data-size="680x1024" data-magic-cursor="link-w-text" data-magic-cursor-text="View" data-id="4"></a>				
+                                                    </div>
+                                                </article>
+                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- visual gallery -->
+                    <div class="vc_row-full-width vc_clearfix"></div>
+                    <div class="vc_row wpb_row vc_row-fluid vc_row-5ef49d25d5dd6" style="padding-top: 100px; padding-bottom: 50px !important;">
+                        <div class="wpb_column vc_column_container vc_col-sm-12 vc_column_container-603de4a9c8dbf">
+                            <div class="vc_column-inner ">
+                                <div class="wpb_wrapper">
+                                    <div class="side-image-with-content side-image-with-content-5ef0ae42f7cfa left style1">
+                                        <div class="image">
+                                            <div style="background-image: url({% static 'front/images/visual-gallery.jpg' %});"></div>
+                                        </div>
+                                        <div class="content">
+                                            <div class="heading-block heading-5ef0add6f3a48 tal h-h4">
+                                                <h4 class="h">Visualize Your Space</h4>
+                                            </div>
+                                            <div class="wpb_text_column wpb_content_element  text-t1 wpb_text_column-5ef0adede408e" >
+                                                <div class="wpb_wrapper">
+                                                    <p class="justify-text">
+                                                        Do you ever get baffled while looking at designs online, thinking how that will really look in your space?
+                                                        Explore the various kinds of designs with our visual gallery; imagine your space virtually with one click.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="button-container button-5ef0ae0364f25 left">
+                                                <a class="button-style1" href="{% url 'visualizer_default' %}" target="_self">
+                                                    <span>Visualize</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- product intro, list -->
+                    <div class="vc_row-full-width vc_clearfix"></div>
+                    <div style="height: 60px;"> </div>
+                    <div data-vc-full-width="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid vc_row-5eecbaf1ff388">
+                        <div class="bg-overlay">
+                            <div class="pattern type3" style="background-image: url({% static 'front/images/pattern443f.svg' %})"></div>
+                        </div>
+                        <div class="wpb_column vc_column_container vc_col-lg-1 vc_col-md-1 vc_column_container-5eecbcc6f3f2c"></div>
+                        <div class="wpb_column vc_column_container vc_col-sm-12 vc_col-lg-10 vc_col-md-10 vc_column_container-5eecbcc6f3f2c">
+                            <div class="vc_column-inner ">
+                                <div class="wpb_wrapper">
+                                    <div class="video-block video-block-5ef0484126916 white" style="">
+                                        <div class="container">
+                                            <div class="content">
+                                                <div class="heading-block ">
+                                                    <div class="h h4">Range of Products</div>
+                                                </div>
+                                                <div class="text justify-text">
+                                                    You will find yourself in paradox of choice once you explore through the wide range of
+                                                    laminates, experience the spectrum of texture, colors and quality. There is an ease in our
+                                                    laminates- a stillness that resonates the feeling of openness and light to your interiors. 
+                                                </div>
+                                                <a class="button-style2" href="{% url 'products' %}">
+                                                    <span>Know More</span>
+                                                    <i class="base-icon-next-2"></i>
+                                                </a>
+                                            </div>
+                                            <div class="video-button-block">
+                                                <div class="video-button single-popup-item" data-type="video" data-size="1920x1080" data-video='<div class="wrapper"><div class="video-wrapper"><div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/542497553?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="remark-launch-compressed.mp4"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script></div></div>'>
+                                                    <span class="icon">
+                                                    <i class="base-icon-play-button"></i>
+                                                    </span>
+                                                    <span>Play Video</span>
+                                                </div>
+                                                
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wpb_column vc_column_container vc_col-lg-1 vc_col-md-1 vc_column_container-5eecbcc6f3f2c"></div>
+                    </div>
+                    <div class="vc_row-full-width vc_clearfix"></div>
+
+
+                    <!-- faqs -->
+                    <div class="vc_row-full-width vc_clearfix"></div>
+                    <div class="vc_row wpb_row vc_row-fluid vc_row-5ef49ba9ef623 vc_row-o-content-middle vc_row-flex" style="padding-top: 100px !important;">
+                        <div class="wpb_column vc_column_container vc_col-sm-6 vc_column_container-603de4a9c9207">
+                            <div class="vc_column-inner ">
+                                <div class="wpb_wrapper">
+                                    <div class="heading-block heading-5ef49aa5a2c70 tal h-h4">
+                                        <h4 class="h">FAQs</h4>
+                                    </div>
+                                    <div class="wpb_text_column wpb_content_element  text-t1 wpb_text_column-5ef49ac562ae4" >
+                                        <div class="wpb_wrapper">
+                                            <p class="justify-text">
+                                                We’ve collected some impotand answers which will help to improve your understanding about the laminates.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-block accordion-block-603de4a9c931c">
+                                        
+                                        <!-- 1 -->
+                                        <div class="accordion-item accordion-item-5ef49aec1c443 current">
+                                            <div class="top">
+                                                What are decorative laminates?    
+                                                <div class="button base-icon-next"></div>
+                                            </div>
+                                            <div class="wrap justify-text" style="display: block;">
+                                                Decorative laminates are surfacing materials that can be used to enhance the aesthetic appeal of
+                                                furniture and walls. Along with appeal, decorative laminates feature properties that make them durable, sturdy,
+                                                and easy-to-maintain.
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- 2 -->
+                                        <div class="accordion-item accordion-item-5ef49afcc51cd">
+                                            <div class="top">
+                                                How do you clean and maintain laminated surfaces?  
+                                                <div class="button base-icon-next"></div>
+                                            </div>
+                                            <div class="wrap justify-text"> 
+                                                Laminates are inherently low maintenance and very minimal upkeep is required to ensure they look brand new for a long time. Dust the laminated surface with a microfiber cloth once or twice a week to
+                                                keep it clean. If you want a thorough sanitization, use a damp cloth and a mild cleaner. Avoid heavily chlorinated, acidic or alkaline
+                                                products. Never use abrasive materials like steel scrubbers on laminates.
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="accordion-item accordion-item-5ef49b07943e7">
+                                            <div class="top">
+                                                What is the average lifespan of laminate sheet?     
+                                                <div class="button base-icon-next"></div>
+                                            </div>
+                                            <div class="wrap justify-text">
+                                                The lifespan of high- quality laminate is usually more than a decade. Properties
+                                                such as fire and abrasion resistance make HPL sheets last longer than expected. The exact lifespan of an HPL sheet, however, largely depends upon
+                                                the application. Generally speaking, HPL sheets are known for their durability, which explains their increasing adoption in large scale
+                                                commercial projects where value and longevity are of the essence.
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="accordion-item accordion-item-5ef49b1026cd7">
+                                            <div class="top">
+                                                Why to choose laminate flooring over hardwood flooring?  
+                                                <div class="button base-icon-next"></div>
+                                            </div>
+                                            <div class="wrap justify-text">
+                                                Because of price aspects. Laminate flooring is typically half
+                                                the cost of traditional hardwood flooring. Sometimes the savings are even greater, depending on the type of flooring in question.
+                                                And with recent innovations in technology, laminates look more and more like real wood. Laminate is easier to install than solid
+                                                hardwood. With a laminate you won’t need nails and/or glue, as is the case with newer laminate locking systems. Therefore
+                                                installation happens fast, in way less time than solid hardwoods can be installed and your finished floor will be scratch- and 
+                                                faderesistant, two areas where solid hardwood is known to be more vulnerable.
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="accordion-item accordion-item-5ef49b1526852">
+                                            <div class="top">
+                                                What do you mean by anti bacterial laminates?    
+                                                <div class="button base-icon-next"></div>
+                                            </div>
+                                            <div class="wrap justify-text">
+                                                Antibacterial laminates are hygienic surface solutions that have been specially
+                                                designed for areas that might need supreme cleanliness & performance like the kitchen, bathrooms, hospital rooms, hotels
+                                                receptions and so on. These particles are by nature, anti-microbial, anti-fungal, and antibacterial and antiviral. The highly activated
+                                                and energized nano-particles physically rupture and kill microbes that come in contact with it through contact killing mechanism,
+                                                keeping the surface always safe and hygienic.
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wpb_column vc_column_container vc_col-sm-6 vc_column_container-603de4a9c94f1">
+                            <div class="vc_column-inner ">
+                                <div class="wpb_wrapper">
+                                    <div class="side-img-block side-img-block-5ef49b3c0434e to-right">
+                                        <div style="background-image: url({% static 'front/images/new/faqs.jpg' %});"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- characteristics slider -->
+                    <div class="vc_row-full-width vc_clearfix"></div>
+                    <div data-vc-full-width="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid vc_row-5ef485ec98036 dark-scheme">
+                        <div class="bg-overlay">
+                            <div class="pattern type3" style="background-image: url({% static 'front/images/pattern443f.svg' %})"></div>
+                        </div>
+                        <div class="wpb_column vc_column_container vc_col-sm-12 vc_column_container-603de4a9c71fd">
+                            <div class="vc_column-inner ">
+                                <div class="wpb_wrapper">
+                                    <div class="icon-box-block icon-box-block-5ef4334f649ad">
+                                        <div class="nav-arrows">
+                                            <div class="prev base-icon-prev-2"></div>
+                                            <div class="next base-icon-next-2"></div>
+                                        </div>
+                                        <div class="swiper-container">
+                                            <div class="swiper-wrapper">
+
+                                                <div class="swiper-slide">
+                                                    <div class="icon-box icon-box-style-5ef4336f87af6 with-link">
+                                                        <div class="icon" style="margin-bottom: 0px;">
+                                                            <img src="{% static 'front/images/new/Water-Repellent.png' %}" alt="" style="height: 50px;">
+                                                        </div>
+                                                        <div class="wrap">
+                                                            <h6 class="title">Water Repellent</h6>
+                                                            <div class="desc" style="text-align: justify;">
+                                                                Water repellent nature protects the laminate from all sort of fluids and 
+                                                                increases the overall lifespan.
+                                                            </div>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="swiper-slide">
+                                                    <div class="icon-box icon-box-style-5ef4336f87af6 with-link">
+                                                        <div class="icon" style="margin-bottom: 0px;">
+                                                            <img src="{% static 'front/images/new/Abrasion-Resistant.png' %}" alt="" style="height: 50px;">
+                                                        </div>
+                                                        <div class="wrap">
+                                                            <h6 class="title">Abrasion Resistant</h6>
+                                                            <div class="desc" style="text-align: justify;">
+                                                                Abrasion resistant nature makes it difficult to get torn due to friction or rubbing.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="swiper-slide">
+                                                    <div class="icon-box icon-box-style-5ef4336f87af6 with-link">
+                                                        <div class="icon" style="margin-bottom: 0px;">
+                                                            <img src="{% static 'front/images/new/All-Wether-Resistant.png' %}" alt="" style="height: 50px;">
+                                                        </div>
+                                                        <div class="wrap">
+                                                            <h6 class="title">All Wether Resistant</h6>
+                                                            <div class="desc" style="text-align: justify;">
+                                                                The complex process used in manufacturing helps the laminate to stay intact 
+                                                                throughout all wheathers.
+                                                            </div>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="swiper-slide">
+                                                    <div class="icon-box icon-box-style-5ef4336f87af6 with-link">
+                                                        <div class="icon" style="margin-bottom: 0px;">
+                                                            <img src="{% static 'front/images/new/Anti-Bacterial.png' %}" alt="" style="height: 50px;">
+                                                        </div>
+                                                        <div class="wrap">
+                                                            <h6 class="title">Anti-Bacterial</h6>
+                                                            <div class="desc" style="text-align: justify;">
+                                                                Laminates that physically rupture and kill tiny bacteria to ensure hygiene, a 
+                                                                perfect for kitchen.
+                                                            </div>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="swiper-slide">
+                                                    <div class="icon-box icon-box-style-5ef4336f87af6 with-link">
+                                                        <div class="icon" style="margin-bottom: 0px;">
+                                                            <img src="{% static 'front/images/new/durable.png' %}" alt="" style="height: 50px;">
+                                                        </div>
+                                                        <div class="wrap">
+                                                            <h6 class="title">Durable</h6>
+                                                            <div class="desc" style="text-align: justify;">
+                                                                Quality core material helps the laminate to stay strong and last long, 
+                                                                independent of it's area of application.
+                                                            </div>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="swiper-slide">
+                                                    <div class="icon-box icon-box-style-5ef4336f87af6 with-link">
+                                                        <div class="icon" style="margin-bottom: 0px;">
+                                                            <img src="{% static 'front/images/new/Flexibility.png' %}" alt="" style="height: 50px;">
+                                                        </div>
+                                                        <div class="wrap">
+                                                            <h6 class="title">Flexible</h6>
+                                                            <div class="desc" style="text-align: justify;">
+                                                                Capable of bending to a certain extent without breaking makes our products last 
+                                                                longer than expected.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="swiper-slide">
+                                                    <div class="icon-box icon-box-style-5ef4336f87af6 with-link">
+                                                        <div class="icon" style="margin-bottom: 0px;">
+                                                            <img src="{% static 'front/images/new/Heat-resistant.png' %}" alt="" style="height: 50px;">
+                                                        </div>
+                                                        <div class="wrap" style="text-align: justify;">
+                                                            <h6 class="title">Heat-Resistant</h6>
+                                                            <div class="desc">ALl the products remains unaffected by high temperatures makes 
+                                                                them sun-friendly.</div>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="swiper-slide">
+                                                    <div class="icon-box icon-box-style-5ef4336f87af6 with-link">
+                                                        <div class="icon" style="margin-bottom: 0px;">
+                                                            <img src="{% static 'front/images/new/Scratch-Proof.png' %}" alt="" style="height: 50px;">
+                                                        </div>
+                                                        <div class="wrap">
+                                                            <h6 class="title">Scratch Proof</h6>
+                                                            <div class="desc" style="text-align: justify;">
+                                                                All products are capable of withstanding scratches, making it 
+                                                                look just like new for years & years.
+                                                            </div>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="swiper-slide">
+                                                    <div class="icon-box icon-box-style-5ef4336f87af6 with-link">
+                                                        <div class="icon" style="margin-bottom: 0px;">
+                                                            <img src="{% static 'front/images/new/Stain-Resistant.png' %}" alt="" style="height: 50px;">
+                                                        </div>
+                                                        <div class="wrap">
+                                                            <h6 class="title">Stain-Resistant</h6>
+                                                            <div class="desc" style="text-align: justify;">
+                                                                Back-breaking task of cleaning can be circumvented because of Stain-Resistant 
+                                                                property.
+                                                            </div>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- testies -->
+                    <!-- <div class="vc_row-full-width vc_clearfix"></div>
+                    <div class="vc_row wpb_row vc_row-fluid vc_row-5ef19ce19781d">
+                        <div class="wpb_column vc_column_container vc_col-sm-12 vc_column_container-603deecc0304a">
+                            <div class="vc_column-inner ">
+                                <div class="wpb_wrapper">
+                                    <div class="heading-block heading-5ef19a6c459f5 tal h-h4">
+                                        <h4 class="h">Clients reviews</h4>
+                                    </div>
+                                    <div class="testimonials-slider testimonials-block-5ef0b6f2297d4">
+                                        <div class="prev base-icon-prev-2"></div>
+                                        <div class="next base-icon-next-2"></div>
+                                        <div class="swiper-container">
+                                            <div class="swiper-wrapper">
+
+                                                <div class="testimonial-item swiper-slide testimonials-item-5ef18ab216eee with-avatar">
+                                                    <div class="top">
+                                                        <div class="avatar" style="background-image: url({% static 'front/images/img9.jpg' %});"></div>
+                                                        <div class="content">
+                                                            <div class="name">Tom Limit</div>
+                                                            <div class="post">Designer</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="quote">
+                                                        Why I say old chap that is spiffing bodge, blag pardon me buggered mufty Oxford butty bubble and squeak wind up, brown bread the full monty bloke ruddy cras tickety-boo squiffy.        
+                                                    </div>
+                                                </div>
+
+                                                <div class="testimonial-item swiper-slide testimonials-item-5ef18b26f7a8e with-avatar">
+                                                    <div class="top">
+                                                        <div class="avatar" style="background-image: url({% static 'front/images/img17.jpg' %});"></div>
+                                                        <div class="content">
+                                                            <div class="name">Jane Coret</div>
+                                                            <div class="post">CEO</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="quote">
+                                                        Why I say old chap that is spiffing bodge, blag pardon me buggered mufty Oxford butty bubble and squeak wind up, brown bread the full monty bloke ruddy cras tickety-boo squiffy.        
+                                                    </div>
+                                                </div>
+
+                                                <div class="testimonial-item swiper-slide testimonials-item-5ef18b3d2b206 with-avatar">
+                                                    <div class="top">
+                                                        <div class="avatar" style="background-image: url({% static 'front/images/img38.jpg' %});"></div>
+                                                        <div class="content">
+                                                            <div class="name">George Livermore</div>
+                                                            <div class="post">Designer</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="quote">
+                                                        Why I say old chap that is spiffing bodge, blag pardon me buggered mufty Oxford butty bubble and squeak wind up, brown bread the full monty bloke ruddy cras tickety-boo squiffy.        
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="swiper-dots"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+
+                    <!-- latest entries -->
+                    <div class="vc_row-full-width vc_clearfix"></div>
+                    <div class="vc_row wpb_row vc_row-fluid vc_row-5ef484c660c86" style="margin-bottom: 20px;">
+                        <div class="wpb_column vc_column_container vc_col-sm-6 vc_column_container-603de4a9b9b54">
+                            <div class="vc_column-inner ">
+                                <div class="wpb_wrapper">
+                                    <div class="portfolio-block portfolio-type-cascade portfolio-5ef45ae9104cc popup-gallery gap-on">
+                                        <div class="nav-arrows">
+                                            <div class="prev base-icon-prev-2"></div>
+                                            <div class="next base-icon-next-2"></div>
+                                        </div>
+                                        <div class="swiper-container">
+                                            <div class="swiper-wrapper">
+                                                
+                                                <article class="portfolio-item swiper-slide category-86">
+                                                    <div class="wrap">
+                                                        <!-- <div class="with-video"></div> -->
+                                                        <div class="icon base-icon-plus"></div>
+                                                        <div class="img" style="background-image: url({% static 'front/images/new/latest/latest_1.jpg' %})"></div>
+                                                        <div class="content">
+                                                            <h6 class="title">1mm - 648-H</h6>
+                                                        </div>
+                                                        <a href="{% static 'front/images/new/latest/latest_1.jpg' %}" class="link" data-type="video" data-size="1920x1080" data-video='<div class="wrapper"><div class="video-wrapper"><iframe class="pswp__video" width="1920" height="1080" src="https://youtube.com/embed/1jWCXJfxHQM" frameborder="0" allowfullscreen=""></iframe></div></div>' data-magic-cursor="link-w-text" data-magic-cursor-text="" data-id="1"></a>				
+                                                    </div>
+                                                </article>
+                                                
+                                                <article class="portfolio-item swiper-slide category-86">
+                                                    <div class="wrap">
+                                                        <div class="icon base-icon-plus"></div>
+                                                        <div class="img" style="background-image: url({% static 'front/images/new/latest/latest_2.jpg' %})"></div>
+                                                        <div class="content">
+                                                            <h6 class="title">1mm - 650</h6>
+                                                        </div>
+                                                        <a href="{% static 'front/images/new/latest/latest_2.jpg' %}" class="link" data-size="1200x801" data-magic-cursor="link-w-text" data-magic-cursor-text="View" data-id="2"></a>				
+                                                    </div>
+                                                </article>
+                                                
+                                                <article class="portfolio-item swiper-slide category-86">
+                                                    <div class="wrap">
+                                                        <div class="icon base-icon-plus"></div>
+                                                        <div class="img" style="background-image: url({% static 'front/images/new/latest/latest_3.jpg' %})"></div>
+                                                        <div class="content">
+                                                            <h6 class="title">1mm - 523</h6>
+                                                        </div>
+                                                        <a href="{% static 'front/images/new/latest/latest_3.jpg' %}" class="link" data-size="1200x915" data-magic-cursor="link-w-text" data-magic-cursor-text="View" data-id="3"></a>				
+                                                    </div>
+                                                </article>
+                                                
+                                                <article class="portfolio-item swiper-slide category-86">
+                                                    <div class="wrap">
+                                                        <div class="icon base-icon-plus"></div>
+                                                        <div class="img" style="background-image: url({% static 'front/images/new/latest/latest_4.jpg' %})"></div>
+                                                        <div class="content">
+                                                            <h6 class="title">Roof beams</h6>
+                                                        </div>
+                                                        <a href="{% static 'front/images/new/latest/latest_4.jpg' %}" class="link" data-size="1200x1000" data-magic-cursor="link-w-text" data-magic-cursor-text="View" data-id="4"></a>				
+                                                    </div>
+                                                </article>
+                                                
+                                                <article class="portfolio-item swiper-slide category-86">
+                                                    <div class="wrap">
+                                                        <div class="icon base-icon-plus"></div>
+                                                        <div class="img" style="background-image: url({% static 'front/images/new/latest/latest_5.jpg' %})"></div>
+                                                        <div class="content">
+                                                            <h6 class="title">Elite - 1633</h6>
+                                                        </div>
+                                                        <a href="{% static 'front/images/new/latest/latest_5.jpg' %}" class="link" data-size="1200x686" data-magic-cursor="link-w-text" data-magic-cursor-text="View" data-id="5"></a>				
+                                                    </div>
+                                                </article>
+                                                
+                                                <article class="portfolio-item swiper-slide category-86">
+                                                    <div class="wrap">
+                                                        <div class="icon base-icon-plus"></div>
+                                                        <div class="img" style="background-image: url({% static 'front/images/new/latest/latest_6.jpg' %})"></div>
+                                                        <div class="content">
+                                                            <h6 class="title">Doorvin - 3303</h6>
+                                                        </div>
+                                                        <a href="{% static 'front/images/new/latest/latest_6.jpg' %}" class="link" data-type="video" data-size="1920x1080" data-video='<div class="wrapper"><div class="video-wrapper"><iframe class="pswp__video" width="1920" height="1080" src="https://youtube.com/embed/_ahSDVzjNMw" frameborder="0" allowfullscreen=""></iframe></div></div>' data-magic-cursor="link-w-text" data-magic-cursor-text="" data-id="6"></a>				
+                                                    </div>
+                                                </article>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="button-container button-5efc31db04ed0 left">
+                                        <a class="button-style2" href="{% url 'products' %}" target="_self">
+                                        <span>View more</span>
+                                        <i class="base-icon-next-2"></i>
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- contents -->
+                        <style>
+                            @media(min-width: 768px){
+                                .latest-sheet-content {
+                                    padding-left: 5%;
+                                    padding-top: 3%;
+                                }
+                            }
+                        </style>
+
+                        <div class="latest-sheet-content wpb_column vc_column_container vc_col-sm-6 vc_column_container-603de4a9be947">
+                            <div class="vc_column-inner ">
+                                <div class="wpb_wrapper">
+                                    <div class="heading-block heading-5ef4557818a99 tal h-h4">
+                                        <h4 class="h">
+                                            Latest Entries
+                                        </h4>
+                                    </div>
+                                    <div class="qoute-block qoute-block-5ef4559ada5f1">
+                                        <div class="quote justify-text">In today's fast moving world, designs needs to make sure that the balance between authenticity and modernity is intact. With 600+ beautifully crafted products, Levin ensures the Innovativeness and Vision never gets worn out. Get ready to deep dive into mystical collection of decorative laminates. </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>                    
+                    
+                    <!-- title-para (below slider) -->
+                    <div class="vc_row-full-width vc_clearfix"></div>
+                    <div data-vc-full-width="true" data-vc-full-width-init="false" data-vc-stretch-content="true" class="vc_row wpb_row vc_row-fluid vc_row-5eea14ea24b7c vc_row-no-padding">
+                        <div class="wpb_column vc_column_container vc_col-sm-12 vc_column_container-603de4a5e841b">
+                            <div class="vc_column-inner ">
+                                <div class="wpb_wrapper">
+                                    <div class="image-slider-block image-slider-5ee9b5de712d5">
+                                        <div class="content-block">
+                                            <div class="container">
+                                                <div class="content">
+                                                    <h2 class="heading">Certifications</h2>
+                                                    <div class="text justify-text" style="color: #606060; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+                                                        <img src="{% static 'front/images/new/certificates.png' %}" alt="">
+                                                        <!-- Levin Décor endeavors your dreams into destination. We have set the benchmark for creating
+                                                        unique piece of art and have delivered designs of excellent quality for over a decade. Decorative
+                                                        laminates under our brand are perfect example of luxury and simplicity; we provide variety of products
+                                                        for you to pick the best design that compliments your style. Levin acknowledges the dynamics of
+                                                        changing trends and preferences of our customers and hence the products launched are combined with
+                                                        cotemporary and futuristic approach. -->
+                                                    </div>
+                                                    <!-- <div class="button">
+                                                        <a href="https://krioskcreata.com" class="button-style1 open-form">Explore</a>
+                                                    </div> -->
+                                                </div>
+                                                <div class="right">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vc_row-full-width vc_clearfix"></div>
+
+                </div>
+                
+                <!-- Trigger/Open The Modal -->
+                <button id="myBtn">Open Modal</button>
+                
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+                
+                  <div class="modal-content" style="text-align:center;">
+                    <span class="close_modal">&times;</span>
+                    <!-- <img src="{% static 'front/images/popup.jpg' %}" alt=""> -->
+                    <video class="custom_modal_video" controls>
+                      <source src="{% static 'front/videos/launch_video.mp4' %}" type="video/mp4">
+                      <source src="{% static '' %}" type="video/ogg">
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                
+                </div>
+
+            </main>
+                    
+        {% endblock %}
+
+
+
+        {% block footerblock  %}
+        
+            <script>
+                // Get the modal
+                var modal = document.getElementById("myModal");
+                
+                // Get the button that opens the modal
+                // var btn = document.getElementById("myBtn");
+                
+                // Get the <span> element that closes the modal
+                var span = document.getElementsByClassName("close_modal")[0];
+                
+                modal.style.display = "block";
+                
+                // window.addEventListener('load', function() {
+                //     modal.style.display = "block";
+                // }
+                
+                // When the user clicks the button, open the modal 
+                // btn.onclick = function() {
+                //   modal.style.display = "block";
+                // }
+                
+                // When the user clicks on <span> (x), close the modal
+                span.onclick = function() {
+                  modal.style.display = "none";
+                }
+                
+                // When the user clicks anywhere outside of the modal, close it
+                window.onclick = function(event) {
+                  if (event.target == modal) {
+                    modal.style.display = "none";
+                  }
+                }
+            </script>
+
+            <!-- <script>(function() {function maybePrefixUrlField() {
+                if (this.value.trim() !== '' && this.value.indexOf('http') !== 0) {
+                    this.value = "http://" + this.value;
+                }
+                }
+                
+                var urlFields = document.querySelectorAll('.mc4wp-form input[type="url"]');
+                if (urlFields) {
+                for (var j=0; j < urlFields.length; j++) {
+                    urlFields[j].addEventListener('blur', maybePrefixUrlField);
+                }
+                }
+                })();
+            </script>
+            
+            <script type="text/html" id="wpb-modifications"></script>
+            <script type="text/javascript">
+                var c = document.body.className;
+                c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
+                document.body.className = c;
+            </script> -->
+
+            <!-- opacity of bg image -->
+            <style id='pt-inline-inline-css' type='text/css'>
+                .banner-item-5ef5f1ac65c75 .bg-overlay .image {
+                    background-position: 50% 50% !important
+                }
+
+                .banner-item-5ef5f1ac65c75 .bg-overlay .image {
+                    background-size: cover !important
+                }
+
+                .banner-item-5ef5f1ac65c75 .bg-overlay .color {
+                    background-color: #000000 !important
+                }
+
+                .banner-item-5ef5f1ac65c75 .bg-overlay .color {
+                    opacity: 0 !important
+                }
+
+                .banner-item-5ef5f1e89de74 .bg-overlay .image {
+                    background-position: 50% 50% !important
+                }
+
+                .banner-item-5ef5f1e89de74 .bg-overlay .image {
+                    background-size: cover !important
+                }
+
+                .banner-item-5ef5f1e89de74 .bg-overlay .color {
+                    background-color: #000000 !important
+                }
+
+                .banner-item-5ef5f1e89de74 .bg-overlay .color {
+                    opacity: 0 !important
+                }
+
+                .banner-item-5ef5f1f368250 .bg-overlay .image {
+                    background-position: 50% 50% !important
+                }
+
+                .banner-item-5ef5f1f368250 .bg-overlay .image {
+                    background-size: cover !important
+                }
+
+                .banner-item-5ef5f1f368250 .bg-overlay .color {
+                    background-color: #000000 !important
+                }
+
+                .banner-item-5ef5f1f368250 .bg-overlay .color {
+                    opacity: 0 !important
+                }
+
+                .banner-item-5ef5f1ff76b5f .bg-overlay .image {
+                    background-position: 50% 50% !important
+                }
+
+                .banner-item-5ef5f1ff76b5f .bg-overlay .image {
+                    background-size: cover !important
+                }
+
+                .banner-item-5ef5f1ff76b5f .bg-overlay .color {
+                    background-color: #000000 !important
+                }
+
+                .banner-item-5ef5f1ff76b5f .bg-overlay .color {
+                    opacity: 0 !important
+                }
+
+                .banner-item-5ef5f20906966 .bg-overlay .image {
+                    background-position: 50% 50% !important
+                }
+
+                .banner-item-5ef5f20906966 .bg-overlay .image {
+                    background-size: cover !important
+                }
+
+                .banner-item-5ef5f20906966 .bg-overlay .color {
+                    background-color: #000000 !important
+                }
+
+                .banner-item-5ef5f20906966 .bg-overlay .color {
+                    opacity: 0 !important
+                }
+
+                .vc_row-5eeb60dd228e3 {
+                    padding-top: 60px !important
+                }
+
+                .vc_row-5eeb60dd228e3>.bg-overlay {
+                    bottom: 90px
+                }
+
+                .vc_row-5eeb60dd228e3>.bg-overlay {
+                    background-color: #f0ece7 !important
+                }
+
+                .portfolio-5eeb62601fc14 {
+                    margin-bottom: 0px !important
+                }
+
+                .vc_row-5eecb915fae57 {
+                    margin-top: 45px !important
+                }
+
+                @media (min-width:992px) {
+                    .rooms-5eec4cd0ca4be {
+                        margin-top: -66px !important
+                    }
+                }
+
+                .vc_row-5eecbaf1ff388>.bg-overlay {
+                    background-color: #404040 !important
+                }
+
+                .video-block-5ef0484126916 {
+                    padding-top: 74px !important;
+                    padding-bottom: 74px !important
+                }
+
+                .video-block-5ef0484126916 .button-style2 {
+                    color: #fdcea6 !important
+                }
+
+                .video-block-5ef0484126916 .button-style2:hover {
+                    color: #ffffff !important
+                }
+
+                @media (min-width:768px) {
+                    .side-img-block-5ef3584cc06df {
+                        margin-top: -260px !important
+                    }
+                }
+
+                .side-img-block-5ef3584cc06df {
+                    height: 613px
+                }
+
+                .vc_row-5ef498f596de7 {
+                    padding-top: 60px !important;
+                    padding-bottom: 70px !important
+                }
+
+                .heading-5ef496a4b7764 {
+                    margin-top: 0px !important;
+                    margin-bottom: 31px !important
+                }
+
+                .wpb_text_column-5ef496bc0647a {
+                    margin-bottom: 36px !important
+                }
+
+                .vc_column_container-5ef49701f706a {
+                    margin-bottom: 30px !important;
+                    padding-bottom: 344px !important
+                }
+
+                .vc_column_container-5ef49701f706a>.bg-overlay {
+                    left: 15px;
+                    right: 15px
+                }
+
+                .vc_column_container-5ef49701f706a>.bg-overlay .image {
+                    background-position: 50% 50% !important
+                }
+
+                .vc_column_container-5ef49701f706a>.bg-overlay .image {
+                    background-size: cover !important
+                }
+
+                .vc_column_container-5ef4970ba7834 {
+                    padding-bottom: 344px !important
+                }
+
+                .vc_column_container-5ef4970ba7834>.bg-overlay {
+                    left: 15px;
+                    right: 15px
+                }
+
+                .vc_column_container-5ef4970ba7834>.bg-overlay .image {
+                    background-position: 50% 50% !important
+                }
+
+                .vc_column_container-5ef4970ba7834>.bg-overlay .image {
+                    background-size: cover !important
+                }
+
+                .heading-5ef0add6f3a48 {
+                    margin-top: 0px !important
+                }
+
+                .button-5ef0ae0364f25 {
+                    margin-bottom: 0px !important
+                }
+
+                .vc_row-5ef19ce19781d {
+                    margin-bottom: 60px !important
+                }
+
+                .heading-5ef19a6c459f5 {
+                    margin-top: 74px !important;
+                    margin-bottom: 40px !important
+                }
+            </style>
+
+            <script type='text/javascript'>
+                /* <![CDATA[ */
+                var MPHB = {
+                    "_data": {
+                        "settings": {
+                            // "currency": {
+                            // 	"code": "USD",
+                            // 	"price_format": "<span class=\"mphb-currency\">$<\/span>%s",
+                            // 	"decimals": 2,
+                            // 	"decimal_separator": ".",
+                            // 	"thousand_separator": ","
+                            // },
+                            "siteName": "Holleta",
+                            "currentLanguage": "en",
+                            "firstDay": 1,
+                            "numberOfMonthCalendar": 2,
+                            "numberOfMonthDatepicker": 2,
+                            "dateFormat": "dd\/mm\/yyyy",
+                            "dateTransferFormat": "yyyy-mm-dd",
+                            "useBilling": false,
+                            "useCoupons": false,
+                            "datepickerClass": "",
+                            "countryRequired": true,
+                            "fullAddressRequired": false,
+                            "isDirectBooking": false
+                        },
+                        "today": "2021-03-02",
+                        // "ajaxUrl": "https:\/\/krioskcreata.com\/holleta\/wp-admin\/admin-ajax.php",
+                        // "nonces": {
+                        // 	"mphb_create_stripe_payment_intent": "94b3386947",
+                        // 	"mphb_update_checkout_info": "8e031c63fa",
+                        // 	"mphb_update_rate_prices": "4a5dbc78ca",
+                        // 	"mphb_get_billing_fields": "26a909541a",
+                        // 	"mphb_apply_coupon": "b64d04f6a4",
+                        // 	"mphb_get_free_accommodations_amount": "18734e59a8"
+                        // },
+                        "roomTypesData": [],
+                        "translations": {
+                            "errorHasOccured": "An error has occurred, please try again later.",
+                            "booked": "Booked",
+                            "pending": "Pending",
+                            "available": "Available",
+                            "notAvailable": "Not available",
+                            "notStayIn": "Not stay-in",
+                            "notCheckIn": "Not check-in",
+                            "notCheckOut": "Not check-out",
+                            "past": "Day in the past",
+                            "checkInDate": "Check-in date",
+                            "lessThanMinDaysStay": "Less than min days stay",
+                            "moreThanMaxDaysStay": "More than max days stay",
+                            "laterThanMaxDate": "Later than max date for current check-in date",
+                            "rules": "Rules:",
+                            "tokenizationFailure": "Tokenisation failed: %s",
+                            "roomsAddedToReservation_singular": "%1$d × “%2$s” has been added to your reservation.",
+                            "roomsAddedToReservation_plural": "%1$d × “%2$s” have been added to your reservation.",
+                            "countRoomsSelected_singular": "%s accommodation selected.",
+                            "countRoomsSelected_plural": "%s accommodations selected.",
+                            "emptyCouponCode": "Coupon code is empty.",
+                            "checkInNotValid": "Check-in date is not valid.",
+                            "checkOutNotValid": "Check-out date is not valid."
+                        },
+                        "page": {
+                            "isCheckoutPage": false,
+                            "isSingleRoomTypePage": false,
+                            "isSearchResultsPage": false,
+                            "isCreateBookingPage": false
+                        },
+                        "rules": {
+                            "reservationRules": {
+                                "check_in_days": [{
+                                    "season_ids": [0],
+                                    "room_type_ids": [0],
+                                    "check_in_days": [0, 1, 2, 3, 4, 5, 6]
+                                }],
+                                "check_out_days": [{
+                                    "season_ids": [0],
+                                    "room_type_ids": [0],
+                                    "check_out_days": [0, 1, 2, 3, 4, 5, 6]
+                                }],
+                                "min_stay_length": [{
+                                    "season_ids": [0],
+                                    "room_type_ids": [0],
+                                    "min_stay_length": 1
+                                }],
+                                "max_stay_length": [{
+                                    "season_ids": [0],
+                                    "room_type_ids": [0],
+                                    "max_stay_length": 0
+                                }]
+                            },
+                            "dates": [],
+                            "blockedTypes": []
+                        },
+                        // "gateways": [],
+                        // "seasons": {
+                        // 	"2358": {
+                        // 		"start_date": "2019-12-01",
+                        // 		"end_date": "2023-07-31",
+                        // 		"allowed_days": [0, 1, 2, 3, 4, 5, 6]
+                        // 	}
+                        // },
+                        // "roomTypeId": 0,
+                        // "allRoomTypeIds": [2381, 2412, 2418, 2422, 2426, 2430, 2435, 2344, 2379]
+                    }
+                };
+                /* ]]> */
+            </script>
+        
+            <script type='text/javascript'>
+                jQuery(document).ready(function (jQuery) {
+                            if(jQuery('.banner-area-5ef5f192da3a1 .banner-slider').find('.banner-item').length > 1){
+                            var $area = jQuery('.banner-area-5ef5f192da3a1'),
+                                $slider = $area.find('.banner-slider');
+                        
+                            var $banner_slider_swiper = new Swiper($slider, {
+                                loop: true,
+                                speed: 800,
+                                autoplay: {
+                                delay: 5000,
+                            },
+                                navigation: {
+                                    nextEl: $area.find('.next'),
+                                    prevEl: $area.find('.prev'),
+                                },
+                                loopAdditionalSlides: 10,
+                                
+                                pagination: {
+                                    clickable: true,
+                                    el: $area.find('.pagination'),
+                                    renderBullet: function (index, className) {
+                                        return '<span class="' + className + '"><span>' + leadZero(index + 1) + '</span></span>';
+                                    }
+                                },
+                                
+                                
+                                
+                                on: {
+                                    
+                                    slideChange: function() {
+                                        if($slider.find('.swiper-slide').eq(this.activeIndex).find('.banner-item').hasClass('white')) {
+                                            $area.removeClass('current-black').addClass('current-white');
+                                        } else {
+                                            $area.removeClass('current-white').addClass('current-black');
+                                        }
+                                        
+                                        $slider.find('.progress-line').removeClass('go').find('div').css('transition-duration', '1ms');
+                                        
+                                    },
+                                    transitionStart: function() {
+                                        jQuery(this.slides).each(function() {
+                                            let event = 'pause';
+                                            if(jQuery(this).hasClass('swiper-slide-active') && !jQuery(this).find('.bg-overlay .video').hasClass('disable-on-scroll')) {
+                                                event = 'play';
+                                            }
+                                            control_video(jQuery(this).find('.bg-overlay .video'), event);
+                                        });
+                                    },
+                                    transitionEnd: function() {
+                                        
+                                        $slider.find('.progress-line').addClass('go').find('div').css('transition-duration', '5000ms');
+                                        
+                                    }
+                                },
+                            });
+                            if($slider.find('.swiper-slide-active .banner-item').hasClass('white')) {
+                                $area.removeClass('current-black').addClass('current-white');
+                            } else {
+                                $area.removeClass('current-white').addClass('current-black');
+                            }
+                        } else {
+                            jQuery('.banner-area-5ef5f192da3a1').find('.slider-nav-on-bottom, .slider-nav').remove();
+                            control_video(jQuery('.banner-area-5ef5f192da3a1').find('.video'), 'play');
+                        }
+                        });
+                jQuery(document).ready(function (jQuery) {
+                            var $portfolio_carousel = jQuery('.portfolio-5eeb62601fc14'),
+                                $portfolio_carousel_swiper = new Swiper($portfolio_carousel.find('.swiper-container'), {
+                                    loop: true,
+                                    spaceBetween: 30,
+                                    navigation: {
+                                        nextEl: $portfolio_carousel.find('.prev'),
+                                        prevEl: $portfolio_carousel.find('.next'),
+                                    },
+                                    slidesPerView: 'auto',
+                                    breakpointsInverse: true,
+                                    loopAdditionalSlides: 5,
+                                    breakpoints: {
+                                        200: { slidesPerView: "auto" },
+                                    },
+                                    on: {
+                                        setTranslate: function(e) {
+                                            var $this = this;
+                                
+                                            jQuery(this.slides).each(function(index) {
+                                                if(jQuery('html').attr('dir') === 'rtl') {
+                                                    var left = $this.slidesGrid[index],
+                                                    x = $this.translate - left,
+                                                    k = 1 - x / jQuery(this).outerWidth(true),
+                                                    o = k < 0 ? 0 : k * 0.5 + 0.5,
+                                                    scale = (k * 0.2 + 0.8);
+                
+                                                    x = -$this.translate + left;
+                                                    x = x >= 0 ? 0 : x;
+                
+                                                    scale = scale > 1 ? 1 : scale;
+                                                    scale = scale <= 0 ? 0 : scale;
+                                                } else {
+                                                    var left = $this.slidesGrid[index],
+                                                    x = -$this.translate - left,
+                                                    k = 1 - x / jQuery(this).outerWidth(true),
+                                                    o = k < 0 ? 0 : k * 0.5 + 0.5,
+                                                    scale = (k * 0.2 + 0.8);
+                
+                                                    x = x <= 0 ? 0 : x;
+                
+                                                    scale = scale > 1 ? 1 : scale;
+                                                    scale = scale <= 0 ? 0 : scale;
+                                                }
+                                
+                                                jQuery(this).css({
+                                                    'transform': 'translateX('+(x)+'px) scale('+(scale)+')',
+                                                    opacity: o,
+                                                    transition: jQuery($this.$wrapperEl).css('transition-duration')
+                                                })
+                                            })
+                                        },
+                                    },
+                                });
+                        });
+                jQuery(document).ready(function (jQuery) {
+                            var $appartments_carousel = jQuery('.rooms-5eec4cd0ca4be'),
+                            $appartments_carousel_swiper = new Swiper($appartments_carousel.find('.swiper-container'), {
+                                loop: true,
+                                autoplay: {
+                                delay: 5000,
+                            },
+                                navigation: {
+                                    nextEl: $appartments_carousel.find('.next'),
+                                    prevEl: $appartments_carousel.find('.prev'),
+                                },
+                                breakpointsInverse: true,
+                                spaceBetween: 30,
+                                loopAdditionalSlides: 4,
+                                watchSlidesVisibility: true,
+                                on: {
+                                    setTranslate: function(e) {
+                                        var $this = this;
+                            
+                                        jQuery(this.slides).each(function(index) {
+                                            if(jQuery('html').attr('dir') === 'rtl') {
+                                                var left = $this.slidesGrid[index],
+                                                x = $this.translate - left,
+                                                k = 1 - x / jQuery(this).outerWidth(true),
+                                                o = k < 0 ? 0 : k * 0.5 + 0.5,
+                                                scale = (k * 0.2 + 0.8);
+                
+                                                x = -$this.translate + left;
+                                                x = x >= 0 ? 0 : x;
+                
+                                                scale = scale > 1 ? 1 : scale;
+                                                scale = scale <= 0 ? 0 : scale;
+                                            } else {
+                                                var left = $this.slidesGrid[index],
+                                                x = -$this.translate - left,
+                                                k = 1 - x / jQuery(this).outerWidth(true),
+                                                o = k < 0 ? 0 : k * 0.5 + 0.5,
+                                                scale = (k * 0.2 + 0.8);
+                
+                                                x = x <= 0 ? 0 : x;
+                
+                                                scale = scale > 1 ? 1 : scale;
+                                                scale = scale <= 0 ? 0 : scale;
+                                            }
+                            
+                                            jQuery(this).css({
+                                                'transform': 'translateX('+(x)+'px) scale('+(scale)+')',
+                                                opacity: o,
+                                                transition: jQuery($this.$wrapperEl).css('transition-duration')
+                                            })
+                                        })
+                                    },
+                                },
+                                breakpoints: {
+                                    200: { slidesPerView: 1 }, 768: { slidesPerView: 2 },
+                                }
+                            });
+                        });
+                jQuery(document).ready(function (jQuery) {
+                            var $portfolio_carousel = jQuery('.portfolio-5ef331c1b8f4d'),
+                                $portfolio_carousel_swiper = new Swiper($portfolio_carousel.find('.swiper-container'), {
+                                    loop: true,
+                                    spaceBetween: 30,
+                                    navigation: {
+                                        nextEl: $portfolio_carousel.find('.next'),
+                                        prevEl: $portfolio_carousel.find('.prev'),
+                                    },
+                                    slidesPerView: 1,
+                                    watchSlidesVisibility: true,
+                                    breakpointsInverse: true,
+                                    loopAdditionalSlides: 5,
+                                    breakpoints: {
+                                        200: { slidesPerView: 1 }, 768: { slidesPerView: 2 },
+                                    },
+                                    on: {
+                                        setTranslate: function() {
+                                            jQuery(this.$wrapperEl).find('.swiper-slide-visible:last').nextAll().addClass('swiper-next')
+                                            jQuery(this.$wrapperEl).find('.swiper-slide-visible:last').next().prevAll().removeClass('swiper-next')
+                                        }
+                                    }
+                                });
+                        });
+                jQuery(document).ready(function (jQuery) {
+                            var $testimonials_slider = jQuery('.testimonials-block-5ef0b6f2297d4'),
+                    $testimonials_slider_swiper = new Swiper($testimonials_slider.find('.swiper-container'), {
+                    loop: true,
+                    
+                    slidesPerView: 1,
+                    spaceBetween: 30,
+                    watchSlidesVisibility: true,
+                    navigation: {
+                        nextEl: $testimonials_slider.find('.next'),
+                        prevEl: $testimonials_slider.find('.prev'),
+                    },
+                    pagination: {
+                        el: $testimonials_slider.find('.swiper-dots'),
+                        clickable: true
+                    },
+                    breakpoints: {
+                        200: { slidesPerView: 1 }, 768: { slidesPerView: 2 },
+                    }
+                    });
+                        });
+            </script>
+
+            <!-- for features slider -->
+            <script type='text/javascript'>
+                jQuery(document).ready(function (jQuery) {
+                            if(jQuery('.banner-area-5ef4539667285 .banner-slider').find('.banner-item').length > 1){
+                            var $area = jQuery('.banner-area-5ef4539667285'),
+                                $slider = $area.find('.banner-slider');
+                        
+                            var $banner_slider_swiper = new Swiper($slider, {
+                                loop: true,
+                                speed: 800,
+                                
+                                navigation: {
+                                    nextEl: $area.find('.next'),
+                                    prevEl: $area.find('.prev'),
+                                },
+                                loopAdditionalSlides: 10,
+                                
+                                
+                                pagination: {
+                                    clickable: true,
+                                    el: $area.find('.counter'),
+                                    type: 'custom',
+                                    renderCustom: function (swiper, current, total) {
+                                        return '<span class="current">' + leadZero(current) + '</span><span class="total">' + leadZero(total) + '</span>';
+                                    }
+                                },
+                                
+                                
+                                on: {
+                                    
+                                    slideChange: function() {
+                                        if($slider.find('.swiper-slide').eq(this.activeIndex).find('.banner-item').hasClass('white')) {
+                                            $area.removeClass('current-black').addClass('current-white');
+                                        } else {
+                                            $area.removeClass('current-white').addClass('current-black');
+                                        }
+                                        
+                                    },
+                                    transitionStart: function() {
+                                        jQuery(this.slides).each(function() {
+                                            let event = 'pause';
+                                            if(jQuery(this).hasClass('swiper-slide-active') && !jQuery(this).find('.bg-overlay .video').hasClass('disable-on-scroll')) {
+                                                event = 'play';
+                                            }
+                                            control_video(jQuery(this).find('.bg-overlay .video'), event);
+                                        });
+                                    },
+                                    transitionEnd: function() {
+                                        
+                                    }
+                                },
+                            });
+                            if($slider.find('.swiper-slide-active .banner-item').hasClass('white')) {
+                                $area.removeClass('current-black').addClass('current-white');
+                            } else {
+                                $area.removeClass('current-white').addClass('current-black');
+                            }
+                        } else {
+                            jQuery('.banner-area-5ef4539667285').find('.slider-nav-on-bottom, .slider-nav').remove();
+                            control_video(jQuery('.banner-area-5ef4539667285').find('.video'), 'play');
+                        }
+                        });
+                jQuery(document).ready(function (jQuery) {
+                            var $appartments_carousel = jQuery('.rooms-5ef4844aacfa9'),
+                            $appartments_carousel_swiper = new Swiper($appartments_carousel.find('.swiper-container'), {
+                                loop: true,
+                                autoplay: {
+                                delay: 5000,
+                            },
+                                navigation: {
+                                    nextEl: $appartments_carousel.find('.next'),
+                                    prevEl: $appartments_carousel.find('.prev'),
+                                },
+                                breakpointsInverse: true,
+                                spaceBetween: 30,
+                                loopAdditionalSlides: 4,
+                                watchSlidesVisibility: true,
+                                on: {
+                                    setTranslate: function(e) {
+                                        var $this = this;
+                            
+                                        jQuery(this.slides).each(function(index) {
+                                            if(jQuery('html').attr('dir') === 'rtl') {
+                                                var left = $this.slidesGrid[index],
+                                                x = $this.translate - left,
+                                                k = 1 - x / jQuery(this).outerWidth(true),
+                                                o = k < 0 ? 0 : k * 0.5 + 0.5,
+                                                scale = (k * 0.2 + 0.8);
+                
+                                                x = -$this.translate + left;
+                                                x = x >= 0 ? 0 : x;
+                
+                                                scale = scale > 1 ? 1 : scale;
+                                                scale = scale <= 0 ? 0 : scale;
+                                            } else {
+                                                var left = $this.slidesGrid[index],
+                                                x = -$this.translate - left,
+                                                k = 1 - x / jQuery(this).outerWidth(true),
+                                                o = k < 0 ? 0 : k * 0.5 + 0.5,
+                                                scale = (k * 0.2 + 0.8);
+                
+                                                x = x <= 0 ? 0 : x;
+                
+                                                scale = scale > 1 ? 1 : scale;
+                                                scale = scale <= 0 ? 0 : scale;
+                                            }
+                            
+                                            jQuery(this).css({
+                                                'transform': 'translateX('+(x)+'px) scale('+(scale)+')',
+                                                opacity: o,
+                                                transition: jQuery($this.$wrapperEl).css('transition-duration')
+                                            })
+                                        })
+                                    },
+                                },
+                                breakpoints: {
+                                    200: { slidesPerView: 1 }, 768: { slidesPerView: 2 }, 992: { slidesPerView: 3 },
+                                }
+                            });
+                        });
+                jQuery(document).ready(function (jQuery) {
+                            var $icon_box_carousel = jQuery('.icon-box-block-5ef4334f649ad'),
+                    $icon_box_carousel_swiper = new Swiper($icon_box_carousel.find('.swiper-container'), {
+                        loop: true,
+                        
+                        spaceBetween: 30,
+                        watchSlidesVisibility: true,
+                        loopAdditionalSlides: 2,
+                        navigation: {
+                        nextEl: $icon_box_carousel.find('.next'),
+                        prevEl: $icon_box_carousel.find('.prev'),
+                        },
+                        breakpointsInverse: true,
+                        breakpoints: {
+                        200: { slidesPerView: 1 }, 576: { slidesPerView: 2 }, 768: { slidesPerView: 3 }, 992: { slidesPerView: 4 },
+                        }
+                    });
+                        });
+                jQuery(document).ready(function (jQuery) {
+                            jQuery('.accordion-block-603de4a9c931c').yprm_accordion();
+                        });
+                jQuery(document).ready(function (jQuery) {
+                            jQuery('#map-5ef4a0c206df9').each(function () {
+                                function initialize() {
+                                    var myLatlng = new google.maps.LatLng(51.5237817, -0.15843700000005);
+                                    var mapOptions = {
+                                        zoom: 16,
+                                        center: myLatlng,
+                                        disableDefaultUI: true,
+                                        scrollwheel: false,
+                                        mapTypeId: google.maps.MapTypeId.ROADMAP,
+                                        styles: [
+                                            {
+                                                "featureType": "water",
+                                                "elementType": "geometry",
+                                                "stylers": [{
+                                                        "color": "#e9e9e9"
+                                                    },
+                                                    {
+                                                        "lightness": 17
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "featureType": "landscape",
+                                                "elementType": "geometry",
+                                                "stylers": [{
+                                                        "color": "#f5f5f5"
+                                                    },
+                                                    {
+                                                        "lightness": 20
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "featureType": "road.highway",
+                                                "elementType": "geometry.fill",
+                                                "stylers": [{
+                                                        "color": "#ffffff"
+                                                    },
+                                                    {
+                                                        "lightness": 17
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "featureType": "road.highway",
+                                                "elementType": "geometry.stroke",
+                                                "stylers": [{
+                                                        "color": "#ffffff"
+                                                    },
+                                                    {
+                                                        "lightness": 29
+                                                    },
+                                                    {
+                                                        "weight": 0.2
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "featureType": "road.arterial",
+                                                "elementType": "geometry",
+                                                "stylers": [{
+                                                        "color": "#ffffff"
+                                                    },
+                                                    {
+                                                        "lightness": 18
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "featureType": "road.local",
+                                                "elementType": "geometry",
+                                                "stylers": [{
+                                                        "color": "#ffffff"
+                                                    },
+                                                    {
+                                                        "lightness": 16
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "featureType": "poi",
+                                                "elementType": "geometry",
+                                                "stylers": [{
+                                                        "color": "#f5f5f5"
+                                                    },
+                                                    {
+                                                        "lightness": 21
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "featureType": "poi.park",
+                                                "elementType": "geometry",
+                                                "stylers": [{
+                                                        "color": "#dedede"
+                                                    },
+                                                    {
+                                                        "lightness": 21
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "elementType": "labels.text.stroke",
+                                                "stylers": [{
+                                                        "visibility": "on"
+                                                    },
+                                                    {
+                                                        "color": "#ffffff"
+                                                    },
+                                                    {
+                                                        "lightness": 16
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "elementType": "labels.text.fill",
+                                                "stylers": [{
+                                                        "saturation": 36
+                                                    },
+                                                    {
+                                                        "color": "#333333"
+                                                    },
+                                                    {
+                                                        "lightness": 40
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "elementType": "labels.icon",
+                                                "stylers": [{
+                                                    "visibility": "off"
+                                                }]
+                                            },
+                                            {
+                                                "featureType": "transit",
+                                                "elementType": "geometry",
+                                                "stylers": [{
+                                                        "color": "#f2f2f2"
+                                                    },
+                                                    {
+                                                        "lightness": 19
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "featureType": "administrative",
+                                                "elementType": "geometry.fill",
+                                                "stylers": [{
+                                                        "color": "#fefefe"
+                                                    },
+                                                    {
+                                                        "lightness": 20
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "featureType": "administrative",
+                                                "elementType": "geometry.stroke",
+                                                "stylers": [{
+                                                        "color": "#fefefe"
+                                                    },
+                                                    {
+                                                        "lightness": 17
+                                                    },
+                                                    {
+                                                        "weight": 1.2
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    };
+                                    var map = new google.maps.Map(document.getElementById('map-5ef4a0c206df9'), mapOptions);
+                            
+                                    var myLatLng = new google.maps.LatLng(51.5237817, -0.15843700000005);
+                                    var beachMarker = new google.maps.Marker({
+                                        position: myLatLng,
+                                        map: map
+                                    });
+                                    google.maps.event.addDomListener(window, 'resize', function () {
+                                        var center = map.getCenter();
+                                        google.maps.event.trigger(map, 'resize');
+                                        map.setCenter(center);
+                                    });
+                                }
+                                google.maps.event.addDomListener(window, 'load', initialize);
+                            });
+                        });
+            </script>
+
+
+        {% endblock %}

@@ -1,0 +1,104 @@
+{% extends 'back/master_back.html' %}
+
+{% load static %}
+
+
+    {% block headblock %}
+
+    {% endblock %}
+
+    
+    
+    {% block page_content %}     
+    <!-- padding : 0 on both sides -->
+    
+    <div class="container" style="padding: 10px 0px 0px 0px !important; margin-top: 35px;">
+        <div class="container">
+
+            <div id="tableDropdown" class="col-lg-12 col-12 layout-spacing">
+                <div class="statbox widget box box-shadow">
+                    <div class="widget-header">
+                        <div class="row">
+
+                            <!-- page title -->
+                            <div class="col-xl-9 col-lg-8 col-md-7 col-sm-3 col-5 pt-4 pl-4">
+                                <h4>Product List</h4>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="widget-content widget-content-area">
+                        <div class="table-responsive">
+
+                            <table class="table table-bordered mb-4" style="margin-bottom: 100px !important;">
+                                <thead>
+                                    <tr>
+                                        <th class="text-center">Index</th>
+                                        <th class="text-center">Product Name</th>
+                                        <th class="text-center">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    {% for product_all in product_all %}
+                                    <tr>
+                                        <td class="text-center">{{product_all.index}}</td>
+                                        <td class="text-center">{{product_all.name | title}}</td>
+                                        <td class="text-center">
+                                            
+                                            <div class="dropdown custom-dropdown">
+                                                <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink7" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg>
+                                                </a>
+            
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink7">
+                                                    <a class="dropdown-item" href="{% url 'sheet_list' product_pk=product_all.pk %}">Manage Sheets</a>
+                                                    <a class="dropdown-item" href="{% url 'product_edit' product_pk=product_all.pk %}">Edit</a>
+                                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#product_{{product_all.pk}}">Delete</a>
+                                                </div>
+
+                                                 <!-- Delete Confirm -->
+                                                 <div class="modal fade bottom" id="product_{{product_all.pk}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="opacity: 1;">
+                                                    <div class="modal-dialog modal-frame modal-bottom" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-body">
+                                                                <div class="row d-flex justify-content-center align-items-center">
+            
+                                                                    <p class="pt-3 pr-2">
+                                                                    This action will delete the Product <b>"{{product_all.name | title}}"</b> and all the full-sheets associated 
+                                                                    with it completely and it is irreparable by nature. Once it is gone it is gone !
+                                                                    </p>
+            
+                                                                    <button type="button" class="btn btn-light btn-sm" data-dismiss="modal">Close</button>
+                                                                    <a href="{% url 'product_delete' product_pk=product_all.pk %}"><button type="button" class="btn btn-dark"><b>Delete</b></button></a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    {% endfor %}
+
+                                </tbody>
+                            </table>
+
+                        </div>
+            
+                    </div>
+                    
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    {% endblock %}
+
+
+    {% block footerblock  %}
+
+    {% endblock %}

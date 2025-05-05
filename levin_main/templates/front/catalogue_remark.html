@@ -1,0 +1,746 @@
+{% load static %}
+
+<!doctype html>
+<html>
+
+    <head>
+        <title> LEVIN DECOR </title>
+        <meta name="viewport" content="width = 1050, user-scalable = no" />
+        <link rel="icon" type="image/icon" href="../images/faviconicon.ico">
+        <!-- favicon-icon -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type="text/javascript" src="{% static 'front/catalogue_remark/js/jquery.min.1.7.js' %}"></script>
+        <script type="text/javascript" src="{% static 'front/catalogue_remark/js/modernizr.2.5.3.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'front/catalogue_remark/js/hash.js' %}"></script>
+        <script type="text/javascript" src="{% static 'front/catalogue_remark/js/magazine.js' %}"></script>
+        <script type="text/javascript" src="{% static 'front/catalogue_remark/js/turn.js' %}"></script>
+        <script type="text/javascript" src="{% static 'front/catalogue_remark/js/zoom.min.js' %}"></script>
+        <link href="{% static 'front/catalogue_remark/css/magazine.css' %}">
+    </head>
+
+    <body>
+        <!-- preloader -->
+        <!-- <div class="preloader">
+            <div class="contpre">
+                <div class="loader">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+            </div>
+            </div> -->
+        <!-- end preloader -->
+
+        <div id="canvas">
+            <div class="zoom-icon zoom-icon-in"></div>
+            <div class="magazine-viewport">
+                <!--<div class="button">
+                    <p> <a download="pdf/spectrum.pdf" href="pdf/spectrum.pdf"  download target="_blank"> DOWNLOAD </a> </p>
+                    </div> -->
+                <div class="button-1" style="z-index:99">
+                    <!-- <p> <a onclick="javascript:history.go(-1)" style="cursor: pointer;"> Back  </a> </p> -->
+                    <p> <a href="{% url 'catalogues' %}" style="cursor: pointer;"> Back  </a> </p>
+                </div>
+                <div class="container">
+                    <div class="magazine">
+                        <!-- Next button -->
+                        <div ignore="1" class="next-button"></div>
+                        <!-- Previous button -->
+                        <div ignore="1" class="previous-button"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Thumbnails -->
+            <div class="thumbnails">
+                <div>
+                    <ul>
+                        <li class="i">
+                            <img src="{% static 'front/catalogue_remark/pages/1.jpg' %}" width="76" height="100" class="page-1" loading="lazy">
+                            <span>1</span>
+                        </li>
+                        <!--<li class="d">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/2.jpg' %}" width="76" height="100" class="page-2" loading="lazy">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/3.jpg' %}" width="76" height="100" class="page-3" loading="lazy">-->
+                        <!--    <span>2-3</span>-->
+                        <!--</li>-->
+                        <!--<li class="d">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/4.jpg' %}" width="76" height="100" class="page-4" loading="lazy">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/5.jpg' %}" width="76" height="100" class="page-5" loading="lazy">-->
+                        <!--    <span>4-5</span>-->
+                        <!--</li>-->
+                        <!--<li class="d">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/6.jpg' %}" width="76" height="100" class="page-6" loading="lazy">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/7.jpg' %}" width="76" height="100" class="page-7" loading="lazy">-->
+                        <!--    <span>6-7</span>-->
+                        <!--</li>-->
+                        <!--<li class="d">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/8.jpg' %}" width="76" height="100" class="page-8" loading="lazy">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/9.jpg' %}" width="76" height="100" class="page-9" loading="lazy">-->
+                        <!--    <span>8-9</span>-->
+                        <!--</li>-->
+                        <!--<li class="d">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/10.jpg' %}" width="76" height="100" class="page-10" loading="lazy">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/11.jpg' %}" width="76" height="100" class="page-11" loading="lazy">-->
+                        <!--    <span>10-11</span>-->
+                        <!--</li>-->
+                        <!--<li class="d">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/12.jpg' %}" width="76" height="100" class="page-12" loading="lazy">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/13.jpg' %}" width="76" height="100" class="page-13" loading="lazy">-->
+                        <!--    <span>12-13</span>-->
+                        <!--</li>-->
+                        <!--<li class="d">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/14.jpg' %}" width="76" height="100" class="page-14" loading="lazy">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/15.jpg' %}" width="76" height="100" class="page-15" loading="lazy">-->
+                        <!--    <span>14-15</span>-->
+                        <!--</li>-->
+                        <!--<li class="d">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/16.jpg' %}" width="76" height="100" class="page-16" loading="lazy">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/17.jpg' %}" width="76" height="100" class="page-17" loading="lazy">-->
+                        <!--    <span>16-17</span>-->
+                        <!--</li>-->
+                        <!--<li class="d">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/18.jpg' %}" width="76" height="100" class="page-18" loading="lazy">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/19.jpg' %}" width="76" height="100" class="page-19" loading="lazy">-->
+                        <!--    <span>18-19</span>-->
+                        <!--</li>-->
+                        <!--<li class="d">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/20.jpg' %}" width="76" height="100" class="page-20" loading="lazy">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/21.jpg' %}" width="76" height="100" class="page-21" loading="lazy">-->
+                        <!--    <span>20-21</span>-->
+                        <!--</li>-->
+                        <!--<li class="d">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/22.jpg' %}" width="76" height="100" class="page-22" loading="lazy">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/23.jpg' %}" width="76" height="100" class="page-23" loading="lazy">-->
+                        <!--    <span>22-23</span>-->
+                        <!--</li>-->
+                        <!--<li class="d">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/24.jpg' %}" width="76" height="100" class="page-24" loading="lazy">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/25.jpg' %}" width="76" height="100" class="page-25" loading="lazy">-->
+                        <!--    <span>24-25</span>-->
+                        <!--</li>-->
+                        <!--<li class="d">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/26.jpg' %}" width="76" height="100" class="page-26" loading="lazy">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/27.jpg' %}" width="76" height="100" class="page-27" loading="lazy">-->
+                        <!--    <span>26-27</span>-->
+                        <!--</li>-->
+                        <!--<li class="d">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/28.jpg' %}" width="76" height="100" class="page-28" loading="lazy">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/29.jpg' %}" width="76" height="100" class="page-29" loading="lazy">-->
+                        <!--    <span>28-29</span>-->
+                        <!--</li>-->
+                        <!--<li class="d">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/30.jpg' %}" width="76" height="100" class="page-30" loading="lazy">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/31.jpg' %}" width="76" height="100" class="page-31" loading="lazy">-->
+                        <!--    <span>30-31</span>-->
+                        <!--</li>-->
+                        <!--<li class="d">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/32.jpg' %}" width="76" height="100" class="page-32" loading="lazy">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/33.jpg' %}" width="76" height="100" class="page-33" loading="lazy">-->
+                        <!--    <span>32-33</span>-->
+                        <!--</li>-->
+                        <!--<li class="d">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/34.jpg' %}" width="76" height="100" class="page-34" loading="lazy">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/35.jpg' %}" width="76" height="100" class="page-35" loading="lazy">-->
+                        <!--    <span>34-35</span>-->
+                        <!--</li>-->
+                        <!--<li class="d">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/36.jpg' %}" width="76" height="100" class="page-36" loading="lazy">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/37.jpg' %}" width="76" height="100" class="page-37" loading="lazy">-->
+                        <!--    <span>36-37</span>-->
+                        <!--</li>-->
+                        <!--<li class="d">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/38.jpg' %}" width="76" height="100" class="page-38" loading="lazy">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/39.jpg' %}" width="76" height="100" class="page-39" loading="lazy">-->
+                        <!--    <span>38-39</span>-->
+                        <!--</li>-->
+                        <!--<li class="d">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/40.jpg' %}" width="76" height="100" class="page-40" loading="lazy">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/41.jpg' %}" width="76" height="100" class="page-41" loading="lazy">-->
+                        <!--    <span>40-41</span>-->
+                        <!--</li>-->
+                        <!--<li class="d">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/42.jpg' %}" width="76" height="100" class="page-42" loading="lazy">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/43.jpg' %}" width="76" height="100" class="page-43" loading="lazy">-->
+                        <!--    <span>42-43</span>-->
+                        <!--</li>-->
+                        <!--<li class="d">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/44.jpg' %}" width="76" height="100" class="page-44" loading="lazy">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/45.jpg' %}" width="76" height="100" class="page-45" loading="lazy">-->
+                        <!--    <span>44-45</span>-->
+                        <!--</li>-->
+                        <!--<li class="d">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/46.jpg' %}" width="76" height="100" class="page-46" loading="lazy">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/47.jpg' %}" width="76" height="100" class="page-47" loading="lazy">-->
+                        <!--    <span>46-47</span>-->
+                        <!--</li>-->
+                        <!--<li class="d">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/48.jpg' %}" width="76" height="100" class="page-48" loading="lazy">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/49.jpg' %}" width="76" height="100" class="page-49" loading="lazy">-->
+                        <!--    <span>48-49</span>-->
+                        <!--</li>-->
+                        <!--<li class="d">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/50.jpg' %}" width="76" height="100" class="page-50" loading="lazy">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/51.jpg' %}" width="76" height="100" class="page-51" loading="lazy">-->
+                        <!--    <span>50-51</span>-->
+                        <!--</li>-->
+                        <!--<li class="d">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/52.jpg' %}" width="76" height="100" class="page-52" loading="lazy">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/53.jpg' %}" width="76" height="100" class="page-53" loading="lazy">-->
+                        <!--    <span>52-53</span>-->
+                        <!--</li>-->
+                        <!--<li class="d">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/54.jpg' %}" width="76" height="100" class="page-54" loading="lazy">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/55.jpg' %}" width="76" height="100" class="page-55" loading="lazy">-->
+                        <!--    <span>54-55</span>-->
+                        <!--</li>-->
+                        <!--<li class="d">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/56.jpg' %}" width="76" height="100" class="page-56" loading="lazy">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/57.jpg' %}" width="76" height="100" class="page-57" loading="lazy">-->
+                        <!--    <span>56-57</span>-->
+                        <!--</li>-->
+                        <!--<li class="d">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/58.jpg' %}" width="76" height="100" class="page-58" loading="lazy">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/59.jpg' %}" width="76" height="100" class="page-59" loading="lazy">-->
+                        <!--    <span>58-59</span>-->
+                        <!--</li>-->
+                        <!--<li class="d">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/60.jpg' %}" width="76" height="100" class="page-60" loading="lazy">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/61.jpg' %}" width="76" height="100" class="page-61" loading="lazy">-->
+                        <!--    <span>60-61</span>-->
+                        <!--</li>-->
+                        <!--<li class="d">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/62.jpg' %}" width="76" height="100" class="page-62" loading="lazy">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/63.jpg' %}" width="76" height="100" class="page-63" loading="lazy">-->
+                        <!--    <span>62-63</span>-->
+                        <!--</li>-->
+                        <!--<li class="d">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/64.jpg' %}" width="76" height="100" class="page-64" loading="lazy">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/65.jpg' %}" width="76" height="100" class="page-65" loading="lazy">-->
+                        <!--    <span>64-65</span>-->
+                        <!--</li>-->
+                        <!--<li class="d">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/66.jpg' %}" width="76" height="100" class="page-66" loading="lazy">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/67.jpg' %}" width="76" height="100" class="page-67" loading="lazy">-->
+                        <!--    <span>66-67</span>-->
+                        <!--</li>-->
+                        <!--<li class="d">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/68.jpg' %}" width="76" height="100" class="page-68" loading="lazy">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/69.jpg' %}" width="76" height="100" class="page-69" loading="lazy">-->
+                        <!--    <span>68-69</span>-->
+                        <!--</li>-->
+                        <!--<li class="d">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/70.jpg' %}" width="76" height="100" class="page-70" loading="lazy">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/71.jpg' %}" width="76" height="100" class="page-71" loading="lazy">-->
+                        <!--    <span>70-71</span>-->
+                        <!--</li>-->
+                        <!--<li class="d">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/72.jpg' %}" width="76" height="100" class="page-72" loading="lazy">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/73.jpg' %}" width="76" height="100" class="page-73" loading="lazy">-->
+                        <!--    <span>72-73</span>-->
+                        <!--</li>-->
+                        <!--<li class="d">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/74.jpg' %}" width="76" height="100" class="page-74" loading="lazy">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/75.jpg' %}" width="76" height="100" class="page-75" loading="lazy">-->
+                        <!--    <span>74-75</span>-->
+                        <!--</li>-->
+                        <!--<li class="d">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/76.jpg' %}" width="76" height="100" class="page-76" loading="lazy">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/77.jpg' %}" width="76" height="100" class="page-77" loading="lazy">-->
+                        <!--    <span>76-77</span>-->
+                        <!--</li>-->
+                        <!--<li class="d">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/78.jpg' %}" width="76" height="100" class="page-78" loading="lazy">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/79.jpg' %}" width="76" height="100" class="page-79" loading="lazy">-->
+                        <!--    <span>78-79</span>-->
+                        <!--</li>-->
+                        <!--<li class="d">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/80.jpg' %}" width="76" height="100" class="page-80" loading="lazy">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/81.jpg' %}" width="76" height="100" class="page-81" loading="lazy">-->
+                        <!--    <span>80-81</span>-->
+                        <!--</li>-->
+                        <!--<li class="d">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/82.jpg' %}" width="76" height="100" class="page-82" loading="lazy">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/83.jpg' %}" width="76" height="100" class="page-83" loading="lazy">-->
+                        <!--    <span>82-83</span>-->
+                        <!--</li>-->
+                        <!--<li class="d">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/84.jpg' %}" width="76" height="100" class="page-84" loading="lazy">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/85.jpg' %}" width="76" height="100" class="page-85" loading="lazy">-->
+                        <!--    <span>84-85</span>-->
+                        <!--</li>-->
+                        <!--<li class="d">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/86.jpg' %}" width="76" height="100" class="page-86" loading="lazy">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/87.jpg' %}" width="76" height="100" class="page-87" loading="lazy">-->
+                        <!--    <span>86-87</span>-->
+                        <!--</li>-->
+                        <!--<li class="d">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/88.jpg' %}" width="76" height="100" class="page-88" loading="lazy">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/89.jpg' %}" width="76" height="100" class="page-89" loading="lazy">-->
+                        <!--    <span>88-89</span>-->
+                        <!--</li>-->
+                        <!--<li class="d">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/90.jpg' %}" width="76" height="100" class="page-90" loading="lazy">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/91.jpg' %}" width="76" height="100" class="page-91" loading="lazy">-->
+                        <!--    <span>90-91</span>-->
+                        <!--</li>-->
+                        <!--<li class="d">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/92.jpg' %}" width="76" height="100" class="page-92" loading="lazy">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/93.jpg' %}" width="76" height="100" class="page-93"loading="lazy"> -->
+                        <!--    <span>92-93</span>-->
+                        <!--</li>-->
+                        <!--<li class="d">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/94.jpg' %}" width="76" height="100" class="page-94" loading="lazy"> -->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/95.jpg' %}" width="76" height="100" class="page-95" loading="lazy">-->
+                        <!--    <span>94-95</span>-->
+                        <!--</li>-->
+                        <!--<li class="d">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/96.jpg' %}" width="76" height="100" class="page-96"loading="lazy"> -->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/97.jpg' %}" width="76" height="100" class="page-97" loading="lazy">-->
+                        <!--    <span>96-97</span>-->
+                        <!--</li>-->
+                        <!--<li class="d">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/98.jpg' %}" width="76" height="100" class="page-98" loading="lazy">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/99.jpg' %}" width="76" height="100" class="page-99" loading="lazy">-->
+                        <!--    <span>98-99</span>-->
+                        <!--</li>-->
+                        <!--<li class="d">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/' %es/100.jpg" w}pagidth="76" height="100" class="page-100" loading="lazy">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/101.jpg' %}" width="76" height="100" class="page-101" loading="lazy">-->
+                        <!--    <span>100-101</span>-->
+                        <!--</li>-->
+                        <!--<li class="d">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/102.jpg' %}" width="76" height="100" class="page-102" loading="lazy">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/103.jpg' %}" width="76" height="100" class="page-103" loading="lazy">-->
+                        <!--    <span>102-103</span>-->
+                        <!--</li>-->
+                        <!--<li class="d">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/104.jpg' %}" width="76" height="100" class="page-104" loading="lazy">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/105.jpg' %}" width="76" height="100" class="page-105" loading="lazy">-->
+                        <!--    <span>104-105</span>-->
+                        <!--</li>-->
+                        <!--<li class="d">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/106.jpg' %}" width="76" height="100" class="page-106" loading="lazy">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/107.jpg' %}" width="76" height="100" class="page-107" loading="lazy">-->
+                        <!--    <span>106-107</span>-->
+                        <!--</li>-->
+                        <!--<li class="d">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/108.jpg' %}" width="76" height="100" class="page-108" loading="lazy">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/109.jpg' %}" width="76" height="100" class="page-109" loading="lazy">-->
+                        <!--    <span>108-109</span>-->
+                        <!--</li>-->
+                        <!--<li class="d">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/110.jpg' %}" width="76" height="100" class="page-110" loading="lazy">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/111.jpg' %}" width="76" height="100" class="page-111" loading="lazy">-->
+                        <!--    <span>110-111</span>-->
+                        <!--</li>-->
+                        <!--<li class="d">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/112.jpg' %}" width="76" height="100" class="page-112" loading="lazy">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/113.jpg' %}" width="76" height="100" class="page-113" loading="lazy">-->
+                        <!--    <span>112-113</span>-->
+                        <!--</li>-->
+                        <!--<li class="d">-->
+                        <!--    <img src="{% static 'front/catalogue_remark/pages/114.jpg' %}" width="76" height="100" class="page-114" loading="lazy">-->
+                        <!--    <span>114</span>-->
+                        <!--</li>-->
+                    </ul>
+                    <div></div>
+                </div>
+
+                <script type="text/javascript">
+                    function loadApp() {
+                    
+                     	$('#canvas').fadeIn(1000);
+                    
+                     	var flipbook = $('.magazine');
+                    
+                     	// Check if the CSS was already loaded
+                    
+                    	if (flipbook.width()==0 || flipbook.height()==0) {
+                    		setTimeout(loadApp, 10);
+                    		return;
+                    	}
+                    
+                    	// Create the flipbook
+                    
+                    	flipbook.turn({
+                    
+                    			// Magazine width
+                    
+                    			width: 1750,
+                    
+                    			// Magazine height
+                    
+                    			height: 900,
+                    
+                    			// Duration in millisecond
+                    
+                    			duration: 1000,
+                    
+                    			// Hardware acceleration
+                    
+                    			acceleration: !isChrome(),
+                    
+                    			// Enables gradients
+                    
+                    			gradients: true,
+                    
+                    			// Auto center this flipbook
+                    
+                    			autoCenter: true,
+                    
+                    			// Elevation from the edge of the flipbook when turning a page
+                    
+                    			elevation: 50,
+                    
+                    			// The number of pages
+                    
+                    			pages: 1,
+                    
+                    			// Events
+                    
+                    			when: {
+                    				turning: function(event, page, view) {
+                    
+                    					var book = $(this),
+                    					currentPage = book.turn('page'),
+                    					pages = book.turn('pages');
+                    
+                    					// Update the current URI
+                    
+                    					Hash.go('page/' + page).update();
+                    
+                    					// Show and hide navigation buttons
+                    
+                    					disableControls(page);
+                    
+                    
+                    					$('.thumbnails .page-'+currentPage).
+                    						parent().
+                    						removeClass('current');
+                    
+                    					$('.thumbnails .page-'+page).
+                    						parent().
+                    						addClass('current');
+                    				},
+                    
+                    				turned: function(event, page, view) {
+                    
+                    					disableControls(page);
+                    
+                    					$(this).turn('center');
+                    
+                    					if (page==1) {
+                    						$(this).turn('peel', 'br');
+                    					}
+                    
+                    				},
+                    
+                    				missing: function (event, pages) {
+                    
+                    					// Add pages that aren't in the magazine
+                    
+                    					for (var i = 0; i < pages.length; i++)
+                    						addPage(pages[i], $(this));
+                    
+                    				}
+                    			}
+                    
+                    	});
+                    
+                    	// Zoom.js
+                    
+                    	$('.magazine-viewport').zoom({
+                    		flipbook: $('.magazine'),
+                    
+                    		max: function() {
+                    
+                    			return largeMagazineWidth()/$('.magazine').width();
+                    
+                    		},
+                    
+                    		when: {
+                    
+                    			swipeLeft: function() {
+                    
+                    				$(this).zoom('flipbook').turn('next');
+                    
+                    			},
+                    
+                    			swipeRight: function() {
+                    
+                    				$(this).zoom('flipbook').turn('previous');
+                    
+                    			},
+                    
+                    			resize: function(event, scale, page, pageElement) {
+                    
+                    				if (scale==1)
+                    					loadSmallPage(page, pageElement);
+                    				else
+                    					loadLargePage(page, pageElement);
+                    
+                    			},
+                    
+                    			zoomIn: function () {
+                    
+                    				$('.thumbnails').hide();
+                    				$('.made').hide();
+                    				$('.magazine').removeClass('animated').addClass('zoom-in');
+                    				$('.zoom-icon').removeClass('zoom-icon-in').addClass('zoom-icon-out');
+                    
+                    				if (!window.escTip && !$.isTouch) {
+                    					escTip = true;
+                    
+                    					$('<div />', {'class': 'exit-message'}).
+                    						html('<div>Press ESC to exit</div>').
+                    							appendTo($('body')).
+                    							delay(2000).
+                    							animate({opacity:0}, 500, function() {
+                    								$(this).remove();
+                    							});
+                    				}
+                    			},
+                    
+                    			zoomOut: function () {
+                    
+                    				$('.exit-message').hide();
+                    				$('.thumbnails').hide();
+                    				$('.made').fadeIn();
+                    				$('.zoom-icon').removeClass('zoom-icon-out').addClass('zoom-icon-in');
+                    
+                    				setTimeout(function(){
+                    					$('.magazine').addClass('animated').removeClass('zoom-in');
+                    					resizeViewport();
+                    				}, 0);
+                    
+                    			}
+                    		}
+                    	});
+                    
+                    	// Zoom event
+                    
+                    	if ($.isTouch)
+                    		$('.magazine-viewport').bind('zoom.doubleTap', zoomTo);
+                    	else
+                    		$('.magazine-viewport').bind('zoom.tap', zoomTo);
+                    
+                    
+                    	// Using arrow keys to turn the page
+                    
+                    	$(document).keydown(function(e){
+                    
+                    		var previous = 37, next = 39, esc = 27;
+                    
+                    		switch (e.keyCode) {
+                    			case previous:
+                    
+                    				// left arrow
+                    				$('.magazine').turn('previous');
+                    				e.preventDefault();
+                    
+                    			break;
+                    			case next:
+                    
+                    				//right arrow
+                    				$('.magazine').turn('next');
+                    				e.preventDefault();
+                    
+                    			break;
+                    			case esc:
+                    
+                    				$('.magazine-viewport').zoom('zoomOut');
+                    				e.preventDefault();
+                    
+                    			break;
+                    		}
+                    	});
+                    
+                    	// URIs - Format #/page/1
+                    
+                    	Hash.on('^page\/([0-9]*)$', {
+                    		yep: function(path, parts) {
+                    			var page = parts[1];
+                    
+                    			if (page!==undefined) {
+                    				if ($('.magazine').turn('is'))
+                    					$('.magazine').turn('page', page);
+                    			}
+                    
+                    		},
+                    		nop: function(path) {
+                    
+                    			if ($('.magazine').turn('is'))
+                    				$('.magazine').turn('page', 1);
+                    		}
+                    	});
+                    
+                    
+                    	$(window).resize(function() {
+                    		resizeViewport();
+                    	}).bind('orientationchange', function() {
+                    		resizeViewport();
+                    	});
+                    
+                    	// Events for thumbnails
+                    
+                    	$('.thumbnails').click(function(event) {
+                    
+                    		var page;
+                    
+                    		if (event.target && (page=/page-([0-9]+)/.exec($(event.target).attr('class'))) ) {
+                    
+                    			$('.magazine').turn('page', page[1]);
+                    		}
+                    	});
+                    
+                    	$('.thumbnails li').
+                    		bind($.mouseEvents.over, function() {
+                    
+                    			$(this).addClass('thumb-hover');
+                    
+                    		}).bind($.mouseEvents.out, function() {
+                    
+                    			$(this).removeClass('thumb-hover');
+                    
+                    		});
+                    
+                    	if ($.isTouch) {
+                    
+                    		$('.thumbnails').
+                    			addClass('thumbanils-touch').
+                    			bind($.mouseEvents.move, function(event) {
+                    				event.preventDefault();
+                    			});
+                    
+                    	} else {
+                    
+                    		$('.thumbnails ul').mouseover(function() {
+                    
+                    			$('.thumbnails').addClass('thumbnails-hover');
+                    
+                    		}).mousedown(function() {
+                    
+                    			return false;
+                    
+                    		}).mouseout(function() {
+                    
+                    			$('.thumbnails').removeClass('thumbnails-hover');
+                    
+                    		});
+                    
+                    	}
+                    
+                    
+                    	// Regions
+                    
+                    	if ($.isTouch) {
+                    		$('.magazine').bind('touchstart', regionClick);
+                    	} else {
+                    		$('.magazine').click(regionClick);
+                    	}
+                    
+                    	// Events for the next button
+                    
+                    	$('.next-button').bind($.mouseEvents.over, function() {
+                    
+                    		$(this).addClass('next-button-hover');
+                    
+                    	}).bind($.mouseEvents.out, function() {
+                    
+                    		$(this).removeClass('next-button-hover');
+                    
+                    	}).bind($.mouseEvents.down, function() {
+                    
+                    		$(this).addClass('next-button-down');
+                    
+                    	}).bind($.mouseEvents.up, function() {
+                    
+                    
+                    		$(this).removeClass('next-button-down');
+                    
+                    	}).click(function() {
+                    
+                    		$('.magazine').turn('next');
+                    
+                    	});
+                    
+                    	// Events for the next button
+                    
+                    	$('.previous-button').bind($.mouseEvents.over, function() {
+                    
+                    		$(this).addClass('previous-button-hover');
+                    
+                    	}).bind($.mouseEvents.out, function() {
+                    
+                    		$(this).removeClass('previous-button-hover');
+                    
+                    	}).bind($.mouseEvents.down, function() {
+                    
+                    		$(this).addClass('previous-button-down');
+                    
+                    	}).bind($.mouseEvents.up, function() {
+                    
+                    		$(this).removeClass('previous-button-down');
+                    
+                    	}).click(function() {
+                    
+                    		$('.magazine').turn('previous');
+                    
+                    	});
+                    
+                    
+                    	resizeViewport();
+                    
+                    	$('.magazine').addClass('animated');
+                    
+                    }
+                    
+                    // Zoom icon
+                    
+                     $('.zoom-icon').bind('mouseover', function() {
+                    
+                     	if ($(this).hasClass('zoom-icon-in'))
+                     		$(this).addClass('zoom-icon-in-hover');
+                    
+                     	if ($(this).hasClass('zoom-icon-out'))
+                     		$(this).addClass('zoom-icon-out-hover');
+                    
+                     }).bind('mouseout', function() {
+                    
+                     	 if ($(this).hasClass('zoom-icon-in'))
+                     		$(this).removeClass('zoom-icon-in-hover');
+                    
+                     	if ($(this).hasClass('zoom-icon-out'))
+                     		$(this).removeClass('zoom-icon-out-hover');
+                    
+                     }).bind('click', function() {
+                    
+                     	if ($(this).hasClass('zoom-icon-in'))
+                     		$('.magazine-viewport').zoom('zoomIn');
+                     	else if ($(this).hasClass('zoom-icon-out'))
+                    		$('.magazine-viewport').zoom('zoomOut');
+                    
+                     });
+                    
+                     $('#canvas').hide();
+                    
+                    
+                    // Load the HTML4 version if there's not CSS transform
+                    
+                    yepnope({
+                    	test : Modernizr.csstransforms,
+                    	yep: ['{% static "front/catalogue_remark/js/turn.js" %}'],
+                    	nope: ['{% static "front/catalogue_remark/js/turn.html4.min.js" %}'],
+                    	both: ['{% static "front/catalogue_remark/js/zoom.min.js" %}', '{% static "front/catalogue_remark/js/magazine.js" %}', '{% static "front/catalogue_remark/css/magazine.css" %}'],
+                    	complete: loadApp
+                    });
+                    
+                </script>
+
+            </div>
+        </div>
+
+    </body>
+</html>
